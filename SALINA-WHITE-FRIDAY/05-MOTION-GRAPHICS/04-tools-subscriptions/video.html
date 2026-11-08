@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ar"><head><meta charset="utf-8"><title>SALINA WHITE FRIDAY — اشتراكات بتطوّرك</title>
+<link rel="stylesheet" href="../../01-BRAND-ASSETS/fonts/fonts.css">
+<style>
+  /* Video 4 (1080x1920, 30fps, 19.9s). «اشتراكات للفرجة... ولا اشتراكات بتطوّرك؟»
+     A phone full of entertainment subscriptions turns into the «اشتراكات Salina» app: each tool slides in,
+     its switch turns on and the «مستواك» meter climbs. Tool names are text only; icons are generic category icons
+     in campaign colours (no third-party logos). Frames = renderAt(t); open with #play to preview. */
+  :root{--pu:#58346F;--pu-dk:#46295A;--pu-in:#3E2350;--vi:#A979C0;--gd:#F5C04A;--cr:#FFF8EE;--ch:#30263A;--tint:#F3E7EF;--soft:#E9DCF0;--lv:#D9C3E6;--lg:#FBE9B7}
+  html,body{margin:0;background:#222}
+  #stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--cr);font-family:"Tajawal","Cairo",sans-serif}
+  #stage > *{position:absolute}
+  svg{overflow:visible}
+  .line{left:0;right:0;display:flex;justify-content:center;gap:.26em;direction:rtl;white-space:nowrap;font-weight:900;line-height:1.25}
+  .m{display:inline-block;overflow:hidden;padding:.12em .04em .2em;margin:-.12em -.04em -.2em}
+  .m > span{display:inline-block}
+  #phone{left:220px;top:380px;width:640px;height:1200px;border-radius:72px;background:var(--pu);box-sizing:border-box;padding:22px}
+  #screen{position:relative;width:100%;height:100%;border-radius:52px;background:var(--tint);overflow:hidden}
+  #screen > *{position:absolute}
+  #notch{left:50%;top:14px;width:150px;height:30px;margin-left:-75px;border-radius:15px;background:var(--pu)}
+  #appbar{left:0;right:0;top:0;height:150px;background:var(--pu);color:var(--cr);display:flex;align-items:flex-end;justify-content:center;padding-bottom:24px;box-sizing:border-box;
+          font:900 46px/1 "Tajawal",sans-serif;direction:rtl;gap:14px}
+  #appbar i{display:block;width:14px;height:14px;border-radius:50%;background:var(--gd)}
+  .trow{position:absolute;left:22px;right:22px;height:118px;border-radius:30px;background:var(--cr);display:flex;align-items:center;gap:22px;padding:0 22px;box-sizing:border-box;direction:rtl}
+  .trow .ico{width:84px;height:84px;border-radius:24px;background:var(--pu);flex:none;display:flex;align-items:center;justify-content:center}
+  .trow .txt{flex:1;display:flex;flex-direction:column;gap:4px;min-width:0}
+  .trow .nm{font:900 44px/1.05 "Tajawal",sans-serif;color:var(--pu);direction:ltr;text-align:right;white-space:nowrap}
+  .trow .ct{font:600 26px/1.2 "Cairo",sans-serif;color:var(--ch);white-space:nowrap}
+  .sw{width:112px;height:60px;border-radius:30px;background:var(--lv);position:relative;flex:none}
+  .sw b{position:absolute;top:6px;right:6px;width:48px;height:48px;border-radius:50%;background:var(--cr);box-shadow:0 2px 0 rgba(48,38,58,.15)}
+  .tile{width:180px;height:180px;border-radius:44px;background:var(--cr);box-shadow:inset 0 0 0 6px var(--vi);display:flex;align-items:center;justify-content:center}
+  #rows,#grid{left:0;right:0;top:0;bottom:0}
+  #wipe{left:0;top:0;width:1px;height:1px;border-radius:50%;background:var(--pu)}
+  .ul{text-decoration:underline;text-decoration-color:var(--gd);text-decoration-thickness:22px;text-underline-offset:32px;text-decoration-skip-ink:none}
+</style></head>
+<body>
+<div id="stage">
+  <div class="line" id="eb" style="top:46px;font-size:32px;color:var(--pu);font-weight:800;letter-spacing:5px;direction:ltr;align-items:center;gap:14px"><i style="display:block;width:12px;height:12px;border-radius:50%;background:var(--gd)"></i>SALINA WHITE FRIDAY</div>
+  <!-- copy above the phone -->
+  <div class="line" id="a1" style="top:120px;font-size:80px;color:var(--ch);font-weight:800"><span class="m"><span>اشتراكات</span></span><span class="m"><span>كتير...</span></span></div>
+  <div class="line" id="a2" style="top:225px;font-size:100px;color:var(--pu)"><span id="a2w" style="display:inline-block">للفرجة بس<span style="color:var(--gd)">؟</span></span></div>
+  <div class="line" id="b1" style="top:120px;font-size:76px;color:var(--ch);font-weight:800"><span class="m"><span>المرة</span></span><span class="m"><span>دي...</span></span></div>
+  <div class="line" id="b2" style="top:222px;font-size:100px;color:var(--pu)"><span class="m"><span>اشتراكات</span></span><span class="m"><span>بتطوّرك</span></span></div>
+
+  <div id="phone"><div id="screen">
+    <!-- entertainment grid (outline style = the "old" spending) -->
+    <div id="grid"></div>
+    <div id="appbar"><i></i>اشتراكات Salina</div>
+    <div id="rows"></div>
+    <div id="notch"></div>
+  </div></div>
+
+  <!-- level meter -->
+  <div id="meter" style="left:220px;top:1630px;width:640px;height:40px;border-radius:20px;background:var(--lv)"><div id="mfill" style="position:absolute;right:0;top:0;bottom:0;border-radius:20px;background:var(--gd);width:0"></div></div>
+  <div id="mlbl" style="left:220px;top:1700px;width:640px;display:flex;justify-content:space-between;direction:rtl;white-space:nowrap">
+    <span style="font:900 46px/1 'Tajawal',sans-serif;color:var(--pu)">مستواك</span><span id="stageTxt" style="font:800 42px/1 'Tajawal',sans-serif;color:var(--pu)"></span></div>
+
+  <!-- summary -->
+  <div class="line" id="s1" style="top:560px;font-size:120px;color:var(--ch);font-weight:800"><span class="m"><span>أدوات</span></span><span class="m"><span>أقوى.</span></span></div>
+  <div class="line" id="s2" style="top:730px;font-size:170px;color:var(--pu)"><span id="s2w" class="ul" style="display:inline-block">مستوى أعلى.</span></div>
+  <div class="line" id="s3" style="top:1040px;font-size:84px;color:var(--pu);font-weight:800"><span class="m"><span>استثمري</span></span><span class="m"><span>في</span></span><span class="m"><span>نفسك</span></span></div>
+  <div id="wipe"></div>
+</div>
+
+<script src="../lib/cta.js"></script>
+<script>
+const DURATION = 19.9, FPS = 30, CTA0 = 17.55;
+const $ = id => document.getElementById(id);
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const P = (t, t0, t1) => clamp((t - t0) / (t1 - t0));
+const lerp = (a, b, p) => a + (b - a) * p;
+const E = { outCubic: p => 1 - (1 - p) ** 3, inCubic: p => p ** 3,
+  inOutCubic: p => p < .5 ? 4 * p ** 3 : 1 - (-2 * p + 2) ** 3 / 2,
+  outBack: (p, s = 1.7) => 1 + (s + 1) * (p - 1) ** 3 + s * (p - 1) ** 2 };
+const spring = (dt, amp, f = 18, k = 9) => dt < 0 ? 0 : amp * Math.exp(-k * dt) * Math.cos(f * dt);
+function words(id, tIn, step, tOut, t) {
+  [...$(id).querySelectorAll('.m > span')].forEach((s, i) => { const a = E.outCubic(P(t, tIn + i * step, tIn + i * step + .45)), b = tOut ? E.inCubic(P(t, tOut + i * .05, tOut + i * .05 + .3)) : 0;
+    s.style.transform = `translateY(${(1 - a) * 115 - b * 115}%)`; });
+  $(id).style.visibility = (t >= tIn - .01 && (!tOut || t < tOut + .5)) ? 'visible' : 'hidden';
+}
+
+/* ---- entertainment tiles (generic, outline style) ---- */
+const V = 'fill="none" stroke="#A979C0" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"';
+const TILES = [
+  `<svg width="96" height="96" viewBox="-48 -48 96 96"><path d="M-16-24v48l38-24z" ${V} fill="#D9C3E6"/></svg>`,                                  // play
+  `<svg width="96" height="96" viewBox="-48 -48 96 96"><rect x="-38" y="-28" width="76" height="50" rx="8" ${V}/><path d="M-14 34h28M0 22v12" ${V}/></svg>`, // tv
+  `<svg width="96" height="96" viewBox="-48 -48 96 96"><path d="M-12 24V-26l34-8v48" ${V}/><circle cx="-22" cy="24" r="12" ${V} fill="#D9C3E6"/><circle cx="12" cy="16" r="12" ${V} fill="#D9C3E6"/></svg>`, // music
+  `<svg width="96" height="96" viewBox="-48 -48 96 96"><path d="M-30-24h60l-8 56h-44z" ${V} fill="#FBE9B7"/><path d="M-30-24q-6-18 10-16 2-14 16-8 8-12 20-2 14-6 16 10" ${V}/></svg>`, // popcorn
+  `<svg width="96" height="96" viewBox="-48 -48 96 96"><rect x="-40" y="-20" width="80" height="44" rx="22" ${V} fill="#D9C3E6"/><path d="M-22 2h16M-14-6v16" ${V}/><circle cx="18" cy="-2" r="4" fill="#A979C0"/><circle cx="26" cy="8" r="4" fill="#A979C0"/></svg>`, // gamepad
+  `<svg width="96" height="96" viewBox="-48 -48 96 96"><path d="M0 30C-34 6-38-22-18-30-6-34 0-24 0-18c0-6 6-16 18-12 20 8 16 36-18 60z" ${V} fill="#D9C3E6"/></svg>`, // heart
+];
+TILES.forEach((svg, i) => { const d = document.createElement('div'); d.className = 'tile'; d.id = 'tile' + i; d.innerHTML = svg;
+  d.style.cssText = `position:absolute;left:${[16, 208, 400][i % 3]}px;top:${230 + Math.floor(i / 3) * 230}px`; $('grid').appendChild(d); });
+// a few more half-visible tiles further down, to feel "too many"
+for (let i = 6; i < 12; i++) { const d = document.createElement('div'); d.className = 'tile'; d.id = 'tile' + i; d.innerHTML = TILES[i % 6];
+  d.style.cssText = `position:absolute;left:${[16, 208, 400][i % 3]}px;top:${230 + Math.floor(i / 3) * 230}px`; $('grid').appendChild(d); }
+
+/* ---- tools (text names + generic category icons) ---- */
+const C = '#FFF8EE', G = '#F5C04A';
+const TOOLS = [
+  { nm: 'Canva', ct: 'تصميم', ic: `<svg width="56" height="56" viewBox="-28 -28 56 56"><path d="M2-24c-18 0-28 12-26 26 2 14 16 22 24 16 6-4 0-12 8-12h8c8 0 12-6 10-14-4-10-12-16-24-16z" fill="${C}"/><circle cx="-10" cy="-6" r="5" fill="#58346F"/><circle cx="2" cy="-14" r="5" fill="${G}"/><circle cx="-12" cy="8" r="5" fill="#A979C0"/></svg>` },
+  { nm: 'CapCut', ct: 'مونتاج فيديو', ic: `<svg width="56" height="56" viewBox="-28 -28 56 56"><rect x="-24" y="-18" width="48" height="36" rx="6" fill="${C}"/><path d="M-6-8v16l14-8z" fill="#58346F"/><path d="M-24-10h-0M-18-18v36M18-18v36" stroke="#58346F" stroke-width="3" opacity=".35"/></svg>` },
+  { nm: 'Claude', ct: 'ذكاء اصطناعي', ic: `<svg width="56" height="56" viewBox="-28 -28 56 56"><path d="M-24-18h48v28H-6l-12 10v-10h-6z" fill="${C}"/><path d="M-14-8h28M-14 0h18" stroke="#58346F" stroke-width="4" stroke-linecap="round"/></svg>` },
+  { nm: 'ChatGPT', ct: 'ذكاء اصطناعي', ic: `<svg width="56" height="56" viewBox="-28 -28 56 56"><path d="M-24-18h48v28H6l12 10v-10h6z" fill="${C}"/><circle cx="-10" cy="-4" r="4" fill="#58346F"/><circle cx="0" cy="-4" r="4" fill="#58346F"/><circle cx="10" cy="-4" r="4" fill="#58346F"/></svg>` },
+  { nm: 'Gemini', ct: 'ذكاء اصطناعي', ic: `<svg width="56" height="56" viewBox="-28 -28 56 56"><rect x="-24" y="-20" width="48" height="40" rx="10" fill="${C}"/><text x="0" y="3" text-anchor="middle" dominant-baseline="middle" font-family="Tajawal" font-weight="900" font-size="24" fill="#58346F">AI</text></svg>` },
+  { nm: 'Zoom', ct: 'اجتماعات وكلاسات أونلاين', ic: `<svg width="56" height="56" viewBox="-28 -28 56 56"><rect x="-24" y="-14" width="32" height="28" rx="7" fill="${C}"/><path d="M10-6l14-8v28l-14-8z" fill="${C}"/></svg>` },
+  { nm: '+ أدوات تانية كتير', ct: 'وغيرها', more: true, ic: `<svg width="56" height="56" viewBox="-28 -28 56 56"><path d="M0-18v36M-18 0h36" stroke="#58346F" stroke-width="8" stroke-linecap="round"/></svg>` },
+];
+const ROW0 = 4.4, ROWD = 1.42;
+const rowT = TOOLS.map((_, k) => ROW0 + k * ROWD);
+TOOLS.forEach((tl, k) => { const r = document.createElement('div'); r.className = 'trow'; r.id = 'row' + k; r.style.top = (170 + k * 136) + 'px';
+  r.innerHTML = `<div class="ico" ${tl.more ? 'style="background:var(--gd)"' : ''}>${tl.ic}</div><div class="txt"><div class="nm" ${tl.more ? 'style="direction:rtl;font-size:40px"' : ''}>${tl.nm}</div><div class="ct">${tl.ct}</div></div>${tl.more ? '' : '<div class="sw"><b></b></div>'}`;
+  $('rows').appendChild(r); });
+const STAGES = [[2, 'بداية حلوة'], [4, 'بقيتي أسرع'], [6, 'مستوى تاني خالص!']];
+
+function renderAt(t) {
+  $('eb').style.opacity = P(t, .1, .4) * (1 - P(t, 16.95, 17.2));
+  /* ---- scene A: «اشتراكات كتير... للفرجة بس؟» ---- */
+  words('a1', .3, .18, 3.15, t);
+  const ap = P(t, .85, 1.25);
+  $('a2w').style.transform = `scale(${lerp(1.7, 1, E.outBack(ap, 2.2))})`;
+  $('a2').style.opacity = clamp(ap * 4) * (1 - P(t, 3.15, 3.4)); $('a2').style.translate = `0 ${-60 * E.inCubic(P(t, 3.15, 3.45))}px`;
+  // phone rises in
+  const ph = E.outCubic(P(t, .05, .6)), sumP = E.inOutCubic(P(t, 14.9, 15.4));
+  $('phone').style.transform = `translateY(${(1 - ph) * 900 + sumP * 1700}px) rotate(${lerp(6, 0, ph)}deg)`;
+  // entertainment tiles pop in, wiggle, then get flicked away
+  for (let i = 0; i < 12; i++) { const el = $('tile' + i), q = E.outBack(P(t, .55 + i * .11, .9 + i * .11), 2.2);
+    const away = E.inCubic(P(t, 3.2 + (i % 6) * .05, 3.6 + (i % 6) * .05)), dir = i % 2 ? 1 : -1;
+    el.style.transform = `translate(${dir * 700 * away}px, ${-200 * away}px) rotate(${3 * Math.sin(t * 3 + i) + dir * 120 * away}deg) scale(${q})`;
+    el.style.opacity = 1 - away; }
+  // app bar drops in
+  const ab = E.outCubic(P(t, 3.55, 3.95)); $('appbar').style.transform = `translateY(${(ab - 1) * 160}px)`;
+  /* ---- scene B copy ---- */
+  words('b1', 3.5, .15, 15.0, t); words('b2', 3.8, .16, 15.0, t);
+  /* ---- tool rows ---- */
+  let on = 0; let bump = 0;
+  TOOLS.forEach((tl, k) => { const r = $('row' + k), s = rowT[k];
+    const ip = E.outBack(P(t, s, s + .45), 1.4);
+    r.style.transform = `translateX(${(1 - ip) * -620}px) scale(${lerp(.9, 1, ip)})`; r.style.opacity = clamp(P(t, s, s + .15) * 3);
+    if (tl.more) { r.style.transform += ` rotate(${2 * Math.sin(t * 4) * P(t, s + .4, s + .6)}deg)`; return; }
+    const sw = r.querySelector('.sw'), knob = sw.firstElementChild, tp = E.outBack(P(t, s + .7, s + .95), 1.6);
+    knob.style.transform = `translateX(${-52 * tp}px)`; sw.style.background = tp > .5 ? 'var(--gd)' : 'var(--lv)';
+    sw.style.transform = `scale(${1 + spring(t - (s + .7), .1, 22, 10)})`;
+    if (t >= s + .7) on++;
+    bump += spring(t - (s + .75), .25, 18, 8);
+    r.style.boxShadow = t >= s + .7 ? `inset 0 0 0 ${4 + 6 * Math.max(0, spring(t - (s + .7), 1, 16, 6))}px var(--gd)` : 'none'; });
+  // level meter climbs with each switched-on tool
+  let lvl = 0; TOOLS.forEach((tl, k) => { if (!tl.more) lvl += E.inOutCubic(P(t, rowT[k] + .75, rowT[k] + 1.2)) / 6; });
+  lvl += .0 * P(t, rowT[6], rowT[6] + .5);
+  $('mfill').style.width = (100 * lvl) + '%';
+  const mshow = P(t, 4.0, 4.4) * (1 - P(t, 15.0, 15.3));
+  $('meter').style.opacity = mshow; $('mlbl').style.opacity = mshow;
+  $('meter').style.transform = `scaleY(${1 + Math.max(0, bump) * .4})`;
+  let st = ''; STAGES.forEach(([n, s]) => { if (on >= n) st = s; }); if ($('stageTxt').textContent !== st) $('stageTxt').textContent = st;
+  const lastStage = STAGES.reduce((acc, [n], i) => on >= n ? i : acc, -1);
+  const stT = lastStage >= 0 ? rowT[STAGES[lastStage][0] - 1] + .7 : 0;
+  $('stageTxt').style.transform = `scale(${lastStage >= 0 ? lerp(1.5, 1, E.outBack(P(t, stT, stT + .35), 2.4)) : 1})`;
+  /* ---- summary ---- */
+  words('s1', 15.3, .16, 0, t);
+  const sp = P(t, 15.75, 16.15); $('s2w').style.transform = `scale(${lerp(1.7, 1, E.outBack(sp, 2.2))})`; $('s2').style.opacity = clamp(sp * 4);
+  words('s3', 16.15, .12, 0, t);
+  /* ---- wipe + CTA ---- */
+  const wp = E.inOutCubic(P(t, 16.95, 17.6)), R = 2300 * wp;
+  Object.assign($('wipe').style, { width: 2 * R + 'px', height: 2 * R + 'px', left: (540 - R) + 'px', top: (900 - R) + 'px', visibility: wp > 0 ? 'visible' : 'hidden' });
+  CTA.render(t, CTA0);
+}
+CTA.init($('stage'));
+window.renderAt = renderAt; window.DURATION = DURATION; window.FPS = FPS;
+renderAt(0);
+if (location.hash === '#play') { const t0 = performance.now(); (function loop() { renderAt(((performance.now() - t0) / 1000) % DURATION); requestAnimationFrame(loop); })(); }
+</script>
+</body></html>
