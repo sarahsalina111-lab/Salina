@@ -1,0 +1,707 @@
+<title>Salina Black Friday Direction</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Cairo:wght@400;600;700&display=swap">
+<style>
+/* Layout: a single RTL column of "boards" — each board pairs a scaled mockup (container-query units) with its rationale. Single committed light look: the campaign's own cream world. */
+:root{
+  --pu:#58346F;   /* Primary Purple */
+  --vi:#A979C0;   /* Soft Violet */
+  --or:#F2A34A;   /* Warm Orange */
+  --cr:#FFF8EE;   /* Warm Cream */
+  --ch:#30263A;   /* Charcoal */
+  --page:#F2E9DE; /* page ground, a step deeper than cream so cream frames read as objects */
+  --paper:#FFFDF9;
+  --mut:#6B5C76;
+  --rule:#E2D4D9;
+  --display:"Tajawal","Cairo",system-ui,sans-serif;
+  --body:"Cairo","Tajawal",system-ui,sans-serif;
+  color-scheme:light;
+}
+body{background:var(--page);color:var(--ch);font-family:var(--body);font-size:16px;line-height:1.75}
+.page{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 80px;display:flex;flex-direction:column;gap:72px}
+h1,h2,h3{font-family:var(--display);color:var(--pu);margin:0;text-wrap:balance;line-height:1.15}
+h1{font-size:clamp(34px,6vw,64px);font-weight:900}
+h2{font-size:clamp(26px,3.6vw,38px);font-weight:900}
+h3{font-size:20px;font-weight:800;color:var(--ch)}
+p{margin:0;max-width:65ch}
+.eyebrow{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.12em;color:var(--mut)}
+.lede{font-size:18px;color:var(--ch)}
+.mut{color:var(--mut)}
+.or{color:var(--or)} .pu{color:var(--pu)} .vi{color:var(--vi)} .crc{color:var(--cr)}
+section{display:flex;flex-direction:column;gap:24px}
+.sec-head{display:flex;flex-direction:column;gap:8px;border-top:2px solid var(--pu);padding-top:20px}
+ul.why{margin:0;padding:0 1.1em 0 0;display:flex;flex-direction:column;gap:8px}
+ul.why li{max-width:62ch}
+ul.why b{color:var(--pu);font-weight:700}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:end}
+.hero > *{min-width:0}
+.status{display:inline-flex;align-items:center;gap:8px;background:var(--pu);color:var(--cr);font-family:var(--display);font-weight:700;font-size:14px;padding:6px 14px;border-radius:999px;width:max-content}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--or);display:block}
+.bigidea{background:var(--pu);color:var(--cr);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:12px}
+.bigidea .q{font-family:var(--display);font-weight:900;font-size:clamp(26px,3.4vw,36px);line-height:1.2}
+.bigidea p{color:#E9DCF0}
+
+/* boards */
+.board{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+.board.wide{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}
+.board > div{min-width:0;display:flex;flex-direction:column;gap:16px}
+.cap{font-size:13px;color:var(--mut);font-family:var(--display);font-weight:500}
+
+/* ---------- mockup frames ---------- */
+.fr{position:relative;width:100%;max-width:100%;aspect-ratio:4/5;container-type:inline-size;overflow:hidden;border-radius:6px;box-shadow:0 1px 0 rgba(48,38,58,.06),0 18px 40px -24px rgba(48,38,58,.35)}
+.fr.s{aspect-ratio:9/16}
+.bg-cr{background:var(--cr)} .bg-pu{background:var(--pu)} .bg-or{background:var(--or)}
+.fr .t{position:absolute;font-family:var(--display);line-height:1.04;text-align:right}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+.ic{position:absolute;display:block}
+.ic svg{width:100%;height:100%;display:block;overflow:visible;stroke-width:3.2;stroke-linejoin:round;stroke-linecap:round}
+.ic.inl{position:relative;display:inline-block;vertical-align:middle}
+/* illustration modes: outline = the old shopping, solid = the new investment */
+.ol{--f:none;--s:var(--vi);--a:none;--l:var(--vi)}
+.so{--f:var(--pu);--s:var(--pu);--a:var(--or);--l:var(--cr)}
+.sc{--f:var(--cr);--s:var(--cr);--a:var(--or);--l:var(--pu)}
+.ocr{--f:none;--s:var(--cr);--a:none;--l:var(--cr)}
+.dots{display:flex;gap:2.2cqw;position:absolute}
+.dots i{display:block;width:3.4cqw;height:3.4cqw;border-radius:50%;background:var(--or)}
+.lk{position:absolute;bottom:5cqw;right:7cqw;display:flex;align-items:center;gap:1.8cqw;font:700 3cqw/1 var(--display);color:var(--ch)}
+.lk .ph{border:.4cqw dashed currentColor;border-radius:1.6cqw;padding:1.2cqw 2cqw;font-weight:500;font-size:2.4cqw;opacity:.8}
+.lk.light{color:var(--cr)}
+.tg{position:absolute;clip-path:polygon(15% 0,100% 0,100% 100%,15% 100%,0 50%);display:flex;align-items:center;justify-content:center;gap:2cqw;font-family:var(--display)}
+.tg::before{content:"";position:absolute;left:8%;top:50%;width:2.4cqw;height:2.4cqw;margin-top:-1.2cqw;border-radius:50%;background:var(--hole,var(--cr))}
+.tg.v{clip-path:polygon(50% 0,100% 18%,100% 100%,0 100%,0 18%);flex-direction:column}
+.tg.v::before{left:50%;top:10%;margin:0 0 0 -1.6cqw;width:3.2cqw;height:3.2cqw}
+.rc{position:absolute;background:var(--paper);color:var(--ch);font-family:var(--body);padding:5cqw 5cqw 7cqw;
+  -webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/4cqw 100%;
+          mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/4cqw 100%}
+.rc .h{font:800 4.2cqw/1.2 var(--display);text-align:center;color:var(--pu)}
+.rc .rr{display:flex;justify-content:space-between;gap:3cqw;font-size:3.3cqw;line-height:1.5}
+.rc hr{border:0;border-top:.4cqw dashed var(--vi);margin:2.4cqw 0}
+.rc .tot{font-weight:700;color:var(--pu);font-size:3.8cqw}
+.cats .tg{font-size:3.4cqw!important;padding-left:6cqw;gap:1.6cqw;white-space:nowrap}
+.cats .tg .ic{width:6.5cqw!important;height:6.5cqw!important}
+.stamp{position:absolute;border:.7cqw solid var(--or);color:var(--or);border-radius:2cqw;font:900 5cqw/1 var(--display);padding:1.6cqw 3cqw;transform:rotate(-12deg)}
+
+/* system */
+.sys{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.card{background:var(--paper);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.swatches{display:flex;height:120px;border-radius:12px;overflow:hidden}
+.swatches div{display:flex;flex-direction:column;justify-content:flex-end;padding:10px;font-size:12px;line-height:1.35;font-family:var(--display);font-weight:700;min-width:0}
+.swatches span{font-weight:400;opacity:.85;font-variant-numeric:tabular-nums}
+.spec{display:flex;flex-direction:column;gap:6px}
+.spec .a{font-family:var(--display);font-weight:900;font-size:44px;line-height:1.05;color:var(--pu)}
+.spec .b{font-family:var(--body);font-size:16px}
+.spec small{color:var(--mut);font-size:12.5px;font-family:var(--display)}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.vs > div{border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px;align-items:center;text-align:center;font-size:14px}
+.vs .row{display:flex;gap:6px;justify-content:center}
+.vs .ic{width:48px;height:48px}
+.motifs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.motifs > div{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;font-size:13px;line-height:1.5}
+.motifs .m{height:72px;width:100%;display:flex;align-items:center;justify-content:center;background:var(--cr);border-radius:10px;container-type:inline-size;position:relative;overflow:hidden}
+
+/* anatomy markers (they map to the numbered notes beside the frame) */
+.pin{position:absolute;width:6cqw;height:6cqw;border-radius:50%;background:var(--ch);color:var(--cr);font:700 3.2cqw/6cqw var(--display);text-align:center}
+ol.anat{margin:0;padding:0 1.4em 0 0;display:flex;flex-direction:column;gap:10px}
+ol.anat li{max-width:60ch} ol.anat li::marker{font-family:var(--display);font-weight:800;color:var(--pu)}
+
+/* series grid */
+.series{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.series figure{margin:0;display:flex;flex-direction:column;gap:10px;min-width:0}
+.series figcaption{display:flex;flex-direction:column;gap:2px;font-size:13.5px;line-height:1.55}
+.series figcaption b{font-family:var(--display);font-size:15px;color:var(--pu)}
+.series .k{font-family:var(--display);font-size:12px;color:var(--mut);font-weight:700;letter-spacing:.06em}
+.rhythm{display:flex;gap:6px;align-items:center;flex-wrap:wrap;font-size:13px;color:var(--mut);font-family:var(--display)}
+.rhythm i{width:20px;height:26px;border-radius:4px;display:block;box-shadow:inset 0 0 0 1px rgba(48,38,58,.12)}
+.stories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;max-width:760px}
+
+/* storyboard */
+.timeline{display:flex;height:44px;border-radius:10px;overflow:hidden;font-family:var(--display);font-weight:700;font-size:13px}
+.timeline div{display:flex;align-items:center;justify-content:center;color:var(--cr);min-width:0;white-space:nowrap;overflow:hidden}
+.ticks{display:flex;justify-content:space-between;font-size:11.5px;color:var(--mut);font-variant-numeric:tabular-nums;font-family:var(--display);margin-top:-16px;direction:ltr}
+.scenes{display:flex;flex-direction:column;gap:16px}
+.scene{display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;background:var(--paper);border-radius:16px;padding:18px;align-items:start}
+.scene .meta{display:flex;flex-direction:column;gap:10px;min-width:0}
+.scene .top{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.scene .time{font-family:var(--display);font-weight:800;color:var(--or);font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}
+.scene .line{font-family:var(--display);font-weight:900;font-size:22px;color:var(--pu);line-height:1.3}
+.scene dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:6px 16px;margin:0;font-size:14.5px;line-height:1.6}
+.scene dt{font-family:var(--display);font-weight:700;color:var(--mut)}
+.scene dd{margin:0}
+.rules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.rules .card{gap:8px;padding:20px}
+.rules .n{font-family:var(--display);font-weight:900;font-size:26px;color:var(--pu);line-height:1.1}
+.rules p{font-size:14.5px}
+
+/* unity vs variety */
+.uv{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.uv .card h3{display:flex;align-items:center;gap:10px}
+.uv ul{margin:0;padding:0 1.1em 0 0;display:flex;flex-direction:column;gap:8px;font-size:15px}
+.dot{width:12px;height:12px;border-radius:50%;display:inline-block}
+
+/* approval */
+.approve{background:var(--pu);color:var(--cr);border-radius:20px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.approve h2,.approve h3{color:var(--cr)}
+.approve ol,.approve ul{margin:0;padding:0 1.2em 0 0;display:flex;flex-direction:column;gap:10px;font-size:15.5px}
+.approve li::marker{color:var(--or);font-weight:800}
+.approve .mutc{color:#DCCBE6}
+
+@media (max-width:860px){
+  .hero,.board,.board.wide,.sys,.uv,.approve{grid-template-columns:1fr}
+  .series{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rules{grid-template-columns:1fr}
+  .motifs{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:520px){
+  .scene{grid-template-columns:1fr}
+  .scene .fr{max-width:180px}
+  .stories{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .timeline{font-size:11px}
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+  <symbol id="i-bag" viewBox="0 0 100 100"><path style="fill:none;stroke:var(--s)" d="M37 37V27a13 13 0 0 1 26 0v10"/><path style="fill:var(--f);stroke:var(--s)" d="M18 37h64l-4 53a5 5 0 0 1-5 5H27a5 5 0 0 1-5-5z"/></symbol>
+  <symbol id="i-shoe" viewBox="0 0 100 100"><path style="fill:var(--f);stroke:var(--s)" d="M8 80V56c0-6 4-9 9-9h15l9 11c7 7 15 9 25 10l17 3c6 1 9 5 9 9z"/><path style="fill:none;stroke:var(--l)" d="M8 72h84M44 60l6-5M52 64l6-5"/></symbol>
+  <symbol id="i-dress" viewBox="0 0 100 100"><path style="fill:var(--f);stroke:var(--s)" d="M40 10h20l-1 24 21 58H20l21-58z"/><path style="fill:none;stroke:var(--l)" d="M42 36h16"/></symbol>
+  <symbol id="i-hbag" viewBox="0 0 100 100"><path style="fill:none;stroke:var(--s)" d="M32 46c0-30 36-30 36 0"/><path style="fill:var(--f);stroke:var(--s)" d="M17 46h66a5 5 0 0 1 5 5v35a6 6 0 0 1-6 6H18a6 6 0 0 1-6-6V51a5 5 0 0 1 5-5z"/><rect x="44" y="56" width="12" height="9" rx="2" style="fill:var(--a);stroke:var(--s)"/></symbol>
+  <symbol id="i-laptop" viewBox="0 0 100 100"><rect x="19" y="20" width="62" height="43" rx="4" style="fill:var(--f);stroke:var(--s)"/><rect x="26" y="27" width="48" height="29" rx="2" style="fill:var(--a);stroke:none"/><path style="fill:var(--f);stroke:var(--s)" d="M7 68h86l-5 10H12z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 100 100"><path style="fill:var(--f);stroke:var(--s)" d="M50 30c-11-8-24-10-38-7v58c14-3 27-1 38 7 11-8 24-10 38-7V23c-14-3-27-1-38 7z"/><path style="fill:none;stroke:var(--l)" d="M50 30v58M22 36c8-1 15 0 21 3M22 48c8-1 15 0 21 3M57 39c6-3 13-4 21-3"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 100 100"><path style="fill:none;stroke:var(--a)" d="M50 4v6M16 18l5 5M84 18l-5 5M6 46h6M88 46h6"/><path style="fill:var(--a);stroke:var(--s)" d="M50 18a25 25 0 0 0-15 45c3 3 5 6 5 10h20c0-4 2-7 5-10a25 25 0 0 0-15-45z"/><rect x="39" y="76" width="22" height="13" rx="4" style="fill:var(--f);stroke:var(--s)"/></symbol>
+  <symbol id="i-cert" viewBox="0 0 100 100"><rect x="10" y="18" width="80" height="56" rx="5" style="fill:var(--f);stroke:var(--s)"/><path style="fill:none;stroke:var(--l)" d="M22 34h42M22 45h52M22 56h26"/><path style="fill:var(--a);stroke:var(--s)" d="M64 76l-4 16 10-6 10 6-4-16"/><circle cx="70" cy="68" r="11" style="fill:var(--a);stroke:var(--s)"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 100 100"><path style="fill:var(--f);stroke:var(--s)" d="M70 10l20 20-52 52-24 5 5-24z"/><path style="fill:none;stroke:var(--l)" d="M62 18l20 20M24 62l14 14"/></symbol>
+  <symbol id="i-play" viewBox="0 0 100 100"><rect x="10" y="20" width="80" height="60" rx="12" style="fill:var(--f);stroke:var(--s)"/><path style="fill:var(--l);stroke:var(--s)" d="M42 36v28l23-14z"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 100 100"><path style="fill:var(--f);stroke:var(--s)" d="M44 8c4 24 11 32 34 36-23 4-30 12-34 36-4-24-11-32-34-36 23-4 30-12 34-36z"/><path style="fill:var(--a);stroke:var(--s)" d="M80 62c2 9 5 12 13 14-8 2-11 5-13 14-2-9-5-12-13-14 8-2 11-5 13-14z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 100 100"><path style="fill:none;stroke:var(--or);stroke-width:6" d="M92 40C70 12 34 12 12 44"/><path style="fill:none;stroke:var(--or);stroke-width:6" d="M10 24l2 20 20-3"/></symbol>
+</defs>
+</svg>
+
+<div class="page" dir="rtl" lang="ar">
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div style="display:flex;flex-direction:column;gap:18px">
+    <span class="status"><i></i> مقترح للاعتماد · التصور الإبداعي</span>
+    <h1><span class="ltr">SALINA BLACK FRIDAY</span><br>استثمري في <span class="or">نفسك</span></h1>
+    <p class="lede">التصور البصري الكامل للحملة قبل التنفيذ: الفكرة والنظام البصري والـ Key Visual وأول إعلان وسلسلة البوستات والستوريز والفيديو الرئيسي. كل الرسومات هنا اسكتشات توضيحية للتكوين والإحساس، مش التصميم النهائي.</p>
+    <p class="cap">مكان اللوجو معلَّم بإطار منقّط لحد ما يوصلني ملف لوجو Salina Academy.</p>
+  </div>
+  <div class="bigidea">
+    <span class="eyebrow" style="color:var(--or)">الفكرة الكبيرة</span>
+    <div class="q">نفس الشنطة.<br>اللي جواها اتغيّر.</div>
+    <p>شنطة الشوبينج هي أشهر رمز في البلاك فرايداي. مش هنحاربها، هنستعيرها: الشنطة تفضل، بس بدل الجزمة والبلوزة يطلع منها لابتوب وكتاب ولمبة. الجمهور يفهم النكتة في ثانية، والرسالة توصل من غير ما نوعظ.</p>
+  </div>
+</header>
+
+<!-- ============ 1. IDEA → IDENTITY ============ -->
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">١ · من الفكرة للهوية</span>
+    <h2>ثلاث قواعد بصرية تحوّل الفكرة لهوية</h2>
+    <p class="mut">بدل ما نعتمد على الديكور، الهوية مبنية على ثلاث قواعد بسيطة. لو اتطبقت صح، أي تصميم في الحملة هيتعرف إنه من Salina من غير ما نقرأ الاسم.</p>
+  </div>
+  <div class="sys">
+    <div class="card">
+      <h3>القاعدة ١: الخط مقابل المصمت</h3>
+      <div class="vs">
+        <div style="background:var(--cr)">
+          <div class="row"><b class="ic inl ol" data-i="shoe"></b><b class="ic inl ol" data-i="dress"></b><b class="ic inl ol" data-i="hbag"></b></div>
+          <span><b>الشوبينج القديم</b><br>رسم بالخط فقط، بنفسجي فاتح</span>
+        </div>
+        <div style="background:var(--cr)">
+          <div class="row"><b class="ic inl so" data-i="laptop"></b><b class="ic inl so" data-i="book"></b><b class="ic inl so" data-i="bulb"></b></div>
+          <span><b>الاستثمار في نفسك</b><br>مصمت، بنفسجي غامق وبرتقالي</span>
+        </div>
+      </div>
+      <p>المقارنة بتتقال بالرسم نفسه: الحاجات اللي "ملهاش وزن" شفافة وخفيفة، والمهارات ليها ثقل ولون. ده بيخلّي فيديو المقارنة مفهوم من غير تعليق صوتي، زي ما الـ brief طالب.</p>
+    </div>
+    <div class="card">
+      <h3>القاعدة ٢: البرتقالي لحاجة واحدة بس</h3>
+      <div class="spec" style="background:var(--cr);border-radius:12px;padding:18px">
+        <span class="a" style="font-size:34px">كل سنة في <span class="ltr">Black Friday</span><span class="or">...</span></span>
+        <span class="a" style="font-size:30px;color:var(--ch)">عشان تفرّحي نفسك<span class="or">؟</span></span>
+        <span class="a" style="font-size:30px">جربي تستثمري في <span class="or">نفسك</span>.</span>
+      </div>
+      <p>في كل تصميم، البرتقالي بيروح لعنصر واحد: الكلمة أو العلامة اللي شايلة المعنى. وفي البوستات الثلاثة الأولى بيمشي على علامات الترقيم: <b class="or">...</b> ثم <b class="or">؟</b> ثم <b class="or">نفسك</b>. يعني الحكاية نفسها بتتحل في التايبوجرافي: تشويق، سؤال، إجابة.</p>
+    </div>
+    <div class="card">
+      <h3>القاعدة ٣: الشنطة إطار، مش ديكور</h3>
+      <div class="motifs">
+        <div><div class="m"><b class="ic so" data-i="bag" style="width:56px;height:56px;position:relative"></b></div>شنطة Salina<br><span class="mut">إطار للكورسات والعروض</span></div>
+        <div><div class="m"><div class="tg" style="--hole:var(--cr);background:var(--or);width:78%;height:46%;color:var(--pu);font-weight:900;font-size:13px">استثمري</div></div>التيكت<br><span class="mut">الخصم والـ CTA</span></div>
+        <div><div class="m"><div class="rc" style="position:relative;width:70%;height:70%;padding:6px;font-size:9px;box-shadow:0 0 0 1px var(--rule)"><div style="height:3px;background:var(--rule);margin:4px 0"></div><div style="height:3px;background:var(--rule);margin:4px 0;width:70%"></div><div style="height:3px;background:var(--vi);margin:4px 0;width:50%"></div></div></div>الفاتورة<br><span class="mut">مساحة الكوميديا</span></div>
+        <div><div class="m"><div class="dots" style="position:relative"><i style="width:12px;height:12px"></i><i style="width:12px;height:12px"></i><i style="width:12px;height:12px"></i></div></div>النقط الثلاث<br><span class="mut">التشويق والانتقالات</span></div>
+      </div>
+      <p>أربع أشكال بس، كلها من عالم الشوبينج: الشنطة والتيكت والفاتورة والنقط. كل شكل له وظيفة ثابتة، فمفيش عنصر بيظهر عشوائي. والأشكال الهندسية (دوائر، مستطيلات مدوّرة، أسهم) بتيجي منها.</p>
+    </div>
+    <div class="card">
+      <h3>الألوان والخطوط</h3>
+      <div class="swatches">
+        <div style="flex:58;background:var(--cr);color:var(--ch);box-shadow:inset 0 0 0 1px var(--rule)">كريمي<span>الأرضية · ~٦٠٪</span></div>
+        <div style="flex:24;background:var(--pu);color:var(--cr)">بنفسجي<span>البطل · ~٢٥٪</span></div>
+        <div style="flex:9;background:var(--vi);color:var(--ch)">فاتح<span>الخط</span></div>
+        <div style="flex:5;background:var(--or);color:var(--ch)">برتقالي<span>لمسة</span></div>
+        <div style="flex:4;background:var(--ch);color:var(--cr)"> </div>
+      </div>
+      <div class="spec">
+        <span class="a">استثمري</span>
+        <small>Tajawal · ExtraBold/Black: للعناوين. حروفها هندسية وبتتماشى مع الدوائر والأشكال المدوّرة.</small>
+        <span class="b">جربي تتعلمي مهارة جديدة تفضل معاكي.</span>
+        <small>Cairo · Regular/SemiBold: للنص المساعد. أوضح وأسهل في القراءة على الموبايل في الأحجام الصغيرة.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. KEY VISUAL ============ -->
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">٢ · الـ Key Visual</span>
+    <h2>شنطة Salina بتطلّع مهارات</h2>
+  </div>
+  <div class="board wide">
+    <div>
+      <div class="fr bg-cr" aria-label="اسكتش الـ Key Visual">
+        <div class="t" style="top:8cqw;right:8cqw;font-weight:700;font-size:3.2cqw;letter-spacing:.35cqw;color:var(--pu)"><span class="ltr">SALINA BLACK FRIDAY</span></div>
+        <div class="t" style="top:14cqw;right:7cqw">
+          <div style="font-weight:900;font-size:17cqw;color:var(--pu)">استثمري</div>
+          <div style="font-weight:900;font-size:17cqw;color:var(--ch)">في <span class="or">نفسك</span></div>
+        </div>
+        <b class="ic ol" data-i="shoe" style="left:3cqw;top:70cqw;width:18cqw;height:18cqw;transform:rotate(-18deg)"></b>
+        <b class="ic ol" data-i="dress" style="right:4cqw;top:60cqw;width:16cqw;height:16cqw;transform:rotate(12deg)"></b>
+        <b class="ic ol" data-i="hbag" style="left:5cqw;top:96cqw;width:17cqw;height:17cqw;transform:rotate(8deg)"></b>
+        <b class="ic ol" data-i="bag" style="right:3cqw;top:92cqw;width:16cqw;height:16cqw;transform:rotate(-10deg)"></b>
+        <b class="ic so" data-i="laptop" style="left:27cqw;top:60cqw;width:24cqw;height:24cqw;transform:rotate(-12deg)"></b>
+        <b class="ic so" data-i="book" style="left:43cqw;top:56cqw;width:19cqw;height:19cqw;transform:rotate(5deg)"></b>
+        <b class="ic so" data-i="bulb" style="left:57cqw;top:58cqw;width:17cqw;height:17cqw;transform:rotate(14deg)"></b>
+        <b class="ic so" data-i="bag" style="left:24cqw;top:62cqw;width:52cqw;height:52cqw"></b>
+        <div class="t" style="left:24cqw;width:52cqw;top:93cqw;text-align:center;color:var(--cr);font-weight:800;font-size:5cqw"><span class="ltr">Salina</span></div>
+        <div class="lk"><span class="ph">اللوجو</span></div>
+        <div class="tg" style="left:7cqw;bottom:4.6cqw;width:30cqw;height:8cqw;background:var(--or);color:var(--pu);font-weight:800;font-size:3cqw"><span class="ltr">BLACK FRIDAY</span></div>
+      </div>
+      <span class="cap">بوست ١٠٨٠ × ١٣٥٠ · اسكتش تكوين</span>
+    </div>
+    <div>
+      <h3>ليه التكوين ده؟</h3>
+      <ul class="why">
+        <li><b>العنوان هو أكبر عنصر في الصورة.</b> "استثمري في نفسك" بياخد تقريبًا ثلث المساحة، فيتقري من الفيد قبل ما حد يوقف عنده.</li>
+        <li><b>الشنطة في النص وبتطلّع لابتوب وكتاب ولمبة.</b> دي الفكرة كلها في صورة واحدة، ومش محتاجة كلام يشرحها.</li>
+        <li><b>الجزمة والفستان والشنطة الصغيرة على الأطراف.</b> مرسومين بالخط ونصهم خارج الكادر، كأنهم خارجين من المشهد. ده الهزار الهادي: ماشتمناش الشوبينج، بس سبناه يمشي.</li>
+        <li><b>الأرضية كريمي والمساحة فاضية.</b> عكس شكل البلاك فرايداي الأسود والأحمر المعتاد، فالبوست هيبان مختلف في وسط إعلانات الخصومات.</li>
+        <li><b>كل اللي جاي بيتبني من هنا.</b> الـ Key Visual ده هو المرجع لباقي الحملة: نفس الشنطة، ونفس أسلوب الرسم، ونفس مكان اللوجو.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. FIRST AD ============ -->
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">٣ · أول تصميم إعلاني</span>
+    <h2>التيزر: "كل سنة في Black Friday..."</h2>
+    <p class="mut">أول بوست مايكشفش الفكرة. بيعرض موقف كلنا عشناه، ويسيب النقط الثلاث سؤال مفتوح.</p>
+  </div>
+  <div class="board">
+    <div>
+      <div class="fr bg-cr" aria-label="اسكتش بوست التيزر">
+        <div class="t" style="top:10cqw;right:8cqw">
+          <div style="font-weight:800;font-size:8cqw;color:var(--ch)">كل سنة في</div>
+          <div style="font-weight:900;font-size:13cqw;color:var(--pu);margin-top:1cqw"><span class="ltr">Black Friday</span></div>
+        </div>
+        <div class="dots" style="top:36cqw;right:8cqw"><i></i><i></i><i></i></div>
+        <b class="ic ol" data-i="bag" style="left:7cqw;top:86cqw;width:30cqw;height:30cqw;transform:rotate(-3deg)"></b>
+        <b class="ic ol" data-i="bag" style="left:31cqw;top:89cqw;width:26cqw;height:26cqw;transform:rotate(5deg)"></b>
+        <b class="ic ol" data-i="bag" style="left:14cqw;top:65cqw;width:26cqw;height:26cqw;transform:rotate(7deg)"></b>
+        <b class="ic ol" data-i="hbag" style="left:35cqw;top:69cqw;width:22cqw;height:22cqw;transform:rotate(-9deg)"></b>
+        <b class="ic ol" data-i="shoe" style="left:20cqw;top:52cqw;width:20cqw;height:20cqw;transform:rotate(-14deg)"></b>
+        <b class="ic ol" data-i="bag" style="left:39cqw;top:50cqw;width:16cqw;height:16cqw;transform:rotate(20deg)"></b>
+        <div class="t" style="bottom:12cqw;right:8cqw;font-family:var(--body);font-size:3.4cqw;color:var(--mut);line-height:1.5">قريبًا من<br><b style="color:var(--pu)">Salina Academy</b></div>
+        <div class="lk"><span class="ph">اللوجو</span></div>
+        <span class="pin" style="top:8cqw;right:62cqw">١</span>
+        <span class="pin" style="top:34cqw;right:22cqw">٢</span>
+        <span class="pin" style="top:47cqw;left:56cqw">٣</span>
+        <span class="pin" style="bottom:20cqw;right:30cqw">٤</span>
+      </div>
+      <span class="cap">بوست ١٠٨٠ × ١٣٥٠ · الأرقام بتشاور على الشرح اللي جنبه</span>
+    </div>
+    <div>
+      <h3>تشريح التصميم</h3>
+      <ol class="anat">
+        <li><b>العنوان على اليمين ومحاذي فوق.</b> بنبدأ من اتجاه القراءة العربي، و"Black Friday" بالإنجليزي أكبر وبالبنفسجي لأنها الكلمة اللي الناس بتدوّر عليها وبتتعرف عليها على طول.</li>
+        <li><b>النقط الثلاث البرتقالي.</b> هي العنصر الملوّن الوحيد في البوست. بتقول "لسه في كلام"، ولونها بيشد العين للجملة الناقصة.</li>
+        <li><b>برج الشنط المايل.</b> شنط فوق بعض، والجزمة في الأعلى، والشنطة الصغيرة على وشك تقع. ده الهزار: مبالغة خفيفة الكل يتعرف عليها، من غير كاريكاتير. وكله بالخط بس، عشان اللون "لسه ماجاش".</li>
+        <li><b>توقيع هادي.</b> "قريبًا من Salina Academy" واللوجو صغيرين. التيزر ماينفعش يبيع، بيفتح الكلام بس.</li>
+      </ol>
+      <p class="mut">في الموشن، البرج ده هيتبني شنطة شنطة على الإيقاع، والشنطة الصغيرة اللي فوق تتهز في الآخر. ده بيدّي للبوست نسخة Reel قصيرة جاهزة.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. SERIES ============ -->
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">٤ · سلسلة البوستات</span>
+    <h2>سبع بوستات، حكاية واحدة</h2>
+    <p class="mut">الترتيب هو ترتيب النشر. كل بوست ليه فكرة تكوين مختلفة (برج، فاتورة، تحوّل، تيكت، رفّ، إطار، رقم)، بس بنفس الألوان والخط والقواعد الثلاث.</p>
+  </div>
+  <div class="series">
+    <!-- 1 teaser -->
+    <figure>
+      <div class="fr bg-cr">
+        <div class="t" style="top:10cqw;right:8cqw"><div style="font-weight:800;font-size:8cqw">كل سنة في</div><div style="font-weight:900;font-size:13cqw;color:var(--pu)"><span class="ltr">Black Friday</span></div></div>
+        <div class="dots" style="top:36cqw;right:8cqw"><i></i><i></i><i></i></div>
+        <b class="ic ol" data-i="bag" style="left:7cqw;top:86cqw;width:30cqw;height:30cqw;transform:rotate(-3deg)"></b>
+        <b class="ic ol" data-i="bag" style="left:31cqw;top:89cqw;width:26cqw;height:26cqw;transform:rotate(5deg)"></b>
+        <b class="ic ol" data-i="bag" style="left:14cqw;top:65cqw;width:26cqw;height:26cqw;transform:rotate(7deg)"></b>
+        <b class="ic ol" data-i="hbag" style="left:35cqw;top:69cqw;width:22cqw;height:22cqw;transform:rotate(-9deg)"></b>
+        <b class="ic ol" data-i="shoe" style="left:20cqw;top:52cqw;width:20cqw;height:20cqw;transform:rotate(-14deg)"></b>
+        <div class="lk"><span class="ph">اللوجو</span></div>
+      </div>
+      <figcaption><span class="k">١ · تيزر</span><b>برج الشنط</b>بيعرض الموقف بس، والنقط بتسيب سؤال.</figcaption>
+    </figure>
+    <!-- 2 twist / receipt -->
+    <figure>
+      <div class="fr bg-pu">
+        <div class="t" style="top:9cqw;right:8cqw;color:var(--cr)"><div style="font-weight:800;font-size:7.4cqw">بتشتري حاجات كتير</div><div style="font-weight:900;font-size:9.4cqw;margin-top:1.5cqw">عشان تفرّحي نفسك<span class="or">؟</span></div></div>
+        <div class="rc" style="left:16cqw;top:37cqw;width:68cqw;transform:rotate(-3deg)">
+          <div class="h">فاتورة <span class="ltr">Black Friday</span></div>
+          <hr>
+          <div class="rr"><span>جزمة شبه اللي عندك</span><span>×١</span></div>
+          <div class="rr"><span>شنطة عشان تليق ع الجزمة</span><span>×١</span></div>
+          <div class="rr"><span>بلوزة لسه بالتيكت</span><span>×٣</span></div>
+          <div class="rr"><span>حاجة مش فاكرة جبتها ليه</span><span>×١</span></div>
+          <hr>
+          <div class="rr tot"><span>مدة الفرحة</span><span>أسبوع تقريبًا</span></div>
+        </div>
+        <div class="lk light"><span class="ph">اللوجو</span></div>
+      </div>
+      <figcaption><span class="k">٢ · التويست</span><b>الفاتورة</b>الهزار في البنود، مش في الرسم. كل واحدة هتلاقي نفسها في سطر.</figcaption>
+    </figure>
+    <!-- 3 main -->
+    <figure>
+      <div class="fr bg-cr">
+        <div class="t" style="top:9cqw;right:8cqw"><div style="font-weight:700;font-size:7cqw;color:var(--ch)">طب المرة دي...</div><div style="font-weight:900;font-size:11.5cqw;color:var(--pu);margin-top:2cqw">جربي تستثمري</div><div style="font-weight:900;font-size:11.5cqw;color:var(--pu)">في <span class="or">نفسك</span>.</div></div>
+        <b class="ic ol" data-i="bag" style="right:8cqw;top:66cqw;width:32cqw;height:32cqw"></b>
+        <b class="ic" data-i="arrow" style="left:38cqw;top:62cqw;width:24cqw;height:24cqw"></b>
+        <b class="ic so" data-i="laptop" style="left:9cqw;top:55cqw;width:20cqw;height:20cqw;transform:rotate(-10deg)"></b>
+        <b class="ic so" data-i="bulb" style="left:25cqw;top:52cqw;width:15cqw;height:15cqw;transform:rotate(12deg)"></b>
+        <b class="ic so" data-i="bag" style="left:6cqw;top:60cqw;width:40cqw;height:40cqw"></b>
+        <div class="lk"><span class="ph">اللوجو</span></div>
+      </div>
+      <figcaption><span class="k">٣ · الرسالة</span><b>التحوّل</b>شنطة بالخط بتتحوّل لشنطة مصمتة مليانة مهارات. أهم بوست في السلسلة.</figcaption>
+    </figure>
+    <!-- 4 identity -->
+    <figure>
+      <div class="fr bg-pu">
+        <div style="position:absolute;left:50cqw;top:0;width:.5cqw;height:16cqw;background:var(--cr);opacity:.7"></div>
+        <div class="tg v" style="--hole:var(--pu);left:29cqw;top:12cqw;width:42cqw;height:52cqw;background:var(--or);color:var(--pu);transform:rotate(5deg);transform-origin:50% 0;padding-top:12cqw">
+          <span style="font-weight:900;font-size:7.4cqw;line-height:1.1;text-align:center">استثمري<br>في نفسك</span>
+        </div>
+        <div class="t" style="top:74cqw;left:0;right:0;text-align:center;color:var(--cr)"><div style="font-weight:900;font-size:18cqw"><span class="ltr">SALINA</span></div><div style="font-weight:800;font-size:7.6cqw;color:var(--vi);letter-spacing:.8cqw;margin-top:1cqw"><span class="ltr">BLACK FRIDAY</span></div></div>
+        <div class="lk light" style="right:auto;left:50%;transform:translateX(-50%)"><span class="ph">اللوجو</span></div>
+      </div>
+      <figcaption><span class="k">٤ · الهوية</span><b>التيكت المعلّق</b>تايبوجرافي بس. السلوجن مكتوب على تيكت السعر، لأن ده "الشراء" الوحيد اللي بنقترحه.</figcaption>
+    </figure>
+    <!-- 5 categories -->
+    <figure>
+      <div class="fr bg-cr">
+        <div class="t" style="top:9cqw;right:8cqw"><div style="font-weight:800;font-size:8cqw">إيه اللي نفسك</div><div style="font-weight:900;font-size:12.5cqw;color:var(--pu)">تتعلميه<span class="or">؟</span></div></div>
+        <div class="cats" style="position:absolute;top:39cqw;left:7cqw;right:7cqw;display:grid;grid-template-columns:1fr 1fr;gap:3cqw">
+          <div class="tg" style="position:relative;height:19cqw;background:var(--pu);color:var(--cr);font-weight:700;font-size:4.4cqw"><b class="ic inl sc" data-i="pen" style="width:8cqw;height:8cqw"></b>تصميم</div>
+          <div class="tg" style="position:relative;height:19cqw;background:var(--vi);color:var(--ch);font-weight:700;font-size:4.4cqw"><b class="ic inl so" data-i="play" style="width:8cqw;height:8cqw"></b>صناعة الفيديو</div>
+          <div class="tg" style="position:relative;height:19cqw;background:var(--vi);color:var(--ch);font-weight:700;font-size:4cqw"><b class="ic inl so" data-i="spark" style="width:8cqw;height:8cqw"></b>الذكاء الاصطناعي</div>
+          <div class="tg" style="position:relative;height:19cqw;background:var(--pu);color:var(--cr);font-weight:700;font-size:4.4cqw"><b class="ic inl sc" data-i="laptop" style="width:8cqw;height:8cqw"></b>الفريلانس</div>
+          <div class="tg" style="position:relative;height:19cqw;background:var(--pu);color:var(--cr);font-weight:700;font-size:4.4cqw"><b class="ic inl sc" data-i="book" style="width:8cqw;height:8cqw"></b>كتابة المحتوى</div>
+          <div class="tg" style="position:relative;height:19cqw;background:var(--vi);color:var(--ch);font-weight:700;font-size:4.4cqw"><b class="ic inl so" data-i="bulb" style="width:8cqw;height:8cqw"></b>تطوير الذات</div>
+        </div>
+        <div class="lk"><span class="ph">اللوجو</span></div>
+      </div>
+      <figcaption><span class="k">٥ · المجالات</span><b>رفّ التيكتات</b>كل مجال على تيكت كأنه منتج على الرف. المجالات هنا أمثلة من الـ brief.</figcaption>
+    </figure>
+    <!-- 6 course template -->
+    <figure>
+      <div class="fr bg-cr">
+        <b class="ic so" data-i="bag" style="left:10cqw;top:10cqw;width:80cqw;height:80cqw"></b>
+        <div class="t" style="top:48cqw;left:22cqw;right:22cqw;text-align:center;color:var(--cr)">
+          <div style="font-weight:700;font-size:3.8cqw;color:var(--or)">[ورشة / كورس]</div>
+          <div style="font-weight:900;font-size:8cqw;margin-top:2cqw;line-height:1.15">[اسم الكورس<br>هنا]</div>
+          <div style="font-family:var(--body);font-size:3.8cqw;margin-top:3cqw">مع [اسم المدرّبة]</div>
+          <div style="font-family:var(--body);font-size:3.3cqw;color:var(--vi);margin-top:1cqw">[المدة] · [أونلاين / حضوري]</div>
+        </div>
+        <div class="tg" style="--hole:var(--cr);left:8cqw;top:26cqw;width:28cqw;height:13cqw;background:var(--or);color:var(--pu);font-weight:900;font-size:4.4cqw;transform:rotate(-12deg)">[الخصم]</div>
+        <div class="t" style="top:97cqw;left:0;right:0;text-align:center;font-weight:800;font-size:5cqw;color:var(--pu)">احجزي مكانك</div>
+        <div class="lk"><span class="ph">اللوجو</span></div>
+      </div>
+      <figcaption><span class="k">٦ · تمبلت كورس</span><b>الشنطة إطار</b>الكورس هو اللي "جوه الشنطة". كل اللي بين أقواس بيتغير، والخصم على التيكت.</figcaption>
+    </figure>
+    <!-- 7 countdown -->
+    <figure>
+      <div class="fr bg-or">
+        <div class="t" style="top:8cqw;right:8cqw;color:var(--pu)"><div style="font-weight:800;font-size:9cqw">فاضل</div></div>
+        <div class="t" style="top:26cqw;right:7cqw;color:var(--pu);font-weight:900;font-size:50cqw;line-height:.8">٣</div>
+        <div class="t" style="top:76cqw;right:8cqw;color:var(--pu);font-weight:900;font-size:10cqw">أيام</div>
+        <div class="t" style="top:92cqw;right:8cqw;color:var(--ch);font-family:var(--body);font-size:3.8cqw">على عروض <span class="ltr">Salina Black Friday</span></div>
+        <b class="ic sc" data-i="bag" style="left:7cqw;top:56cqw;width:34cqw;height:34cqw;transform:rotate(-6deg)"></b>
+        <div class="lk" style="color:var(--pu)"><span class="ph">اللوجو</span></div>
+      </div>
+      <figcaption><span class="k">٧ · العروض والعدّ</span><b>الرقم بطل</b>البرتقالي بيبقى الأرضية لأول مرة، لأن الاستعجال محتاج طاقة. الرقم مثال، والأرقام الحقيقية منك.</figcaption>
+    </figure>
+    <!-- rhythm card -->
+    <figure style="justify-content:center">
+      <div class="card" style="gap:12px">
+        <h3>إيقاع الفيد</h3>
+        <div class="rhythm"><i style="background:var(--cr)"></i><i style="background:var(--pu)"></i><i style="background:var(--cr)"></i><i style="background:var(--pu)"></i><i style="background:var(--cr)"></i><i style="background:var(--cr)"></i><i style="background:var(--or)"></i></div>
+        <p style="font-size:14px">الأرضية بتتبادل بين كريمي وبنفسجي، فالبروفايل يبان متناسق ومش رتيب. البرتقالي محجوز لبوستات العروض والعد التنازلي، عشان لما يظهر الجمهور يفهم إن ده وقت التحرك.</p>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ STORIES ============ -->
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">٤ب · الستوريز</span>
+    <h2>الستوريز بتتكلم مع المتابعة</h2>
+    <p class="mut">البوست بيقول الفكرة، والستوري بيخلّي المتابعة تشارك: تصويت، أو هزار تقدر تعيد نشره، أو تذكير بالموعد.</p>
+  </div>
+  <div class="stories">
+    <figure style="margin:0;display:flex;flex-direction:column;gap:10px">
+      <div class="fr s bg-cr">
+        <div class="t" style="top:22cqw;left:0;right:0;text-align:center"><div style="font-family:var(--body);font-size:5cqw;color:var(--mut)">سؤال سريع</div><div style="font-weight:800;font-size:11cqw;color:var(--vi);margin-top:5cqw">شنطة جديدة</div><div style="font-weight:700;font-size:7cqw;color:var(--ch);margin:2cqw 0">ولا</div><div style="font-weight:900;font-size:12.5cqw;color:var(--pu)">مهارة جديدة<span class="or">؟</span></div></div>
+        <div style="position:absolute;top:96cqw;left:10cqw;right:10cqw;display:grid;grid-template-columns:1fr 1fr;gap:4cqw">
+          <div style="background:#fff;border-radius:5cqw;padding:5cqw 2cqw;display:flex;flex-direction:column;align-items:center;gap:2cqw;font:700 4.6cqw var(--display);box-shadow:0 1cqw 4cqw rgba(48,38,58,.12)"><b class="ic inl ol" data-i="bag" style="width:20cqw;height:20cqw"></b>شنطة</div>
+          <div style="background:#fff;border-radius:5cqw;padding:5cqw 2cqw;display:flex;flex-direction:column;align-items:center;gap:2cqw;font:700 4.6cqw var(--display);color:var(--pu);box-shadow:0 1cqw 4cqw rgba(48,38,58,.12)"><b class="ic inl so" data-i="laptop" style="width:20cqw;height:20cqw"></b>مهارة</div>
+        </div>
+        <div class="lk" style="bottom:8cqw"><span class="ph">اللوجو</span></div>
+      </div>
+      <span class="cap">ستوري تصويت · ١٠٨٠ × ١٩٢٠</span>
+    </figure>
+    <figure style="margin:0;display:flex;flex-direction:column;gap:10px">
+      <div class="fr s bg-pu">
+        <div class="t" style="top:14cqw;right:8cqw;color:var(--cr);font-weight:900;font-size:9cqw">فاتورتك السنة اللي فاتت<span class="or">؟</span></div>
+        <div class="rc" style="left:12cqw;top:36cqw;width:76cqw;transform:rotate(2deg)">
+          <div class="h">فاتورة <span class="ltr">Black Friday</span></div><hr>
+          <div class="rr"><span>جزمة شبه اللي عندك</span><span>×١</span></div>
+          <div class="rr"><span>شنطة عشان تليق ع الجزمة</span><span>×١</span></div>
+          <div class="rr"><span>بلوزة لسه بالتيكت</span><span>×٣</span></div>
+          <div class="rr"><span>ساعة ماتلبستش</span><span>×١</span></div>
+          <div class="rr"><span>حاجة مش فاكرة جبتها ليه</span><span>×١</span></div><hr>
+          <div class="rr tot"><span>مدة الفرحة</span><span>أسبوع تقريبًا</span></div>
+        </div>
+        <div class="stamp" style="left:36cqw;top:62cqw">مش محتاجاها</div>
+        <div class="t" style="top:128cqw;left:0;right:0;text-align:center;color:var(--cr)"><div style="font-weight:700;font-size:6cqw">المرة دي</div><div style="font-weight:900;font-size:10cqw;margin-top:2cqw">استثمري في <span class="or">نفسك</span></div></div>
+        <div class="lk light" style="bottom:8cqw;right:auto;left:50%;transform:translateX(-50%)"><span class="ph">اللوجو</span></div>
+      </div>
+      <span class="cap">ستوري قابل لإعادة النشر · ختم برتقالي</span>
+    </figure>
+    <figure style="margin:0;display:flex;flex-direction:column;gap:10px">
+      <div class="fr s bg-cr">
+        <div class="tg v" style="--hole:var(--cr);left:24cqw;top:16cqw;width:52cqw;height:66cqw;background:var(--or);color:var(--pu);padding-top:14cqw;transform:rotate(-4deg)">
+          <span style="font-weight:800;font-size:7cqw">آخر</span><span style="font-weight:900;font-size:17cqw;line-height:1">يوم</span>
+        </div>
+        <div style="position:absolute;left:50cqw;top:0;width:.5cqw;height:20cqw;background:var(--pu);opacity:.5"></div>
+        <div class="t" style="top:98cqw;left:0;right:0;text-align:center;color:var(--pu)"><div style="font-weight:900;font-size:9.5cqw">استثمري في نفسك</div><div style="font-family:var(--body);font-size:4.6cqw;color:var(--ch);margin-top:3cqw">قبل ما عروض <span class="ltr">Black Friday</span> تخلص</div></div>
+        <div style="position:absolute;top:134cqw;left:22cqw;right:22cqw;background:var(--pu);color:var(--cr);border-radius:99cqw;padding:3.4cqw;text-align:center;font:800 4.8cqw var(--display)">شوفي العروض</div>
+        <div class="lk" style="bottom:8cqw"><span class="ph">اللوجو</span></div>
+      </div>
+      <span class="cap">ستوري التذكير الأخير · مكان ستيكر الرابط</span>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 5. MAIN VIDEO ============ -->
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">٥ · الفيديو الرئيسي والموشن</span>
+    <h2>١٨ ثانية: الشنطة اللي بلعت الشوبينج</h2>
+    <p class="mut">فيديو رأسي ١٠٨٠ × ١٩٢٠ بدون تعليق صوتي. الحكاية كلها بتتحكي بالرسم والتايبوجرافي والصوت، وفيه انتقال واحد كبير في النص هو اللي هيفضل في الذاكرة.</p>
+  </div>
+  <div class="timeline" aria-label="الخط الزمني للفيديو">
+    <div style="flex:3;background:var(--vi);color:var(--ch)">الموقف · ٣ث</div>
+    <div style="flex:4;background:#8F62A8">المبالغة · ٤ث</div>
+    <div style="flex:2.5;background:var(--or);color:var(--pu)">الوقفة</div>
+    <div style="flex:4.5;background:var(--pu)">التحوّل · ٤٫٥ث</div>
+    <div style="flex:4;background:var(--ch)">الهوية · ٤ث</div>
+  </div>
+
+  <div class="scenes">
+    <div class="scene">
+      <div class="fr s bg-cr">
+        <div class="t" style="top:20cqw;right:8cqw"><div style="font-weight:800;font-size:9cqw">كل سنة في</div><div style="font-weight:900;font-size:14cqw;color:var(--pu)"><span class="ltr">Black Friday</span></div></div>
+        <div class="dots" style="top:50cqw;right:8cqw"><i></i><i></i><i></i></div>
+        <b class="ic ol" data-i="bag" style="left:30cqw;top:96cqw;width:40cqw;height:40cqw"></b>
+        <div style="position:absolute;left:49cqw;top:76cqw;width:.8cqw;height:14cqw;background:var(--vi);border-radius:1cqw"></div>
+        <div style="position:absolute;left:42cqw;top:80cqw;width:.8cqw;height:9cqw;background:var(--vi);border-radius:1cqw"></div>
+        <div style="position:absolute;left:56cqw;top:80cqw;width:.8cqw;height:9cqw;background:var(--vi);border-radius:1cqw"></div>
+      </div>
+      <div class="meta">
+        <div class="top"><span class="time">0:00 – 0:03</span><span class="eyebrow">مشهد ١</span></div>
+        <div class="line">كل سنة في <span class="ltr">Black Friday</span>...</div>
+        <dl>
+          <dt>الصورة</dt><dd>كادر كريمي فاضي. شنطة بالخط بتنزل من فوق وتقف بضغطة خفيفة، وبعدها شنطة تانية.</dd>
+          <dt>التايبوجرافي</dt><dd>العنوان بيظهر كلمة كلمة من اليمين بقناع (mask reveal)، والنقط الثلاث بتنط واحدة ورا التانية على الإيقاع.</dd>
+          <dt>الصوت</dt><dd>خشخشة شنطة ورق مع كل نزول، و"بوب" صغير مع كل نقطة. الموسيقى بتبدأ هادية.</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="scene">
+      <div class="fr s bg-cr">
+        <div class="t" style="top:14cqw;right:8cqw"><div style="font-weight:800;font-size:8cqw">بنشتري حاجات كتير</div><div style="font-weight:900;font-size:10cqw;color:var(--pu)">عشان نفرّح نفسنا!</div></div>
+        <b class="ic ol" data-i="bag" style="left:6cqw;top:120cqw;width:34cqw;height:34cqw;transform:rotate(-4deg)"></b>
+        <b class="ic ol" data-i="bag" style="left:36cqw;top:124cqw;width:30cqw;height:30cqw;transform:rotate(6deg)"></b>
+        <b class="ic ol" data-i="hbag" style="left:64cqw;top:126cqw;width:28cqw;height:28cqw"></b>
+        <b class="ic ol" data-i="bag" style="left:16cqw;top:94cqw;width:30cqw;height:30cqw;transform:rotate(8deg)"></b>
+        <b class="ic ol" data-i="shoe" style="left:48cqw;top:100cqw;width:26cqw;height:26cqw;transform:rotate(-10deg)"></b>
+        <b class="ic ol" data-i="dress" style="left:30cqw;top:66cqw;width:24cqw;height:24cqw;transform:rotate(-6deg)"></b>
+        <b class="ic ol" data-i="shoe" style="left:58cqw;top:72cqw;width:22cqw;height:22cqw;transform:rotate(18deg)"></b>
+        <b class="ic ol" data-i="bag" style="left:8cqw;top:62cqw;width:20cqw;height:20cqw;transform:rotate(-16deg)"></b>
+      </div>
+      <div class="meta">
+        <div class="top"><span class="time">0:03 – 0:07</span><span class="eyebrow">مشهد ٢</span></div>
+        <div class="line">بنشتري حاجات كتير عشان نفرّح نفسنا!</div>
+        <dl>
+          <dt>الصورة</dt><dd>الحاجات بتتراكم بسرعة بتزيد: شنط وجزم وفستان وشنطة يد، لحد ما الكادر يتملي ويبقى البرج على وشك يقع. دي المبالغة المقصودة.</dd>
+          <dt>الحركة</dt><dd>كل عنصر بيظهر بتكبير خفيف مع ارتداد بسيط (overshoot لحد ٨٪)، وكل عنصر بعد اللي قبله بـ ٧٠ مللي ثانية.</dd>
+          <dt>الصوت</dt><dd>صوت كاشير "تشينج" ثلاث مرات، كل مرة أسرع من اللي قبلها.</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="scene">
+      <div class="fr s bg-cr">
+        <div class="t" style="top:22cqw;left:0;right:0;text-align:center"><div style="font-weight:900;font-size:16cqw;color:var(--pu)">طب المرة دي<span class="or">؟</span></div></div>
+        <b class="ic ol" data-i="bag" style="left:22cqw;top:84cqw;width:56cqw;height:56cqw"></b>
+        <b class="ic ol" data-i="shoe" style="left:6cqw;top:66cqw;width:16cqw;height:16cqw;transform:rotate(30deg);opacity:.6"></b>
+        <b class="ic ol" data-i="dress" style="left:76cqw;top:64cqw;width:15cqw;height:15cqw;transform:rotate(-30deg);opacity:.6"></b>
+        <b class="ic ol" data-i="hbag" style="left:40cqw;top:60cqw;width:14cqw;height:14cqw;opacity:.6"></b>
+        <b class="ic" data-i="arrow" style="left:12cqw;top:76cqw;width:16cqw;height:16cqw;transform:rotate(-120deg)"></b>
+        <b class="ic" data-i="arrow" style="left:70cqw;top:76cqw;width:16cqw;height:16cqw;transform:scaleX(-1) rotate(-120deg)"></b>
+      </div>
+      <div class="meta">
+        <div class="top"><span class="time">0:07 – 0:09.5</span><span class="eyebrow">مشهد ٣</span></div>
+        <div class="line">طب المرة دي<span class="or">؟</span></div>
+        <dl>
+          <dt>الصورة</dt><dd>الكادر بيتجمد نص ثانية، وبعدها كل الحاجات بتتسحب لجوه شنطة واحدة كبيرة في النص. ده الانتقال الوحيد الكبير في الفيديو.</dd>
+          <dt>التايبوجرافي</dt><dd>السؤال بيظهر لوحده في النص، وعلامة الاستفهام البرتقالي بتلف ربع لفة وتقف.</dd>
+          <dt>الصوت</dt><dd>الموسيقى بتقف فجأة: نص ثانية سكوت هي الإفيه. وبعدها صوت "سحب" ناعم (whoosh) مع دخول الحاجات للشنطة.</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="scene">
+      <div class="fr s bg-cr">
+        <div class="t" style="top:18cqw;right:8cqw"><div style="font-weight:800;font-size:9cqw;color:var(--ch)">جربي تستثمري</div><div style="font-weight:900;font-size:17cqw;color:var(--pu)">في <span class="or">نفسك</span>.</div></div>
+        <b class="ic so" data-i="laptop" style="left:16cqw;top:74cqw;width:30cqw;height:30cqw;transform:rotate(-14deg)"></b>
+        <b class="ic so" data-i="book" style="left:40cqw;top:68cqw;width:24cqw;height:24cqw;transform:rotate(6deg)"></b>
+        <b class="ic so" data-i="bulb" style="left:60cqw;top:72cqw;width:22cqw;height:22cqw;transform:rotate(16deg)"></b>
+        <b class="ic so" data-i="cert" style="left:6cqw;top:62cqw;width:18cqw;height:18cqw;transform:rotate(-20deg)"></b>
+        <b class="ic so" data-i="bag" style="left:20cqw;top:88cqw;width:60cqw;height:60cqw"></b>
+      </div>
+      <div class="meta">
+        <div class="top"><span class="time">0:09.5 – 0:14</span><span class="eyebrow">مشهد ٤</span></div>
+        <div class="line">جربي تستثمري في نفسك.</div>
+        <dl>
+          <dt>الصورة</dt><dd>الشنطة بتتملي بنفسجي من تحت لفوق، وبعدها بيطلع منها على الإيقاع لابتوب وكتاب ولمبة وشهادة. اللمبة بتنوّر برتقالي.</dd>
+          <dt>التايبوجرافي</dt><dd>"جربي تستثمري" بتظهر بقناع من اليمين، و"نفسك" بتيجي بالبرتقالي بعدها بنبضة واحدة. ده أهم لحظة في الفيديو.</dd>
+          <dt>الصوت</dt><dd>"دينج" للمبة، و"بوب" دافي لكل عنصر، والموسيقى بترجع أقوى شوية.</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="scene">
+      <div class="fr s bg-pu">
+        <div style="position:absolute;left:50cqw;top:0;width:.6cqw;height:22cqw;background:var(--cr);opacity:.7"></div>
+        <div class="tg v" style="--hole:var(--pu);left:27cqw;top:18cqw;width:46cqw;height:58cqw;background:var(--or);color:var(--pu);transform:rotate(-5deg);transform-origin:50% 0;padding-top:14cqw"><span style="font-weight:900;font-size:8cqw;line-height:1.1;text-align:center">استثمري<br>في نفسك</span></div>
+        <div class="t" style="top:96cqw;left:0;right:0;text-align:center;color:var(--cr)"><div style="font-weight:900;font-size:19cqw"><span class="ltr">SALINA</span></div><div style="font-weight:800;font-size:8cqw;color:var(--vi);letter-spacing:.8cqw"><span class="ltr">BLACK FRIDAY</span></div></div>
+        <div class="lk light" style="bottom:12cqw;right:auto;left:50%;transform:translateX(-50%)"><span class="ph">اللوجو</span></div>
+      </div>
+      <div class="meta">
+        <div class="top"><span class="time">0:14 – 0:18</span><span class="eyebrow">مشهد ٥</span></div>
+        <div class="line"><span class="ltr">SALINA BLACK FRIDAY</span> · استثمري في نفسك</div>
+        <dl>
+          <dt>الصورة</dt><dd>الشنطة بتكبر لحد ما تملى الكادر وتحوّل الأرضية بنفسجي (انتقال بقناع على شكل الشنطة). ومن فوق بينزل التيكت البرتقالي ويتمرجح مرتين ويهدى.</dd>
+          <dt>التايبوجرافي</dt><dd>كلمة <span class="ltr">SALINA</span> بتظهر حرف حرف بخطوة ٤٠ مللي ثانية، وتحتها <span class="ltr">BLACK FRIDAY</span>، واللوجو آخر حاجة. الكادر الأخير بيثبت ٢٫٥ ثانية على الأقل.</dd>
+          <dt>الصوت</dt><dd>صوت تيكت بيتمرجح، ونغمة ختام قصيرة دافية، والموسيقى بتخلص على الإيقاع.</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:12px">قواعد الموشن في الحملة كلها</h3>
+  <div class="rules">
+    <div class="card"><span class="n">أقل من ثانية</span><p>دخول أي عنصر بياخد من ٤٠٠ لـ ٦٠٠ مللي ثانية، بحركة بتبدأ سريعة وتهدى في الآخر (ease-out). مفيش حركة خطية آلية.</p></div>
+    <div class="card"><span class="n">الكلام مايرتدّش</span><p>الارتداد (overshoot) للرسومات بس، وحدّه ٨٪. النص بيظهر بقناع واتجاهه دايمًا من اليمين للشمال.</p></div>
+    <div class="card"><span class="n">إيقاع ١٢٠ BPM</span><p>كل حدث مهم على نبضة كل نص ثانية، والمؤثرات الصوتية متركّبة على نفس النبضات. فيبان إن الصورة والصوت متزامنين.</p></div>
+    <div class="card"><span class="n">انتقال كبير واحد</span><p>كل فيديو ليه لحظة "واو" واحدة بس، زي الشنطة اللي بتبلع الشوبينج. باقي الانتقالات هادية عشان اللحظة دي تبرز.</p></div>
+    <div class="card"><span class="n">الكاميرا ثابتة</span><p>مفيش زوم ولا اهتزاز. الحركة كلها في العناصر، فالشاشة تفضل مريحة ومقروءة على الموبايل.</p></div>
+    <div class="card"><span class="n">الصوت أعلى من الموسيقى</span><p>الموسيقى خفيفة وتحت المؤثرات بوضوح، وبتقف لحظة السؤال. لحظة السكوت دي جزء من الإفيه.</p></div>
+  </div>
+  <p class="mut">باقي الفيديوهات (المقارنة، والمجالات، والعروض، والتذكير الأخير) هتستخدم نفس العناصر ونفس القواعد دي، وكل واحد هيتعرض عليكي بالـ storyboard بتاعه قبل التنفيذ.</p>
+</section>
+
+<!-- ============ 6. UNITY & VARIETY ============ -->
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">٦ · التنوع مع وحدة الهوية</span>
+    <h2>إيه اللي ثابت، وإيه اللي يتغير</h2>
+  </div>
+  <div class="uv">
+    <div class="card">
+      <h3><span class="dot" style="background:var(--pu)"></span>ثابت في كل تصميم</h3>
+      <ul>
+        <li>الألوان الخمسة بنفس النسب تقريبًا، والبرتقالي لعنصر واحد بس.</li>
+        <li>Tajawal للعناوين، وCairo للنص المساعد. مفيش أي خط تالت.</li>
+        <li>الشوبينج بالخط، والاستثمار مصمت.</li>
+        <li>مكان اللوجو وحجمه في الركن السفلي.</li>
+        <li>رسالة واحدة في كل بوست، وعنوان واحد كبير.</li>
+        <li>نفس سُمك الخط في كل الرسومات، ونفس الزوايا المدوّرة.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3><span class="dot" style="background:var(--or)"></span>بيتغير من تصميم للتاني</h3>
+      <ul>
+        <li>فكرة التكوين: برج، فاتورة، تحوّل، تيكت معلّق، رفّ، إطار، رقم كبير.</li>
+        <li>لون الأرضية: كريمي، وبنفسجي، وبرتقالي للعروض بس.</li>
+        <li>مكان العنوان: فوق، أو في النص، أو على التيكت، أو جوه الشنطة.</li>
+        <li>مين البطل: الكلام لوحده، أو رسم واحد كبير، أو مجموعة رسومات.</li>
+        <li>نوع الهزار: موقف، أو بنود فاتورة، أو ختم، أو سؤال تصويت.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPROVAL ============ -->
+<section class="approve">
+  <div style="display:flex;flex-direction:column;gap:16px">
+    <span class="eyebrow" style="color:var(--or)">للاعتماد</span>
+    <h2>محتاجة رأيك في دول قبل التنفيذ</h2>
+    <ol>
+      <li>الفكرة الكبيرة: <b>"نفس الشنطة، اللي جواها اتغيّر"</b>.</li>
+      <li>قاعدة الخط مقابل المصمت.</li>
+      <li>الـ Key Visual: الشنطة في النص والعنوان كبير فوق.</li>
+      <li>نبرة الهزار في الفاتورة: هل البنود مناسبة لجمهوركم؟</li>
+      <li>ترتيب السلسلة والفيديو الرئيسي (١٨ ثانية، ٥ مشاهد).</li>
+    </ol>
+    <p class="mutc">لو عاوزة تغيّري أي جزء، قوليلي رقمه وأعدّله في التصور قبل ما نبدأ.</p>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:16px">
+    <h3>محتاجة منك عشان التنفيذ</h3>
+    <ul>
+      <li>ملف لوجو Salina Academy (PNG بخلفية شفافة أو SVG).</li>
+      <li>أسماء الكورسات والورش اللي داخلة الحملة.</li>
+      <li>الأسعار والخصومات المعتمدة. مش هحط أي رقم من عندي.</li>
+      <li>تاريخ بداية الحملة ونهايتها، عشان العد التنازلي.</li>
+      <li>الحساب أو الرابط اللي هيظهر في الـ CTA.</li>
+    </ul>
+    <p class="mutc">بعد اعتمادك، أول حاجة هنفذها هي الـ Key Visual النهائي، وبعدين باقي الحملة على أساسه.</p>
+  </div>
+</section>
+
+</div>
+
+<script>
+document.querySelectorAll('[data-i]').forEach(function(e){
+  e.innerHTML='<svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#i-'+e.dataset.i+'"/></svg>';
+});
+</script>
