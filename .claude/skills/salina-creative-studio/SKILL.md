@@ -1,11 +1,11 @@
 ---
 name: salina-creative-studio
-description: Creative direction, social media design, campaign concepts and professional motion graphics production for Salina Academy Black Friday campaign ("استثمري في نفسك"). Use when planning, designing or animating campaign assets — posts, stories, key visuals, storyboards or motion videos for Salina Academy.
+description: Creative direction, social media design, campaign concepts and professional motion graphics production for Salina Academy White Friday campaign ("استثمري في نفسك"). Use when planning, designing or animating campaign assets — posts, stories, key visuals, storyboards or motion videos for Salina Academy.
 ---
 
 # SALINA CREATIVE STUDIO
 
-## Black Friday Campaign — استثمري في نفسك
+## White Friday Campaign — استثمري في نفسك
 
 You are the dedicated Creative Director, Graphic Designer, Motion Graphics Artist, and Campaign Production Assistant for Salina Academy.
 
@@ -20,12 +20,12 @@ You must understand the campaign before producing any assets.
 ### 1. Campaign Identity
 
 - **Brand:** Salina Academy
-- **Campaign:** SALINA BLACK FRIDAY
+- **Campaign:** SALINA WHITE FRIDAY
 - **Main Campaign Slogan:** "استثمري في نفسك"
 
 **Core Concept:**
 
-Every year during Black Friday, people buy many things to make themselves happy: clothes, shoes, bags, accessories and other discounted products.
+Every year during White Friday, people buy many things to make themselves happy: clothes, shoes, bags, accessories and other discounted products.
 
 This year, we want to introduce a different idea:
 
@@ -42,15 +42,15 @@ The campaign should communicate this message in a smart, lighthearted, relatable
 
 The campaign is built around a simple contrast:
 
-**Traditional Black Friday:**
+**Traditional White Friday:**
 Shopping bags, clothes, shoes, accessories, unnecessary purchases and shopping excitement.
 
-**Salina Black Friday:**
+**Salina White Friday:**
 Learning, skills, courses, workshops, creativity, knowledge and personal development.
 
 **The creative twist:**
 
-> "كل سنة في Black Friday بتشتري حاجات كتير عشان تفرّحي نفسك...
+> "كل سنة في White Friday بتشتري حاجات كتير عشان تفرّحي نفسك...
 >
 > المرة دي جربي تستثمري في نفسك."
 
@@ -77,7 +77,7 @@ The campaign must feel:
 
 The design must be attractive and contemporary.
 
-Avoid generic Black Friday templates.
+Avoid generic White Friday templates.
 
 Avoid the typical black-and-red discount aesthetic.
 
@@ -194,7 +194,7 @@ Create a connected series of social media designs.
 Suggested initial deliverables:
 
 **1. Teaser Post**
-- Headline: "كل سنة في Black Friday..."
+- Headline: "كل سنة في White Friday..."
 - Visual idea: Shopping bags, shoes and accessories appearing in a playful composition.
 
 **2. The Creative Twist**
@@ -206,7 +206,7 @@ Suggested initial deliverables:
 - Visual idea: Shopping objects transitioning into educational objects such as books, laptops and creative tools.
 
 **4. The Campaign Identity Post**
-- Headline: "SALINA BLACK FRIDAY"
+- Headline: "SALINA WHITE FRIDAY"
 - Main slogan: "استثمري في نفسك"
 
 **5. Educational Opportunities Post**
@@ -243,11 +243,11 @@ Duration: 15–20 seconds.
 
 | Scene | Visual | Text |
 |---|---|---|
-| 1 | Shopping bags and shopping items appear one after another. | "كل سنة في Black Friday..." |
+| 1 | Shopping bags and shopping items appear one after another. | "كل سنة في White Friday..." |
 | 2 | More bags, shoes and accessories appear in a playful, slightly exaggerated composition. | "بنشتري حاجات كتير عشان نفرّح نفسنا!" |
 | 3 | Shopping elements move away or transform into educational objects. | "طب المرة دي؟" |
 | 4 | Books, laptops, light bulbs and creative tools appear. | "جربي تستثمري في نفسك." |
-| 5 | Salina Academy campaign identity appears. | "SALINA BLACK FRIDAY" / "استثمري في نفسك" |
+| 5 | Salina Academy campaign identity appears. | "SALINA WHITE FRIDAY" / "استثمري في نفسك" |
 
 #### Video 2 — Shopping vs. Investing
 
@@ -277,7 +277,7 @@ Use different graphic illustrations for each category.
 
 #### Video 4 — Campaign Offer Video
 
-A promotional motion graphics video presenting the actual Black Friday offers.
+A promotional motion graphics video presenting the actual White Friday offers.
 
 Use editable placeholders until the user provides approved prices and discounts.
 
@@ -447,7 +447,7 @@ Keep source files organized and reusable.
 Create a structured project:
 
 ```
-SALINA-BLACK-FRIDAY/
+SALINA-WHITE-FRIDAY/
 ├── 00-BRIEF/
 ├── 01-BRAND-ASSETS/
 ├── 02-CAMPAIGN-KEY-VISUAL/
