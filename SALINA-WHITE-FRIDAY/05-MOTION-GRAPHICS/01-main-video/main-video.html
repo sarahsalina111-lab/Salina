@@ -21,31 +21,99 @@
 <div id="stage">
   <svg id="art" width="1080" height="1920" viewBox="0 0 1080 1920" style="left:0;top:0">
     <defs>
-      <!-- outline shopping bag, origin = mouth centre -->
-      <g id="obag" fill="var(--cr)" stroke="var(--vi)" stroke-width="8" stroke-linejoin="round" stroke-linecap="round">
+      <!-- price tag that hangs off shopping items (origin = where the string attaches) -->
+      <g id="ptag"><path d="M0 0l16 26" fill="none" stroke="var(--vi)" stroke-width="3"/>
+        <g transform="translate(16 26) rotate(38)"><path d="M0-12h34a5 5 0 0 1 5 5v14a5 5 0 0 1-5 5H0l-10-12z" fill="var(--gd)"/><circle cx="-1" cy="0" r="3.5" fill="var(--cr)"/></g></g>
+      <!-- shopping bags (origin = mouth centre, body to y=320): three prints, tissue paper peeking out -->
+      <g id="obag1" stroke="var(--vi)" stroke-width="8" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M-70 6l18-58 24 44 22-62 22 60 20-40 16 56z" fill="#FBE3A6" stroke-width="5"/>
         <path d="M-58 0v-38c0-78 116-78 116 0v38" fill="none"/>
-        <path d="M-150 0H150L136 300Q135 320 115 320H-115Q-135 320-136 300Z"/>
+        <path d="M-150 0H150L136 300Q135 320 115 320H-115Q-135 320-136 300Z" fill="var(--tint)"/>
+        <g stroke="#D9C3E6" stroke-width="18" stroke-linecap="butt"><path d="M-96 12V312M-38 12V318M20 12V318M78 12V314"/></g>
+        <path d="M-150 0H150L136 300Q135 320 115 320H-115Q-135 320-136 300Z" fill="none"/>
+        <rect x="-150" y="0" width="300" height="34" fill="#E7D6EE" stroke-width="6"/>
       </g>
-      <g id="i-shoe" fill="var(--cr)" stroke="var(--vi)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" transform="translate(-5 -14)">
-        <path d="M-95 40V5c0-17 13-25 29-25h36l20 24c20 18 46 24 76 27l26 5c12 2 16 14 12 24H-95z"/><path d="M-95 48h199M-22 10l12-10M-6 18l12-10" fill="none"/>
+      <g id="obag2" stroke="var(--vi)" stroke-width="8" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M-64 6l14-50 26 40 24-58 20 56 26-36 12 48z" fill="#D9C3E6" stroke-width="5"/>
+        <path d="M-58 0v-38c0-78 116-78 116 0v38" fill="none"/>
+        <path d="M-150 0H150L136 300Q135 320 115 320H-115Q-135 320-136 300Z" fill="var(--cr)"/>
+        <g fill="#E7D6EE" stroke="none">
+          <circle cx="-95" cy="70" r="15"/><circle cx="-30" cy="70" r="15"/><circle cx="35" cy="70" r="15"/><circle cx="100" cy="70" r="15"/>
+          <circle cx="-62" cy="140" r="15"/><circle cx="3" cy="140" r="15"/><circle cx="68" cy="140" r="15"/>
+          <circle cx="-95" cy="210" r="15"/><circle cx="-30" cy="210" r="15"/><circle cx="35" cy="210" r="15"/><circle cx="100" cy="210" r="15"/>
+          <circle cx="-62" cy="280" r="15"/><circle cx="3" cy="280" r="15"/><circle cx="68" cy="280" r="15"/>
+        </g>
+        <path d="M-150 0H150L136 300Q135 320 115 320H-115Q-135 320-136 300Z" fill="none"/>
       </g>
-      <g id="i-dress" fill="var(--cr)" stroke="var(--vi)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
-        <path d="M0-102c0-16 15-20 19-9" fill="none"/><path d="M0-100L-72-62H72z" fill="none"/><path d="M-30-62H30l-4 42 54 140H-80l54-140z"/><path d="M-27-20h54" fill="none"/>
+      <g id="obag3" stroke="var(--vi)" stroke-width="8" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M-74 6l20-46 18 34 26-60 18 52 28-44 16 64z" fill="var(--tint)" stroke-width="5"/>
+        <path d="M-58 0v-38c0-78 116-78 116 0v38" fill="none"/>
+        <path d="M-150 0H150L136 300Q135 320 115 320H-115Q-135 320-136 300Z" fill="#FBE9B7"/>
+        <rect x="-147" y="70" width="294" height="54" fill="#D9C3E6" stroke-width="6"/>
+        <circle cx="0" cy="210" r="46" fill="var(--cr)" stroke-width="6"/>
+        <path d="M-22 192l44 36M-18 226a6 6 0 1 0 0.1 0M18 194a6 6 0 1 0 0.1 0" fill="none" stroke-width="7"/>
       </g>
-      <g id="i-hbag" fill="var(--cr)" stroke="var(--vi)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" transform="translate(0 -6)">
-        <path d="M-45-30c0-64 90-64 90 0" fill="none"/><path d="M-80-30H80q8 0 8 8v82q0 12-12 12H-76q-12 0-12-12v-82q0-8 8-8z"/><rect x="-14" y="-6" width="28" height="20" rx="4"/>
+      <!-- shopping items: soft fills + violet line, each with details -->
+      <g id="i-shoe" stroke="var(--vi)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" transform="translate(-5 -14)">
+        <path d="M-95 40V5c0-17 13-25 29-25h36l20 24c20 18 46 24 76 27l26 5c12 2 16 14 12 24H-95z" fill="var(--cr)"/>
+        <path d="M-95 34h199v10q0 8-8 8H-87q-8 0-8-8z" fill="#D9C3E6"/>
+        <path d="M-22 10l12-10M-6 18l12-10M10 24l12-9" fill="none"/>
+        <path d="M-66-20v24" fill="none" stroke="#D9C3E6" stroke-width="10"/>
+        <use href="#ptag" transform="translate(-80 -20)"/>
       </g>
-      <g id="i-shirt" fill="var(--cr)" stroke="var(--vi)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" transform="translate(0 -40)">
-        <path d="M-30 0L-12-8H12L30 0 52 30 34 42 26 34V100H-26V34L-34 42-52 30Z"/><path d="M-12-8q12 14 24 0" fill="none"/>
+      <g id="i-dress" stroke="var(--vi)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M0-102c0-16 15-20 19-9" fill="none"/><path d="M0-100L-72-62H72z" fill="none"/>
+        <path d="M-30-62H30l-4 42 54 140H-80l54-140z" fill="#D9C3E6"/>
+        <path d="M-28-20h56" fill="none" stroke="var(--gd)" stroke-width="10"/>
+        <path d="M-58 90q10 10 20 0t20 0 20 0 20 0 20 0 18 0" fill="none" stroke="var(--cr)" stroke-width="5"/>
+        <use href="#ptag" transform="translate(26 -58)"/>
       </g>
+      <g id="i-hbag" stroke="var(--vi)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" transform="translate(0 -6)">
+        <path d="M-45-30c0-64 90-64 90 0" fill="none"/>
+        <path d="M-80-30H80q8 0 8 8v82q0 12-12 12H-76q-12 0-12-12v-82q0-8 8-8z" fill="#FBE9B7"/>
+        <path d="M-88 4H88" fill="none"/>
+        <rect x="-16" y="-6" width="32" height="22" rx="5" fill="var(--gd)"/>
+        <use href="#ptag" transform="translate(40 -52)"/>
+      </g>
+      <g id="i-shirt" stroke="var(--vi)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" transform="translate(0 -40)">
+        <path d="M-30 0L-12-8H12L30 0 52 30 34 42 26 34V100H-26V34L-34 42-52 30Z" fill="var(--tint)"/>
+        <path d="M-26 52H26M-26 72H26M-26 92H26" fill="none" stroke="#D9C3E6" stroke-width="8" stroke-linecap="butt"/>
+        <path d="M-12-8q12 14 24 0" fill="none"/>
+      </g>
+      <g id="i-heel" stroke="var(--vi)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M-84 30q-2-22 20-24c30-3 52 8 72-8l36-30q12-8 18 2l-4 14-14 52h-12l8-38-16 12c-26 20-60 28-108 32z" fill="#D9C3E6"/>
+        <path d="M-58 10q20 4 36 0" fill="none" stroke="var(--cr)" stroke-width="5"/>
+        <use href="#ptag" transform="translate(48 -36)"/>
+      </g>
+      <g id="i-hat" stroke="var(--vi)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+        <ellipse cx="0" cy="10" rx="96" ry="22" fill="#FBE9B7"/>
+        <path d="M-46 8c0-56 92-56 92 0z" fill="#FBE9B7"/>
+        <path d="M-46-6h92v12h-92z" fill="var(--pu)" stroke="none"/>
+        <use href="#ptag" transform="translate(60 6)"/>
+      </g>
+      <g id="i-glasses" stroke="var(--vi)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+        <rect x="-86" y="-24" width="70" height="50" rx="20" fill="#D9C3E6"/><rect x="16" y="-24" width="70" height="50" rx="20" fill="#D9C3E6"/>
+        <path d="M-16-6q16-12 32 0M-86-12l-18-6M86-12l18-6" fill="none"/>
+        <path d="M-70-10l14-6M32-10l14-6" stroke="var(--cr)" stroke-width="5"/>
+      </g>
+      <g id="i-perfume" stroke="var(--vi)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+        <rect x="-44" y="-30" width="88" height="100" rx="18" fill="var(--tint)"/>
+        <rect x="-16" y="-58" width="32" height="28" rx="5" fill="var(--gd)"/>
+        <rect x="-26" y="4" width="52" height="34" rx="6" fill="var(--cr)"/>
+        <path d="M-30-14q8-6 14 0" fill="none" stroke="var(--cr)" stroke-width="5"/>
+      </g>
+      <!-- discount sticker and sparkle -->
+      <g id="pct"><circle r="50" fill="var(--gd)"/><circle r="40" fill="none" stroke="var(--cr)" stroke-width="4" stroke-dasharray="6 7"/>
+        <text x="0" y="4" text-anchor="middle" dominant-baseline="middle" font-family="Tajawal" font-weight="900" font-size="54" fill="var(--pu)">%</text></g>
+      <path id="spark" d="M0-24c3 15 9 21 24 24-15 3-21 9-24 24-3-15-9-21-24-24 15-3 21-9 24-24z" fill="var(--vi)"/>
       <clipPath id="wipeClip" clipPathUnits="userSpaceOnUse"><rect id="wipeRect" x="-320" y="400" width="640" height="900"/></clipPath>
     </defs>
 
     <circle id="ground" cx="540" cy="1330" r="450" fill="var(--tint)"/>
 
-    <g id="B1"><use href="#obag"/></g>
-    <g id="B3"><use href="#obag"/></g>
-    <g id="B2"><use href="#obag"/></g>
+    <g id="B1"><use href="#obag1"/></g>
+    <g id="B3"><use href="#obag3"/></g>
+    <g id="B2"><use href="#obag2"/></g>
 
     <!-- Salina bag: back | learning items | front (back+front revealed by a bottom-up wipe) -->
     <g id="sbag">
@@ -91,11 +159,16 @@
       </g>
     </g>
 
+    <g id="K1"><use href="#spark"/></g><g id="K2"><use href="#spark"/></g><g id="K3"><use href="#spark"/></g><g id="K4"><use href="#spark"/></g><g id="K5"><use href="#spark"/></g>
     <g id="I1"><use href="#i-hbag"/></g>
     <g id="I2"><use href="#i-dress"/></g>
     <g id="I3"><use href="#i-shoe"/></g>
     <g id="I4"><use href="#i-shirt"/></g>
-    <g id="I5"><use href="#i-shoe"/></g>
+    <g id="I5"><use href="#i-heel"/></g>
+    <g id="I6"><use href="#i-hat"/></g>
+    <g id="I7"><use href="#i-glasses"/></g>
+    <g id="I8"><use href="#i-perfume"/></g>
+    <g id="P1"><use href="#pct"/></g><g id="P2"><use href="#pct"/></g><g id="P3"><use href="#pct"/></g>
   </svg>
 
   <!-- scene 1 copy -->
@@ -154,11 +227,17 @@ function words(lineId, tIn, step, tOut, t) {
 const BAGS = [ // outline shopping bags: x, mouth y, land time
   { id: 'B1', x: 285, y: 1300, tl: .55 }, { id: 'B2', x: 540, y: 1345, tl: 1.0 }, { id: 'B3', x: 795, y: 1300, tl: 1.45 } ];
 const ITEMS = [ // item, from bag, pop time, rest x,y,rot, scale
-  { id: 'I1', b: 0, tp: 1.9, x: 205, y: 960, r: -12, s: 1.6 },
-  { id: 'I2', b: 1, tp: 2.15, x: 545, y: 880, r: 6, s: 1.55 },
-  { id: 'I3', b: 2, tp: 2.4, x: 880, y: 975, r: 16, s: 1.55 },
-  { id: 'I4', b: 0, tp: 2.65, x: 330, y: 750, r: 10, s: 1.45 },
-  { id: 'I5', b: 2, tp: 2.9, x: 770, y: 745, r: -20, s: 1.3 } ];
+  { id: 'I1', b: 0, tp: 1.75, x: 200, y: 975, r: -12, s: 1.55 },
+  { id: 'I2', b: 1, tp: 1.95, x: 545, y: 900, r: 6, s: 1.5 },
+  { id: 'I3', b: 2, tp: 2.15, x: 885, y: 985, r: 16, s: 1.5 },
+  { id: 'I4', b: 0, tp: 2.35, x: 345, y: 760, r: 10, s: 1.4 },
+  { id: 'I5', b: 2, tp: 2.55, x: 760, y: 770, r: -14, s: 1.35 },
+  { id: 'I6', b: 1, tp: 2.75, x: 150, y: 700, r: -16, s: 1.15 },
+  { id: 'I7', b: 2, tp: 2.95, x: 935, y: 690, r: 12, s: 1.05 },
+  { id: 'I8', b: 1, tp: 3.15, x: 655, y: 1085, r: 8, s: 1.1 } ];
+const STICKERS = [ { id: 'P1', tp: 2.3, x: 100, y: 1150, r: -14, s: 1.25 }, { id: 'P2', tp: 2.75, x: 985, y: 860, r: 12, s: 1.1 }, { id: 'P3', tp: 3.2, x: 420, y: 1095, r: -6, s: 1.0 } ];
+const SPARKS = [ { id: 'K1', x: 470, y: 660, s: .9, ph: 0 }, { id: 'K2', x: 1000, y: 1080, s: .7, ph: 1.3 }, { id: 'K3', x: 80, y: 860, s: .8, ph: 2.1 },
+  { id: 'K4', x: 640, y: 1010, s: .6, ph: .7 }, { id: 'K5', x: 260, y: 1120, s: .6, ph: 2.8 } ];
 const SB = { x: 540, y: 1180, s: .92 };                 // Salina bag (mouth centre) in scene 2
 const LEARN = [ // learning items inside Salina bag, local coords
   { id: 'it-laptop', tp: 7.0, x: -150, y: -70, r: -18, s: 1 },
@@ -201,11 +280,22 @@ function renderAt(t) {
     // scene 2: crowd in a little (4.2-4.7), then get pulled into the middle bag one by one
     const crowd = E.inOutCubic(P(t, 4.1, 4.6));
     x = lerp(x, lerp(x, 540, .25), crowd); y = lerp(y, y + 40, crowd);
-    const tg = 4.7 + k * .12, gp = E.inCubic(P(t, tg, tg + .45));
+    const tg = 4.62 + k * .085, gp = E.inCubic(P(t, tg, tg + .42));
     x = lerp(x, 540, gp); y = lerp(y, 1345, gp); s *= 1 - gp * .85; r += gp * 200;
     tf(el, x, y, r, s);
-    el.style.display = (t < it.tp || t > tg + .45) ? 'none' : '';
+    el.style.display = (t < it.tp || t > tg + .42) ? 'none' : '';
   });
+
+  // discount stickers pop in, spin a little, then get pulled into the bag with the rest
+  STICKERS.forEach((k, i) => { const el = $(k.id), p = P(t, k.tp, k.tp + .4);
+    let x = k.x, y = k.y + 6 * Math.sin(t * 2.2 + i) * P(t, k.tp + .4, k.tp + .8), r = lerp(-60, k.r, E.outBack(p, 2)) + 4 * Math.sin(t * 1.7 + i);
+    let s = k.s * E.outBack(p, 2.4);
+    const tg = 5.0 + i * .1, gp = E.inCubic(P(t, tg, tg + .4)); x = lerp(x, 540, gp); y = lerp(y, 1345, gp); s *= 1 - gp * .85; r += gp * 180;
+    tf(el, x, y, r, Math.max(s, .0001)); el.style.display = (t < k.tp || t > tg + .4) ? 'none' : ''; });
+  // sparkles twinkle while the shopping is at its peak
+  SPARKS.forEach(k => { const live = P(t, 2.2, 2.6) * (1 - P(t, 4.4, 4.7));
+    const tw = Math.max(0, Math.sin(t * 4.2 + k.ph)) ** 2 * live; tf($(k.id), k.x, k.y, t * 40 + k.ph * 30, Math.max(k.s * tw, .0001));
+    $(k.id).style.display = live > 0 ? '' : 'none'; });
 
   /* ----- scene 2: the middle bag becomes the Salina bag ----- */
   const sb = $('sbag');

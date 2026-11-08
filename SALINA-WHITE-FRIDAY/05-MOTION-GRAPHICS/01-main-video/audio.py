@@ -60,11 +60,17 @@ def impact():
 
 # scene 1: bags land, items pop out, words tick in
 for tl, pan in [(.55, -.5), (1.0, 0), (1.45, .5)]: add(sfx, tl, thump(), .7, pan); add(sfx, tl - .3, whoosh(.3), .25, pan)
-for k, (tp, pan) in enumerate([(1.9, -.5), (2.15, 0), (2.4, .5), (2.65, -.3), (2.9, .3)]): add(sfx, tp, pop(420 + 60 * k, 1000 + 120 * k), .55, pan)
+ITEM_T = [(1.75, -.5), (1.95, 0), (2.15, .5), (2.35, -.4), (2.55, .4), (2.75, -.6), (2.95, .6), (3.15, .1)]
+for k, (tp, pan) in enumerate(ITEM_T): add(sfx, tp, pop(400 + 45 * k, 950 + 90 * k), .55, pan)
+def kaching():  # discount sticker: short register bell
+    return np.concatenate([ding(2093, .25) * .6, np.zeros(int(.05 * SR))])[: int(.3 * SR)] + np.pad(ding(2637, .5), (int(.07 * SR), 0))[: int(.3 * SR)]
+for tp, pan in [(2.3, -.7), (2.75, .7), (3.2, -.2)]: add(sfx, tp, kaching(), .32, pan)
+for k in range(9): add(sfx, 2.45 + k * .21 + .05 * (k % 2), tick(3800 + 300 * (k % 3), .03), .06, (-1) ** k * .6)  # sparkle shimmer
 for tw in [.35, .49, .63, .85, 3.25, 3.41, 3.57]: add(sfx, tw, tick(), .18)
 # scene 2: crowd, gulp into one bag, fill, items out, bulb on
 add(sfx, 4.1, whoosh(.55), .35)
-for k in range(5): add(sfx, 4.7 + k * .12 + .4, pop(900 - 90 * k, 380 - 40 * k, .1), .45, (k - 2) * .25)
+for k in range(8): add(sfx, 4.62 + k * .085 + .38, pop(950 - 60 * k, 400 - 25 * k, .09), .4, (k - 3.5) * .15)
+for i in range(3): add(sfx, 5.0 + i * .1 + .36, pop(1200, 500, .08), .3)
 add(sfx, 5.2, whoosh(.5, False), .3)
 add(sfx, 6.05, riser(), .45)
 add(sfx, 6.85, thump(180, .3), .8); add(sfx, 6.85, pop(300, 900, .15), .4)
@@ -103,8 +109,9 @@ def clap():
 def shaker():
     t = t_(.06); n = rng.standard_normal(len(t)); n = n - lowpass(n, .3); return n * np.exp(-t / .015)
 
+MUSIC = False   # the client asked for sound effects only
 END_MUSIC = 17.2
-for bar in range(10):
+for bar in (range(10) if MUSIC else []):
     t0 = bar * 4 * BEAT; ch = chords[bar % 4]
     for b in range(4):
         tb = t0 + b * BEAT
@@ -122,12 +129,12 @@ for bar in range(10):
             add(music, te, pluck(midi(note)), .16, -.35 if e8 else .35)
             add(music, te, shaker(), .07, .5)
 # closing chord
-for n in [48, 60, 64, 67, 72]: add(music, 16.55, pluck(midi(n), 2.2) * np.exp(-t_(2.2) / 1.2), .14)
+for n in ([48, 60, 64, 67, 72] if MUSIC else []): add(music, 16.55, pluck(midi(n), 2.2) * np.exp(-t_(2.2) / 1.2), .14)
 # gentle fade in / out
 fade = np.ones(N); fi = int(.25 * SR); fade[:fi] = np.linspace(0, 1, fi); fo = int(1.4 * SR); fade[-fo:] = np.linspace(1, 0, fo)
 music *= fade[:, None]
 
-mix = music * .55 + sfx * .9
+mix = (music * .55 if MUSIC else 0) + sfx * .9
 mix /= np.max(np.abs(mix)) / .89            # peak ≈ -1 dBFS
 pcm = (mix * 32767).astype('<i2')
 with wave.open(sys.argv[1], 'wb') as w:

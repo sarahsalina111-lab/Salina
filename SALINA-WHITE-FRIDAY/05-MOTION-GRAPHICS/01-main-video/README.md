@@ -3,7 +3,7 @@
 | الملف | وظيفته |
 |---|---|
 | `main-video.html` | الحركة كلها: رسومات SVG وكلام HTML، وكل إطار بيتحسب من الوقت بالدالة `renderAt(t)` |
-| `audio.py` | المؤثرات الصوتية والموسيقى (numpy)، وبيطلّع `soundtrack.wav` |
+| `audio.py` | المؤثرات الصوتية (numpy)، وبيطلّع `soundtrack.wav`. الموسيقى مقفولة (`MUSIC = False`) |
 | `soundtrack.wav` | الصوت الجاهز اللي بيتركّب على الفيديو |
 | `../../07-SOURCE-FILES/render-video.js` | بيطلّع الإطارات من الصفحة ويحوّلها لفيديو بـ ffmpeg |
 | `../../06-STORYBOARDS/01-main-video/` | الـ Storyboard وصور الإطارات |
