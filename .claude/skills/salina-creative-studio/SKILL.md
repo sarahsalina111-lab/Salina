@@ -89,12 +89,12 @@ Avoid excessive decorations, unnecessary effects and crowded compositions.
 |---|---|---|
 | Primary | Primary Purple | `#58346F` |
 | Secondary | Soft Violet | `#A979C0` |
-| Highlight | Warm Orange | `#F2A34A` |
+| Highlight | Salina Pink | `#EC5F81` |
 | Light background | Warm Cream | `#FFF8EE` |
 | Text | Charcoal | `#30263A` |
 
 - Purple is the primary brand color.
-- Orange is used for highlights, emphasis and visual energy.
+- Pink (taken from the Salina logo) is used for highlights, emphasis and visual energy.
 - Cream is the preferred light background.
 - Charcoal is used for readable typography.
 
