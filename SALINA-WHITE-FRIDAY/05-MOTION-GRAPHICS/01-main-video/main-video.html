@@ -194,8 +194,9 @@
 </div>
 <style>.dot{display:block;width:26px;height:26px;border-radius:50%;background:var(--gd)}</style>
 
+<script src="../lib/cta.js"></script>
 <script>
-const DURATION = 18.5, FPS = 30;
+const DURATION = 20.0, FPS = 30, CTA0 = 17.6;
 const $ = id => document.getElementById(id);
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const P = (t, t0, t1) => clamp((t - t0) / (t1 - t0));
@@ -364,8 +365,15 @@ function renderAt(t) {
   const lp = P(t, 16.55, 17.0);
   $('logo').style.transform = `translateY(${spring(t - 17.0, 0) + 6 * Math.sin(t * 2.4) * P(t, 17, 17.5)}px) scale(${lerp(.5, 1, E.outBack(lp, 2))})`;
   $('logo').style.opacity = clamp(lp * 3);
+  /* ----- end card: identity lifts away, logo settles at the bottom ----- */
+  const go = E.inCubic(P(t, CTA0, CTA0 + .35));
+  ['s4a', 's4b', 'rule', 's4c', 's4d'].forEach(id => { $(id).style.opacity = 1 - go; $(id).style.translate = `0 ${-120 * go}px`; });
+  const ls = E.inOutCubic(P(t, CTA0, CTA0 + .5));
+  $('logo').style.translate = `0 ${lerp(0, 60, ls)}px`; $('logo').style.scale = String(lerp(1, .62, ls));
+  CTA.render(t, CTA0);
 }
 
+CTA.init($('stage'));
 /* build SALINA letters once */
 'SALINA'.split('').forEach(ch => { const s = document.createElement('span'); s.textContent = ch; s.style.display = 'inline-block'; $('s4a').appendChild(s); });
 

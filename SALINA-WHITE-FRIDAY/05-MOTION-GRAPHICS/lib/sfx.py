@@ -68,3 +68,13 @@ def flip():
     return lowpass(rng.standard_normal(len(t)), .4) * np.exp(-t / .02) * 1.2 + c * .5
 def clock_tick():
     return tick(3200, .03) * .8
+
+# ---- end card (CTA) ----
+def cta_sfx(add, c):
+    add(c, whoosh(.35, False), .3)
+    for i in range(3): add(c + .2 + i * .12, tick(2200), .18)
+    add(c + .5, pop(500, 1150, .12), .45)
+    add(c + .7, whoosh(.4), .12, .5)
+    add(c + 1.15, impact(), .55); add(c + 1.15, fall(1300, 400, .25), .25)
+    add(c + 1.55, pop(450, 1300, .14), .5, -.3)
+    add(c + 2.05, tick(1800, .05), .5); add(c + 2.06, thump(260, .12), .3)

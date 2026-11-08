@@ -5,7 +5,7 @@ import sys, wave
 import numpy as np
 
 SR = 48000
-DUR = 18.5
+DUR = 20.0
 N = int(SR * DUR)
 rng = np.random.default_rng(7)
 music = np.zeros((N, 2)); sfx = np.zeros((N, 2))
@@ -90,6 +90,10 @@ for k in range(6): add(sfx, 14.2 + k * .07, tick(1600 + 120 * k), .22, (k - 2.5)
 add(sfx, 14.75, whoosh(.5), .25)
 for tw in [15.45, 15.63, 16.0, 16.16, 16.32]: add(sfx, tw, tick(2200), .16)
 add(sfx, 16.55, sparkle(), .45)
+# end card (CTA) — same cues as lib/sfx.py cta_sfx
+import os as _os; sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'lib'))
+import sfx as _lib
+_lib.cta_sfx(lambda st, sig, g=1.0, pan=0.0: add(sfx, st, sig, g, pan), 17.6)
 
 # ---------------- MUSIC (120 BPM, C major, I–vi–IV–V) ----------------
 BEAT = .5

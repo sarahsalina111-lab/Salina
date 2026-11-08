@@ -137,8 +137,9 @@
   <div class="logo" id="logo" style="left:310px;top:1360px;width:460px"><img src="../../01-BRAND-ASSETS/salina-logo-transparent.png" alt="Salina"></div>
 </div>
 
+<script src="../lib/cta.js"></script>
 <script>
-const DURATION = 18.5, FPS = 30;
+const DURATION = 20.4, FPS = 30, CTA0 = 18.0;
 const $ = id => document.getElementById(id);
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const P = (t, t0, t1) => clamp((t - t0) / (t1 - t0));
@@ -282,7 +283,14 @@ function renderAt(t) {
   words('o4', 16.5, .14, 0, t);
   const lp = P(t, 17.05, 17.45);
   $('logo').style.transform = `translateY(${4 * Math.sin(t * 2.4) * P(t, 17.45, 17.8)}px) scale(${lerp(.5, 1, E.outBack(lp, 2))})`; $('logo').style.opacity = clamp(lp * 3);
+  /* ----- end card ----- */
+  const go = E.inCubic(P(t, CTA0, CTA0 + .35));
+  ['o1', 'o2', 'o3', 'o4'].forEach(id => { $(id).style.opacity = 1 - go; $(id).style.translate = `0 ${-120 * go}px`; });
+  const ls = E.inOutCubic(P(t, CTA0, CTA0 + .5));
+  $('logo').style.translate = `0 ${lerp(0, 60, ls)}px`; $('logo').style.scale = String(lerp(1, .68, ls));
+  CTA.render(t, CTA0);
 }
+CTA.init($('stage'));
 window.renderAt = renderAt; window.DURATION = DURATION; window.FPS = FPS;
 renderAt(0);
 if (location.hash === '#play') { const t0 = performance.now(); (function loop() { renderAt(((performance.now() - t0) / 1000) % DURATION); requestAnimationFrame(loop); })(); }

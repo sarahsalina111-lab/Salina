@@ -4,7 +4,7 @@ import sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib'))
 from sfx import *
 
-tr = Track(18.5)
+tr = Track(20.4)
 # intro: words, then the screen splits
 for t in [.3, .5, .95]: tr.add(t, tick(2200), .2)
 tr.add(1.85, whoosh(.4, False), .25)
@@ -45,5 +45,6 @@ for t in [15.0, 15.18, 15.55, 15.75]: tr.add(t, tick(2200), .18)
 tr.add(16.35, whoosh(.4), .2)
 for t in [16.5, 16.64, 16.78]: tr.add(t, tick(2400), .16)
 tr.add(17.05, sparkle(), .45)
+cta_sfx(tr.add, 18.0)
 tr.write(sys.argv[1])
 print('wrote', sys.argv[1])
