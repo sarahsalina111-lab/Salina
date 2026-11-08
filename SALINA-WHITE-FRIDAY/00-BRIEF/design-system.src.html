@@ -7,8 +7,8 @@
 /* Layout: one RTL column of spec boards; every mockup is a 1080×1350 artboard drawn in canvas units (--u = 1/1080 of its width) so it scales and exports 1:1. Single committed light look: the campaign's cream world. */
 :root{
   --pu:#58346F; --pu-dk:#46295A; --pu-in:#3E2350;
-  --vi:#A979C0; --or:#EC5F81; --cr:#FFF8EE; --ch:#30263A; --tint:#F3E7EF;
-  --lg-pink:#EC5F81; --lg-plum:#94276B;
+  --vi:#A979C0; --or:#F5C04A; --cr:#FFF8EE; --ch:#30263A; --tint:#F3E7EF;
+  --lg-plum:#94276B;
   --page:#F1E8DD; --paper:#FFFDF9; --mut:#6B5C76; --rule:#E2D4D9; --soft:#E9DCF0;
   --display:"Tajawal","Cairo",system-ui,sans-serif;
   --body:"Cairo","Tajawal",system-ui,sans-serif;
@@ -151,20 +151,20 @@ tr:last-child td{border-bottom:0}
     <div class="pal">
       <div class="sw"><div class="c" style="background:var(--pu)"></div><div class="t"><b>بنفسجي أساسي</b><code>#58346F</code>العناوين، الكيس، الرسومات المصمتة</div></div>
       <div class="sw"><div class="c" style="background:var(--cr);box-shadow:inset 0 -1px 0 var(--rule)"></div><div class="t"><b>كريمي</b><code>#FFF8EE</code>الأرضية الأساسية، والنص على البنفسجي</div></div>
-      <div class="sw"><div class="c" style="background:var(--or)"></div><div class="t"><b>بينك</b><code>#EC5F81</code>لمسة واحدة: خط تحت كلمة، لمبة، تيكت</div></div>
+      <div class="sw"><div class="c" style="background:var(--or)"></div><div class="t"><b>ذهبي</b><code>#F5C04A</code>لمسة واحدة: خط تحت كلمة، لمبة، تيكت</div></div>
       <div class="sw"><div class="c" style="background:var(--vi)"></div><div class="t"><b>بنفسجي فاتح</b><code>#A979C0</code>رسومات الشوبينج بالخط، تفاصيل ثانوية</div></div>
       <div class="sw"><div class="c" style="background:var(--ch)"></div><div class="t"><b>فحمي</b><code>#30263A</code>النص المساعد، الكتاب</div></div>
       <div class="sw"><div class="c" style="background:var(--tint)"></div><div class="t"><b>بنفسجي باهت</b><code>#F3E7EF</code>الدايرة ورا العنصر البطل، أرضية بديلة</div></div>
       <div class="sw"><div class="c" style="background:linear-gradient(90deg,var(--pu-dk) 50%,var(--pu-in) 50%)"></div><div class="t"><b>ظلال الكيس</b><code>#46295A · #3E2350</code>للتجسيم المسطح فقط، مش للنص</div></div>
-      <div class="sw"><div class="c" style="background:var(--lg-plum)"></div><div class="t"><b>بنفسجي اللوجو</b><code>#94276B</code>جوه اللوجو بس. البينك اتاخد من حرف الـ S في اللوجو</div></div>
+      <div class="sw"><div class="c" style="background:var(--lg-plum)"></div><div class="t"><b>بنفسجي اللوجو</b><code>#94276B</code>جوه اللوجو بس، مابنستخدمهاش في التصميم</div></div>
     </div>
     <div class="ratio" aria-label="نسب الألوان">
       <div style="flex:58;background:var(--cr)"></div><div style="flex:22;background:var(--pu)"></div><div style="flex:8;background:var(--vi)"></div><div style="flex:6;background:var(--or)"></div><div style="flex:6;background:var(--ch)"></div>
     </div>
     <ul class="rules">
-      <li><b>النسب التقريبية في كل تصميم:</b> كريمي ٥٨٪، بنفسجي ٢٢٪، فاتح ٨٪، بينك ٦٪، فحمي ٦٪. في التصميمات اللي أرضيتها بنفسجي أو بينك، النسب بتتقلب بس الألوان نفسها.</li>
-      <li><b>البينك مابيتكتبش بيه نص على الكريمي</b>، لأن التباين ضعيف. بيتحط خط تحت الكلمة، أو أرضية تيكت عليها نص بنفسجي.</li>
-      <li><b>التركيبات المسموحة للنص:</b> بنفسجي على كريمي، كريمي على بنفسجي، بنفسجي على بينك، فحمي على كريمي.</li>
+      <li><b>النسب التقريبية في كل تصميم:</b> كريمي ٥٨٪، بنفسجي ٢٢٪، فاتح ٨٪، ذهبي ٦٪، فحمي ٦٪. في التصميمات اللي أرضيتها بنفسجي أو ذهبي، النسب بتتقلب بس الألوان نفسها.</li>
+      <li><b>الذهبي مابيتكتبش بيه نص على الكريمي</b>، لأن التباين ضعيف. بيتحط خط تحت الكلمة، أو أرضية تيكت عليها نص بنفسجي.</li>
+      <li><b>التركيبات المسموحة للنص:</b> بنفسجي على كريمي، كريمي على بنفسجي، بنفسجي على ذهبي، فحمي على كريمي.</li>
       <li>مفيش تدرجات ألوان، ومفيش ظلال. التجسيم بدرجة واحدة أغمق بس.</li>
     </ul>
   </div>
@@ -182,7 +182,7 @@ tr:last-child td{border-bottom:0}
       </div>
       <ul class="rules">
         <li>المقاسات على لوحة 1080px. <b>مفيش نص أصغر من 28px</b> عشان يتقري على الموبايل.</li>
-        <li>العنوان سطرين بالكتير، وكلمة واحدة بس عليها الخط البينك.</li>
+        <li>العنوان سطرين بالكتير، وكلمة واحدة بس عليها الخط الذهبي.</li>
         <li>عائلتين خطوط بس: Tajawal للعناوين والإنجليزي، وCairo للنص المساعد.</li>
       </ul>
     </div>
@@ -207,11 +207,11 @@ tr:last-child td{border-bottom:0}
       <h3>٤. الأشكال المميزة</h3>
       <div class="shapes">
         <div><div class="m"><b class="ic" data-s="bagmini" style="width:64px;position:relative"></b></div><b>كيس Salina</b>العنصر البطل وإطار المحتوى. بنفسجي سادة من غير لوجو.</div>
-        <div><div class="m"><svg viewBox="0 0 200 60" width="150" aria-hidden="true"><text x="190" y="38" text-anchor="end" font-family="Tajawal" font-weight="900" font-size="38" fill="#58346F">نفسك</text><rect x="92" y="48" width="100" height="7" fill="#EC5F81"/></svg></div><b>الخط البينك</b>تحت الكلمة اللي شايلة المعنى، بمسافة عن الحروف.</div>
-        <div><div class="m"><svg viewBox="0 0 160 60" width="140" aria-hidden="true"><polygon points="18,8 152,8 152,52 18,52 2,30" fill="#EC5F81"/><circle cx="16" cy="30" r="5" fill="#FFF8EE"/><text x="140" y="37" text-anchor="end" font-family="Tajawal" font-weight="800" font-size="16" fill="#58346F" letter-spacing="1">WHITE FRIDAY</text></svg></div><b>التيكت</b>للاسم والخصم والاختيارات والـ CTA.</div>
+        <div><div class="m"><svg viewBox="0 0 200 60" width="150" aria-hidden="true"><text x="190" y="38" text-anchor="end" font-family="Tajawal" font-weight="900" font-size="38" fill="#58346F">نفسك</text><rect x="92" y="48" width="100" height="7" fill="#F5C04A"/></svg></div><b>الخط الذهبي</b>تحت الكلمة اللي شايلة المعنى، بمسافة عن الحروف.</div>
+        <div><div class="m"><svg viewBox="0 0 160 60" width="140" aria-hidden="true"><polygon points="18,8 152,8 152,52 18,52 2,30" fill="#F5C04A"/><circle cx="16" cy="30" r="5" fill="#FFF8EE"/><text x="140" y="37" text-anchor="end" font-family="Tajawal" font-weight="800" font-size="16" fill="#58346F" letter-spacing="1">WHITE FRIDAY</text></svg></div><b>التيكت</b>للاسم والخصم والاختيارات والـ CTA.</div>
         <div><div class="m"><svg viewBox="0 0 120 80" width="90" aria-hidden="true"><circle cx="60" cy="40" r="36" fill="#F3E7EF"/></svg></div><b>الدايرة الأرضية</b>ورا العنصر البطل بس، قطرها ثلثين العرض تقريبًا.</div>
         <div><div class="m"><svg viewBox="0 0 160 50" width="140" aria-hidden="true"><path d="M10 35q60-30 140-10" fill="none" stroke="#A979C0" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 14"/></svg></div><b>نقط الحركة</b>ورا حاجات الشوبينج الخارجة من الكادر.</div>
-        <div><div class="m"><svg viewBox="0 0 120 80" width="90" aria-hidden="true"><g stroke="#EC5F81" stroke-width="7" stroke-linecap="round"><path d="M60 8v14M28 22l9 9M92 22l-9 9M14 52h14M106 52h-14"/></g></svg></div><b>شعاع الفكرة</b>خطوط بينك قصيرة حوالين اللمبة أو عنصر واحد بس.</div>
+        <div><div class="m"><svg viewBox="0 0 120 80" width="90" aria-hidden="true"><g stroke="#F5C04A" stroke-width="7" stroke-linecap="round"><path d="M60 8v14M28 22l9 9M92 22l-9 9M14 52h14M106 52h-14"/></g></svg></div><b>شعاع الفكرة</b>خطوط ذهبي قصيرة حوالين اللمبة أو عنصر واحد بس.</div>
       </div>
     </div>
 
@@ -223,14 +223,14 @@ tr:last-child td{border-bottom:0}
           <div style="inset:0;border:calc(var(--u)*0) solid transparent;box-shadow:inset calc(var(--u)*84) 0 0 rgba(242,163,74,.18),inset calc(var(--u)*-84) 0 0 rgba(242,163,74,.18)"></div>
           <div style="left:0;right:0;top:calc(var(--u)*40);height:calc(var(--u)*80);outline:2px dashed var(--pu);outline-offset:-2px"></div>
           <div style="left:calc(var(--u)*170);right:calc(var(--u)*70);top:calc(var(--u)*140);height:calc(var(--u)*420);outline:2px dashed var(--pu);outline-offset:-2px"></div>
-          <div style="left:calc(var(--u)*760);right:calc(var(--u)*40);top:calc(var(--u)*1120);bottom:calc(var(--u)*30);outline:2px dashed #EC5F81;outline-offset:-2px"></div>
+          <div style="left:calc(var(--u)*760);right:calc(var(--u)*40);top:calc(var(--u)*1120);bottom:calc(var(--u)*30);outline:2px dashed #F5C04A;outline-offset:-2px"></div>
         </div>
         <ul class="rules" style="font-size:14px">
-          <li><b>الهوامش:</b> ٨٤px يمين وشمال (المنطقة البينك)، و٤٦px تحت. مفيش نص في الهامش.</li>
-          <li><b>اسم الحملة:</b> «SALINA WHITE FRIDAY» فوق على اليمين، ٤٠px، سطر واحد، وقبله نقطة بينك.</li>
+          <li><b>الهوامش:</b> ٨٤px يمين وشمال (المنطقة الذهبي)، و٤٦px تحت. مفيش نص في الهامش.</li>
+          <li><b>اسم الحملة:</b> «SALINA WHITE FRIDAY» فوق على اليمين، ٤٠px، سطر واحد، وقبله نقطة ذهبي.</li>
           <li><b>العنوان:</b> محاذي يمين، تحت اسم الحملة، وفي التلت العلوي غالبًا.</li>
           <li><b>اللوجو الرسمي:</b> تحت على اليمين، عرضه ٢٣٦px. حواليه مساحة فاضية قد ارتفاع حرف الـ S على الأقل. بألوانه الأصلية بس، وعمره ما يتحط على الكيس.</li>
-          <li><b>على الأرضية البنفسجي أو البينك:</b> اللوجو بيتحط على كارت كريمي صغير بزوايا مدوّرة، عشان ألوانه تفضل واضحة.</li>
+          <li><b>على الأرضية البنفسجي أو الذهبي:</b> اللوجو بيتحط على كارت كريمي صغير بزوايا مدوّرة، عشان ألوانه تفضل واضحة.</li>
           <li><b>المساحة الفاضية:</b> ٣٥٪ من الكادر على الأقل فاضي. لو حسيتي إن التصميم زحمة، شيلي عنصر، ماتصغريش كله.</li>
         </ul>
       </div>
@@ -254,7 +254,7 @@ tr:last-child td{border-bottom:0}
         <tr><td>مقارنة الشوبينج بالتعلم</td><td><b>C · القسمة</b></td><td>نفس الجمعة. اختيارين.</td><td>عمودين جنب بعض</td></tr>
         <tr><td>تفاعلي بأسئلة للجمهور</td><td><b>D · السؤال والاختيارات</b></td><td>لو هتشتري حاجة واحدة بس النهارده؟</td><td>تيكتات الاختيارات</td></tr>
         <tr><td>عرض الكورسات والورش</td><td><b>E · التيكت</b></td><td>بدل قطعة جديدة... اشتري مهارة.</td><td>تيكت سعر عليه الكورس</td></tr>
-        <tr><td>إعلان الخصومات والعروض</td><td><b>E · التيكت</b> (أرضية بينك)</td><td>[نسبة الخصم] على [الكورسات]</td><td>مساحة الخصم</td></tr>
+        <tr><td>إعلان الخصومات والعروض</td><td><b>E · التيكت</b> (أرضية ذهبي)</td><td>[نسبة الخصم] على [الكورسات]</td><td>مساحة الخصم</td></tr>
         <tr><td>تذكير بانتهاء الحملة</td><td><b>E · التيكت</b> + <b>A</b> على بنفسجي</td><td>فاضل [٣] أيام · الخصم بيخلص، اللي اتعلمتيه بيفضل.</td><td>الرقم أو العبارة</td></tr>
       </tbody>
     </table>
@@ -359,7 +359,7 @@ tr:last-child td{border-bottom:0}
     <div>
       <div class="lhead"><span class="lcode">C</span><h3 style="font-size:24px;color:var(--pu)">القسمة</h3></div>
       <dl class="spec">
-        <dt>الفكرة</dt><dd>عمودين جنب بعض: سلة الشوبينج على الكريمي بالخط الفاتح، وسلة Salina على كارت بنفسجي مصمت. دايرة بينك في النص مكتوب عليها «ولا».</dd>
+        <dt>الفكرة</dt><dd>عمودين جنب بعض: سلة الشوبينج على الكريمي بالخط الفاتح، وسلة Salina على كارت بنفسجي مصمت. دايرة ذهبي في النص مكتوب عليها «ولا».</dd>
         <dt>التوزيع</dt><dd>عنوان قصير فوق، وتحته العمودين بنفس الترتيب بالظبط: عنوان، رسمة، ثلاث سطور. فالعين تقارن سطر بسطر، والسلوجن في الآخر.</dd>
         <dt>ليه بيشتغل</dt><dd>المقارنة واضحة من اللون قبل الكلام: الفاتح بيقول «خفيف ومش هيفضل»، والمصمت بيقول «ليه وزن». ومفيش ولا كلمة بتهاجم الشوبينج.</dd>
       </dl>
@@ -390,7 +390,7 @@ tr:last-child td{border-bottom:0}
     <div>
       <div class="lhead"><span class="lcode">D</span><h3 style="font-size:24px;color:var(--pu)">السؤال والاختيارات</h3></div>
       <dl class="spec">
-        <dt>الفكرة</dt><dd>سؤال مباشر، والإجابات تيكتات كبيرة كأنها منتجات في محل. الاختيار «الذكي» على تيكت بينك من غير ما نقول إنه الصح، والتصميم بيلمّح بس.</dd>
+        <dt>الفكرة</dt><dd>سؤال مباشر، والإجابات تيكتات كبيرة كأنها منتجات في محل. الاختيار «الذكي» على تيكت ذهبي من غير ما نقول إنه الصح، والتصميم بيلمّح بس.</dd>
         <dt>التوزيع</dt><dd>أرضية بنفسجي. السؤال فوق بالكريمي، والاختيارات بعرض الكادر واحد تحت التاني، وفي الآخر سطر بيطلب الرد. ده الاتجاه الوحيد اللي النص فيه بعرض الكادر كله.</dd>
         <dt>ليه بيشتغل</dt><dd>الرد بحرف واحد سهل، فبيرفع الكومنتات. ونفس التصميم بيتحول ستوري بستيكر تصويت مكان التيكتات.</dd>
       </dl>
@@ -437,7 +437,7 @@ tr:last-child td{border-bottom:0}
             <div class="bd" data-p="r84 t920 fs36">لفترة الوايت فرايداي بس.</div>
             <div class="chip" data-p="r52 b36 w270"><img class="lgc" alt="Salina"></div>
           </div>
-          <span class="cap">إعلان الخصم: الأرضية البينك محجوزة للعروض بس</span>
+          <span class="cap">إعلان الخصم: الأرضية الذهبي محجوزة للعروض بس</span>
         </div>
         <div>
           <div class="fr bg-pu" id="E3" data-export="layout-E-countdown">
@@ -472,9 +472,9 @@ tr:last-child td{border-bottom:0}
       <h3>قواعد التنويع</h3>
       <ul class="rules">
         <li><b>مفيش اتجاهين زي بعض ورا بعض</b> في الفيد.</li>
-        <li><b>الأرضية بتتبادل:</b> كريمي، وبعدين بنفسجي، وبعدين كريمي. البينك للعروض بس، والبنفسجي الباهت لما نحتاج تهدية.</li>
+        <li><b>الأرضية بتتبادل:</b> كريمي، وبعدين بنفسجي، وبعدين كريمي. الذهبي للعروض بس، والبنفسجي الباهت لما نحتاج تهدية.</li>
         <li><b>البطل بيتغير:</b> كلام، رسمة، مقارنة، سؤال، تيكت. وكل بوست ليه بطل واحد بس.</li>
-        <li><b>الـ Key Visual بيظهر كامل مرة واحدة</b> في بداية الحملة، وبعد كده عناصره بس (الكيس، اللمبة، الخط البينك) جوه الاتجاهات التانية.</li>
+        <li><b>الـ Key Visual بيظهر كامل مرة واحدة</b> في بداية الحملة، وبعد كده عناصره بس (الكيس، اللمبة، الخط الذهبي) جوه الاتجاهات التانية.</li>
         <li><b>الثابت اللي مابيتغيرش:</b> اسم الحملة فوق، واللوجو تحت، والخطين، والألوان الستة، والخط مقابل المصمت.</li>
       </ul>
     </div>
@@ -489,7 +489,7 @@ tr:last-child td{border-bottom:0}
       <li>قواعد الهوية: الألوان والنسب، والخطوط، وقواعد اللوجو.</li>
       <li>الاتجاهات الخمسة: هل في اتجاه عاوزة تشيليه أو تبدّليه؟</li>
       <li>نبرة العبارات: «اللبس بيقدم. المهارة لأ.» و«الدولاب مليان... والمهارات؟».</li>
-      <li>اللوجو على كارت كريمي فوق الأرضيات البنفسجي والبينك.</li>
+      <li>اللوجو على كارت كريمي فوق الأرضيات البنفسجي والذهبي.</li>
     </ol>
   </div>
   <div style="display:flex;flex-direction:column;gap:14px">
@@ -507,9 +507,9 @@ tr:last-child td{border-bottom:0}
 <script>
 const LOGO="__LOGO__", KV="__KV__";
 const ILL={
- laptop:{vb:"-150 -135 300 200",g:'<rect x="-118" y="-128" width="236" height="160" rx="16" fill="#A979C0"/><rect x="-102" y="-112" width="204" height="128" rx="8" fill="#FFF8EE"/><rect x="-84" y="-94" width="96" height="14" rx="7" fill="#58346F"/><rect x="-84" y="-70" width="70" height="9" rx="4.5" fill="#A979C0"/><rect x="-84" y="-54" width="56" height="9" rx="4.5" fill="#A979C0"/><circle cx="54" cy="-58" r="28" fill="#EC5F81"/><path d="M46-72v28l22-14z" fill="#FFF8EE"/><rect x="-84" y="-14" width="168" height="10" rx="5" fill="#F3E7EF"/><rect x="-84" y="-14" width="104" height="10" rx="5" fill="#EC5F81"/><path d="M-134 34h268l14 22h-296z" fill="#8E62A8"/>'},
- book:{vb:"-72 -130 150 248",g:'<rect x="-66" y="-126" width="132" height="236" rx="10" fill="#30263A"/><rect x="-66" y="-126" width="24" height="236" rx="6" fill="#463A52"/><rect x="-26" y="-94" width="72" height="14" rx="7" fill="#EC5F81"/><rect x="-26" y="-70" width="52" height="9" rx="4.5" fill="#FFF8EE" opacity=".75"/><circle cx="10" cy="-12" r="22" fill="none" stroke="#FFF8EE" stroke-width="6" opacity=".75"/><rect x="62" y="-118" width="10" height="220" rx="3" fill="#FFF8EE"/>'},
- bulb:{vb:"-150 -150 300 285",g:'<g stroke="#EC5F81" stroke-width="11" stroke-linecap="round"><path d="M0-112v-26"/><path d="M-80-80l-18-18"/><path d="M80-80l18-18"/><path d="M-112-12h-26"/><path d="M112-12h26"/></g><path d="M-74-12a74 74 0 1 1 148 0c0 34-30 50-34 86h-80c-4-36-34-52-34-86z" fill="#EC5F81"/><path d="M-42-36a46 46 0 0 1 30-32" fill="none" stroke="#FFF8EE" stroke-width="11" stroke-linecap="round"/><rect x="-40" y="80" width="80" height="22" rx="8" fill="#58346F"/><rect x="-32" y="106" width="64" height="20" rx="8" fill="#46295A"/>'},
+ laptop:{vb:"-150 -135 300 200",g:'<rect x="-118" y="-128" width="236" height="160" rx="16" fill="#A979C0"/><rect x="-102" y="-112" width="204" height="128" rx="8" fill="#FFF8EE"/><rect x="-84" y="-94" width="96" height="14" rx="7" fill="#58346F"/><rect x="-84" y="-70" width="70" height="9" rx="4.5" fill="#A979C0"/><rect x="-84" y="-54" width="56" height="9" rx="4.5" fill="#A979C0"/><circle cx="54" cy="-58" r="28" fill="#F5C04A"/><path d="M46-72v28l22-14z" fill="#FFF8EE"/><rect x="-84" y="-14" width="168" height="10" rx="5" fill="#F3E7EF"/><rect x="-84" y="-14" width="104" height="10" rx="5" fill="#F5C04A"/><path d="M-134 34h268l14 22h-296z" fill="#8E62A8"/>'},
+ book:{vb:"-72 -130 150 248",g:'<rect x="-66" y="-126" width="132" height="236" rx="10" fill="#30263A"/><rect x="-66" y="-126" width="24" height="236" rx="6" fill="#463A52"/><rect x="-26" y="-94" width="72" height="14" rx="7" fill="#F5C04A"/><rect x="-26" y="-70" width="52" height="9" rx="4.5" fill="#FFF8EE" opacity=".75"/><circle cx="10" cy="-12" r="22" fill="none" stroke="#FFF8EE" stroke-width="6" opacity=".75"/><rect x="62" y="-118" width="10" height="220" rx="3" fill="#FFF8EE"/>'},
+ bulb:{vb:"-150 -150 300 285",g:'<g stroke="#F5C04A" stroke-width="11" stroke-linecap="round"><path d="M0-112v-26"/><path d="M-80-80l-18-18"/><path d="M80-80l18-18"/><path d="M-112-12h-26"/><path d="M112-12h26"/></g><path d="M-74-12a74 74 0 1 1 148 0c0 34-30 50-34 86h-80c-4-36-34-52-34-86z" fill="#F5C04A"/><path d="M-42-36a46 46 0 0 1 30-32" fill="none" stroke="#FFF8EE" stroke-width="11" stroke-linecap="round"/><rect x="-40" y="80" width="80" height="22" rx="8" fill="#58346F"/><rect x="-32" y="106" width="64" height="20" rx="8" fill="#46295A"/>'},
  bagback:{vb:"0 0 460 580",g:'<path d="M110 195C110 30 350 30 350 195" fill="none" stroke="#3E2350" stroke-width="22" stroke-linecap="round"/><polygon points="16,180 444,180 432,208 28,208" fill="#3E2350"/>'},
  bagfront:{vb:"0 0 460 580",g:'<path d="M8 202H452L426 542Q424 570 396 570H64Q36 570 34 542Z" fill="#58346F"/><path d="M378 240H449L426 542Q424 570 396 570H372Z" fill="#46295A" opacity=".55"/><polygon points="8,202 452,202 449,240 11,240" fill="#46295A"/>'},
  bagmini:{vb:"0 0 460 580",g:'<path d="M110 195C110 30 350 30 350 195" fill="none" stroke="#3E2350" stroke-width="30" stroke-linecap="round"/><path d="M8 202H452L426 542Q424 570 396 570H64Q36 570 34 542Z" fill="#58346F"/><polygon points="8,202 452,202 449,240 11,240" fill="#46295A"/>'},
