@@ -14,14 +14,13 @@
   html,body{margin:0;background:#ddd}
   .stage{position:relative;width:1080px;height:1350px;overflow:hidden;background:var(--cr);font-family:"Tajawal","Cairo",sans-serif}
   .art{position:absolute;inset:0}
-  .eyebrow{position:absolute;top:48px;right:86px;display:flex;align-items:center;gap:16px;
-    font:700 30px/1 "Tajawal",sans-serif;letter-spacing:7px;color:var(--pu);direction:ltr}
-  .eyebrow i{width:14px;height:14px;border-radius:50%;background:var(--or);display:block}
-  .headline{position:absolute;top:140px;right:84px;text-align:right;color:var(--pu);font-weight:900}
-  .l1{font-size:196px;line-height:1}
-  .l2{display:flex;align-items:center;gap:26px;margin-top:6px}
-  .fi{font-size:128px;line-height:1;color:var(--ch);font-weight:800}
-  .hl{font-size:188px;line-height:1;background:var(--or);color:var(--pu);border-radius:28px;padding:0 30px 12px;transform:rotate(-2.5deg);display:inline-block}
+  .eyebrow{position:absolute;top:62px;right:84px;display:flex;align-items:center;gap:18px;white-space:nowrap;
+    font:800 40px/1 "Tajawal",sans-serif;letter-spacing:6px;color:var(--pu);direction:ltr}
+  .eyebrow i{width:16px;height:16px;border-radius:50%;background:var(--or);display:block}
+  .headline{position:absolute;top:150px;right:84px;text-align:right;color:var(--pu);font-weight:900;white-space:nowrap}
+  .l1,.l2{font-size:176px;line-height:1.08}
+  /* «نفسك» underlined in orange below the letters — same size, colour and baseline as the rest of the phrase */
+  .hl{text-decoration:underline;text-decoration-color:var(--or);text-decoration-thickness:24px;text-underline-offset:34px;text-decoration-skip-ink:none}
   .logo{position:absolute;right:62px;bottom:46px;width:236px}
   .tag{position:absolute;left:54px;bottom:44px;height:64px;padding:0 30px 0 64px;background:var(--or);color:var(--pu);
     display:flex;align-items:center;font:800 27px/1 "Tajawal",sans-serif;letter-spacing:3px;direction:ltr;
@@ -111,14 +110,13 @@
     <path d="M228 882H672L646 1222Q644 1250 616 1250H284Q256 1250 254 1222Z" fill="var(--pu)"/>
     <path d="M598 920H669L646 1222Q644 1250 616 1250H592Z" fill="var(--pu-dk)" opacity=".55"/>
     <polygon points="228,882 672,882 669,920 231,920" fill="var(--pu-dk)"/>
-    <image href="../01-BRAND-ASSETS/salina-logo-cream.png" x="310" y="985" width="250" height="173"/>
   </svg>
 
   <div class="eyebrow"><i></i>SALINA WHITE FRIDAY</div>
 
   <div class="headline">
     <div class="l1">استثمري</div>
-    <div class="l2"><span class="fi">في</span><span class="hl">نفسك</span></div>
+    <div class="l2">في <span class="hl">نفسك</span></div>
   </div>
 
   <img class="logo" src="../01-BRAND-ASSETS/salina-logo-transparent.png" alt="Salina">
