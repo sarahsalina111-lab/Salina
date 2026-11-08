@@ -13,7 +13,10 @@
   const spring = (dt, amp, f = 18, k = 9) => dt < 0 ? 0 : amp * Math.exp(-k * dt) * Math.cos(f * dt);
 
   const CTA = {};
-  CTA.init = function (stage) {
+  // opts (all optional): { b: HTML of the big line, bSize: px, tag: text on the gold tag, handle: text under the tag }
+  CTA.init = function (stage, opts = {}) {
+    const B = opts.b || 'استني عروض <span style="color:#F5C04A">Salina</span>', BS = opts.bSize || 104;
+    const TAG = opts.tag || 'تابعينا عشان تلحقيها', H = opts.handle !== undefined ? opts.handle : HANDLE;
     const w = document.createElement('div');
     w.id = 'cta'; w.style.cssText = 'position:absolute;inset:0;pointer-events:none;visibility:hidden';
     w.innerHTML = `
@@ -31,13 +34,13 @@
         <span>إتمام الشراء</span></div>
       <svg id="ctaHand" width="96" height="128" viewBox="0 0 96 128" style="position:absolute;left:0;top:0">
         <path d="M8 6L8 104 34 80 52 120 70 112 52 74 88 74Z" fill="#FFF8EE" stroke="#30263A" stroke-width="7" stroke-linejoin="round"/></svg>
-      <div class="row" id="ctaB" style="top:810px;font:900 104px/1.25 'Tajawal',sans-serif;color:#FFF8EE">
-        <span id="ctaBin" style="display:inline-block">استني عروض <span style="color:#F5C04A">Salina</span></span></div>
+      <div class="row" id="ctaB" style="top:810px;font:900 ${BS}px/1.25 'Tajawal',sans-serif;color:#FFF8EE">
+        <span id="ctaBin" style="display:inline-block">${B}</span></div>
       <div id="ctaTag" style="position:absolute;left:150px;top:1060px;width:780px;height:150px;background:#F5C04A;color:#58346F;
            clip-path:polygon(70px 0,100% 0,100% 100%,70px 100%,0 50%);display:flex;align-items:center;justify-content:center;
            padding-left:60px;box-sizing:border-box;font:900 64px/1 'Tajawal',sans-serif;direction:rtl;white-space:nowrap">
-        <i style="position:absolute;left:46px;top:63px;width:24px;height:24px;border-radius:50%;background:#58346F;display:block"></i>تابعينا عشان تلحقيها</div>
-      <div class="row" id="ctaH" style="top:1236px;font:700 46px/1.2 'Cairo',sans-serif;color:#E9DCF0;direction:ltr">${HANDLE}</div>`;
+        <i style="position:absolute;left:46px;top:63px;width:24px;height:24px;border-radius:50%;background:#58346F;display:block"></i>${TAG}</div>
+      <div class="row" id="ctaH" style="top:1236px;font:700 46px/1.2 'Cairo',sans-serif;color:#E9DCF0;direction:ltr">${H}</div>`;
     stage.appendChild(w);
   };
 
