@@ -23,12 +23,15 @@ const { chromium } = require('playwright'); const path = require('path');
       texts.push({ t: t.slice(0, 28), px: Math.round(px), font: cs.fontFamily.split(',')[0].replace(/"/g, ''), w: cs.fontWeight, contrast: +cr.toFixed(2), need: large ? 3 : 4.5,
         inside: R.left >= S.left - 1 && R.right <= S.right + 1 && R.top >= S.top - 1 && R.bottom <= S.bottom + 1 });
     }
-    return { size: [S.width, S.height], texts, imgs: [...st.querySelectorAll('img')].map(i => [i.getAttribute('src').split('/').pop(), i.naturalWidth > 0]),
+    const clipped = [...st.querySelectorAll('.card,.price,[data-fit]')].flatMap(box => { const B = box.getBoundingClientRect();
+      return [...box.querySelectorAll('*'), box].filter(e => e !== box || box.hasAttribute('data-fit')).filter(e => { const R = e.getBoundingClientRect(); return R.width && (e.scrollWidth > e.clientWidth + 1 || (e !== box && (R.bottom > B.bottom + 1 || R.left < B.left - 1))); }).map(e => (e.textContent || e.className).trim().slice(0, 24)); });
+    return { size: [S.width, S.height], texts, clipped: [...new Set(clipped)], imgs: [...st.querySelectorAll('img')].map(i => [i.getAttribute('src').split('/').pop(), i.naturalWidth > 0]),
       fonts: [...document.fonts].filter(f => f.status === 'loaded').map(f => f.family.replace(/"/g, '') + ' ' + f.weight) };
   });
   console.log(`\n== ${path.basename(input)}  stage ${r.size.join('x')}`);
   console.log('fonts loaded:', [...new Set(r.fonts)].join(', '));
   console.log('images:', JSON.stringify(r.imgs), failed.length ? 'FAILED: ' + failed.join(' ') : 'all assets loaded');
+  console.log(r.clipped.length ? 'CLIPPED: ' + JSON.stringify(r.clipped) : 'no clipped content');
   for (const t of r.texts) console.log(`${t.contrast >= t.need ? 'ok ' : 'LOW'} ${String(t.contrast).padStart(5)} (need ${t.need}) ${t.inside ? 'in ' : 'OUT'} ${t.px}px ${t.font} ${t.w}  ${t.t}`);
   await p.locator('#stage').screenshot({ path: out }); console.log('exported', out);
   await b.close();

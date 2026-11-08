@@ -1,50 +1,59 @@
 <!doctype html>
-<html lang="ar"><head><meta charset="utf-8"><title>Sample 3 — بطاقة العرض</title>
+<html lang="ar"><head><meta charset="utf-8"><title>Sample 3 — بطاقة العرض (قالب)</title>
 <link rel="stylesheet" href="base.css">
 <style>
   .stage{background:var(--tint)}
   .pill{background:var(--pu);color:var(--cr);border-radius:999px;display:flex;align-items:center;gap:14px;font:800 28px/1 "Tajawal",sans-serif;letter-spacing:4px;direction:ltr;padding:18px 28px;white-space:nowrap}
   .pill i{width:12px;height:12px;border-radius:50%;background:var(--gd);display:block}
   .card{clip-path:polygon(50% 0,100% 12%,100% 100%,0 100%,0 12%);background:var(--gd);transform-origin:50% 0;
-        display:flex;flex-direction:column;align-items:flex-end;gap:16px;padding:150px 48px 0;box-sizing:border-box}
+        display:flex;flex-direction:column;align-items:stretch;gap:12px;padding:140px 44px 0;box-sizing:border-box}
   .card::before{content:"";position:absolute;left:50%;top:48px;width:36px;height:36px;margin-left:-18px;border-radius:50%;background:var(--tint)}
-  .card .k{font:600 32px/1.45 "Cairo",sans-serif;color:var(--ch);white-space:nowrap}
+  .card .k{font:600 30px/1.45 "Cairo",sans-serif;color:var(--ch);white-space:nowrap}
   .card .k b{font-weight:700;color:var(--pu)}
-  .ph{color:var(--pu-dk);font-weight:700}
+  .sep{border-top:5px dashed var(--pu);opacity:.45;margin-block:6px}
+  /* price block: three labelled rows, nothing overlaps */
+  .price{background:var(--pu);border-radius:26px;padding:20px 26px 22px;display:flex;flex-direction:column;gap:12px;margin-top:8px}
+  .price .row{display:flex;justify-content:space-between;align-items:center;gap:16px;min-width:0}
+  .price .lbl{font:600 26px/1.2 "Cairo",sans-serif;color:var(--soft);white-space:nowrap;flex:none}
+  .price .old{font:600 30px/1.2 "Cairo",sans-serif;color:var(--soft);text-decoration:line-through;white-space:nowrap;overflow:hidden;min-width:0}
+  .price .off{background:var(--gd);color:var(--pu);border-radius:999px;padding:6px 18px;font:800 30px/1.2 "Tajawal",sans-serif;white-space:nowrap;overflow:hidden;min-width:0}
+  .price .new{font:900 58px/1.1 "Tajawal",sans-serif;color:var(--cr);white-space:nowrap;overflow:hidden;text-align:right}
+  .price hr{border:0;border-top:2px solid rgba(255,248,238,.25);margin:2px 0}
 </style></head>
 <body>
 <div class="stage" id="stage">
   <div class="pill" style="top:56px;left:60px"><i></i>SALINA WHITE FRIDAY</div>
 
-  <!-- nail + string -->
   <div style="left:324px;top:150px;width:26px;height:26px;border-radius:50%;background:var(--pu)"></div>
   <div style="left:335px;top:170px;width:4px;height:70px;background:var(--ch);opacity:.55"></div>
 
-  <!-- the price tag = the course card (sample data in brackets) -->
-  <div class="card" style="left:87px;top:206px;width:500px;height:900px;transform:rotate(-4deg)">
-    <span class="k">[ورشة / كورس]</span>
-    <span class="d" style="font-size:68px;line-height:1.15">[اسم الورشة]</span>
-    <span class="k">مع <span class="ph">[اسم المدرّبة]</span></span>
-    <span style="align-self:stretch;border-top:5px dashed var(--pu);opacity:.45;margin-block:8px"></span>
-    <span class="k"><b>المدة:</b> [عدد الساعات / الأسابيع]</span>
-    <span class="k"><b>النظام:</b> [أونلاين / حضوري]</span>
-    <span class="k"><b>البداية:</b> [التاريخ]</span>
-    <span style="align-self:stretch;display:flex;flex-direction:column-reverse;align-items:flex-start;gap:10px;margin-top:26px;background:var(--pu);border-radius:26px;padding:22px 28px">
-      <span style="font:900 42px/1 'Tajawal',sans-serif;color:var(--cr);white-space:nowrap">[سعر العرض]</span>
-      <span style="font:600 26px/1.3 'Cairo',sans-serif;color:var(--soft);text-decoration:line-through;white-space:nowrap">[السعر الأصلي]</span>
-    </span>
+  <!-- TEMPLATE: every [data-field] is replaced from COURSE below; empty values keep the [placeholder] -->
+  <div class="card" style="left:87px;top:206px;width:500px;height:930px;transform:rotate(-4deg)">
+    <span class="k" data-field="type">[ورشة / كورس]</span>
+    <span class="d" style="font-size:66px;line-height:1.15;white-space:normal" data-field="title" data-fit-lines="2">[اسم الورشة]</span>
+    <span class="k">مع <b data-field="trainer">[اسم المدرّبة]</b></span>
+    <span class="sep"></span>
+    <span class="k"><b>المدة:</b> <span data-field="duration">[المدة]</span></span>
+    <span class="k"><b>النظام:</b> <span data-field="mode">[أونلاين / حضوري]</span></span>
+    <span class="k"><b>البداية:</b> <span data-field="start">[التاريخ]</span></span>
+    <div class="price">
+      <div class="row"><span class="lbl">السعر الأصلي</span><span class="old" data-field="price_old" data-fit>[السعر قبل]</span></div>
+      <div class="row"><span class="lbl">الخصم</span><span class="off" data-field="discount" data-fit>[نسبة الخصم]</span></div>
+      <hr>
+      <span class="lbl">سعر العرض</span>
+      <span class="new" data-field="price_new" data-fit>[السعر بعد]</span>
+    </div>
   </div>
 
-  <!-- message column -->
   <div class="d" style="top:236px;right:84px;font-size:72px;color:var(--ch);font-weight:800;line-height:1.2">بدل قطعة<br>جديدة...</div>
   <div class="d" style="top:440px;right:84px;font-size:116px;line-height:1.14">اشتري<br><span class="ul">مهارة.</span></div>
 
   <svg style="left:650px;top:780px" width="330" height="220" viewBox="-150 -135 300 200" aria-hidden="true">
     <g transform="rotate(-8)">
-      <rect x="-118" y="-128" width="236" height="160" rx="16" fill="#A979C0"/><rect x="-102" y="-112" width="204" height="128" rx="8" fill="#FFF8EE"/>
-      <rect x="-84" y="-94" width="96" height="14" rx="7" fill="#58346F"/><rect x="-84" y="-70" width="70" height="9" rx="4.5" fill="#A979C0"/><rect x="-84" y="-54" width="56" height="9" rx="4.5" fill="#A979C0"/>
-      <circle cx="54" cy="-58" r="28" fill="#F5C04A"/><path d="M46-72v28l22-14z" fill="#FFF8EE"/>
-      <rect x="-84" y="-14" width="168" height="10" rx="5" fill="#F3E7EF"/><rect x="-84" y="-14" width="104" height="10" rx="5" fill="#F5C04A"/>
+      <rect x="-118" y="-128" width="236" height="160" rx="16" fill="var(--vi)"/><rect x="-102" y="-112" width="204" height="128" rx="8" fill="var(--cr)"/>
+      <rect x="-84" y="-94" width="96" height="14" rx="7" fill="var(--pu)"/><rect x="-84" y="-70" width="70" height="9" rx="4.5" fill="var(--vi)"/><rect x="-84" y="-54" width="56" height="9" rx="4.5" fill="var(--vi)"/>
+      <circle cx="54" cy="-58" r="28" fill="var(--gd)"/><path d="M46-72v28l22-14z" fill="var(--cr)"/>
+      <rect x="-84" y="-14" width="168" height="10" rx="5" fill="var(--tint)"/><rect x="-84" y="-14" width="104" height="10" rx="5" fill="var(--gd)"/>
       <path d="M-134 34h268l14 22h-296z" fill="#8E62A8"/>
     </g>
   </svg>
@@ -53,4 +62,27 @@
 
   <img class="logo" src="../../01-BRAND-ASSETS/salina-logo-transparent.png" alt="Salina" style="left:76px;bottom:40px;width:210px">
 </div>
+<script>
+/* ===== COURSE DATA — fill these when the real course details arrive, then re-export ===== */
+const COURSE = {
+  type: "",       // ورشة أو كورس
+  title: "",      // اسم الورشة
+  trainer: "",    // اسم المدرّبة
+  duration: "",   // مثال: ٤ أسابيع
+  mode: "",       // أونلاين / حضوري
+  start: "",      // تاريخ البداية
+  price_old: "",  // السعر قبل الخصم
+  discount: "",   // نسبة الخصم
+  price_new: ""   // السعر بعد الخصم
+};
+document.querySelectorAll('[data-field]').forEach(el => { const v = COURSE[el.dataset.field]; if (v) el.textContent = v; });
+/* long values shrink to fit instead of overflowing */
+document.fonts.ready.then(() => {
+  document.querySelectorAll('[data-fit]').forEach(el => { let f = parseFloat(getComputedStyle(el).fontSize);
+    while (el.scrollWidth > el.clientWidth + 1 && f > 18) { f -= 1; el.style.fontSize = f + 'px'; } });
+  document.querySelectorAll('[data-fit-lines]').forEach(el => { const n = +el.dataset.fitLines; let f = parseFloat(getComputedStyle(el).fontSize);
+    const lh = () => parseFloat(getComputedStyle(el).lineHeight);
+    while (el.getBoundingClientRect().height > n * lh() + 2 && f > 40) { f -= 2; el.style.fontSize = f + 'px'; } });
+});
+</script>
 </body></html>
