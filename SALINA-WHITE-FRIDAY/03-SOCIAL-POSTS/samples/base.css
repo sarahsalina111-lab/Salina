@@ -1,5 +1,6 @@
 /* SALINA WHITE FRIDAY — shared tokens for 1080×1350 post sources */
-@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800;900&family=Cairo:wght@500;600;700&display=swap");
+/* fonts are bundled in the project (no internet needed to open or render) */
+@import url("../../01-BRAND-ASSETS/fonts/fonts.css");
 :root{
   --pu:#58346F; --pu-dk:#46295A; --pu-in:#3E2350;
   --vi:#A979C0; --gd:#F5C04A; --cr:#FFF8EE; --ch:#30263A; --tint:#F3E7EF; --soft:#E9DCF0;

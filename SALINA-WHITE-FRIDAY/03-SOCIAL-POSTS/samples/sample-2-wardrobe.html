@@ -2,67 +2,95 @@
 <html lang="ar"><head><meta charset="utf-8"><title>Sample 2 — الدولاب مليان</title>
 <link rel="stylesheet" href="base.css">
 <style>
+  /* One wardrobe, two halves: clothes packed and spilling out (outline style) vs. skills — one real book and
+     dashed empty slots for what's missing (solid = investment). Plaques name each half. */
+  .plaque{height:58px;border-radius:29px;display:flex;align-items:center;justify-content:center;font:800 34px/1 "Tajawal",sans-serif;white-space:nowrap}
   .tag{clip-path:polygon(44px 0,100% 0,100% 100%,44px 100%,0 50%);background:var(--gd);color:var(--pu);display:flex;align-items:center;justify-content:center;
-       font:800 36px/1 "Tajawal",sans-serif;padding:0 26px 0 64px;box-sizing:border-box}
+       font:800 34px/1 "Tajawal",sans-serif;padding:0 26px 0 64px;box-sizing:border-box;white-space:nowrap}
   .tag::before{content:"";position:absolute;left:30px;top:50%;width:16px;height:16px;margin-top:-8px;border-radius:50%;background:var(--tint)}
 </style></head>
 <body>
 <div class="stage" id="stage">
   <div class="eb" style="top:62px;right:84px"><i></i>SALINA WHITE FRIDAY</div>
-  <div class="d" style="top:150px;right:84px;font-size:124px">الدولاب مليان...</div>
-  <div class="d" style="top:290px;right:84px;font-size:124px;color:var(--ch)">والمهارات<span style="color:var(--gd)">؟</span></div>
+  <div class="d" style="top:146px;right:84px;font-size:112px">الدولاب مليان...</div>
+  <div class="d" style="top:272px;right:84px;font-size:112px;color:var(--ch)">والمهارات<span style="color:var(--pu)">؟</span></div>
 
   <svg style="left:0;top:0" width="1080" height="1350" viewBox="0 0 1080 1350" aria-hidden="true">
-    <g fill="none" stroke="#A979C0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-      <!-- body -->
-      <rect x="200" y="500" width="680" height="680" rx="14" fill="#F3E7EF"/>
-      <rect x="182" y="476" width="716" height="30" rx="10" fill="#FFF8EE"/>
-      <!-- open doors -->
-      <path d="M880 512L986 560V1124L880 1170" fill="#FFF8EE"/>
-      <path d="M200 512L94 560V1124L200 1170" fill="#FFF8EE"/>
-      <path d="M962 830v40M118 830v40"/>
-      <!-- divider -->
-      <path d="M560 506V1180"/>
+    <g fill="none" stroke="#A979C0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <!-- overflow on top of the clothes half -->
+      <rect x="610" y="430" width="110" height="46" rx="6" fill="#FFF8EE"/>
+      <rect x="626" y="398" width="84" height="34" rx="6" fill="#F3E7EF"/>
+      <g transform="translate(790 476)"><path d="M-20-44v-10c0-22 40-22 40 0v10"/><path d="M-44-44h88l-4 44H-40z" fill="#FFF8EE"/></g>
 
-      <!-- RIGHT: clothes, packed -->
-      <path d="M574 560H866"/>
-      <g transform="translate(610 560) rotate(-4)"><path d="M0 0v-8"/><path d="M0 6L-26 22H26z"/><path d="M-24 22H24L34 42 22 46V150H-22V46L-34 42Z" fill="#F3E7EF"/></g>
-      <g transform="translate(660 560) rotate(3)"><path d="M0 0v-8"/><path d="M0 6L-26 22H26z"/><path d="M-16 22H16L14 52 46 176H-46L-14 52Z" fill="#F3E7EF"/></g>
-      <g transform="translate(712 560) rotate(-2)"><path d="M0 0v-8"/><path d="M0 6L-26 22H26z"/><path d="M-24 22H24L34 42 22 46V160H-22V46L-34 42Z" fill="#F3E7EF"/></g>
-      <g transform="translate(762 560) rotate(4)"><path d="M0 0v-8"/><path d="M0 6L-26 22H26z"/><path d="M-16 22H16L14 52 42 166H-42L-14 52Z" fill="#F3E7EF"/></g>
-      <g transform="translate(814 560) rotate(-3)"><path d="M0 0v-8"/><path d="M0 6L-26 22H26z"/><path d="M-24 22H24L34 42 22 46V146H-22V46L-34 42Z" fill="#F3E7EF"/></g>
-      <path d="M560 900H880"/>
-      <!-- bags piled on the lower shelf -->
-      <g transform="translate(640 1060)"><path d="M-28-60v-16c0-30 56-30 56 0v16"/><path d="M-62-60h124l-6 160q-1 10-11 10h-90q-10 0-11-10z" fill="#F3E7EF"/></g>
-      <g transform="translate(790 1110) rotate(-6)"><path d="M-40-34c0-56 80-56 80 0"/><path d="M-72-34H72q8 0 8 8v76q0 10-10 10H-70q-10 0-10-10v-76q0-8 8-8z" fill="#F3E7EF"/><rect x="-12" y="-10" width="24" height="18" rx="4"/></g>
-      <g transform="translate(760 990) rotate(8)"><path d="M-22-46v-12c0-24 44-24 44 0v12"/><path d="M-50-46h100l-5 88q-1 8-9 8h-72q-8 0-9-8z" fill="#F3E7EF"/></g>
-      <!-- a shoe falling out of the right door -->
-      <g transform="translate(990 1214) rotate(-16) scale(.78)"><path d="M-95 40V5c0-17 13-25 29-25h36l20 24c20 18 46 24 76 27l26 5c12 2 16 14 12 24H-95z" fill="#FFF8EE"/><path d="M-95 48h199"/></g>
-      <path d="M930 1150q14-18 6-40" stroke-dasharray="1 16"/>
+      <!-- carcass -->
+      <rect x="190" y="490" width="700" height="690" rx="14" fill="#F3E7EF"/>
+      <rect x="172" y="474" width="736" height="28" rx="10" fill="#FFF8EE"/>
+      <path d="M560 502V1180"/>
+      <!-- doors, open -->
+      <path d="M890 504L990 552V1120L890 1168" fill="#FFF8EE"/>
+      <path d="M190 504L90 552V1120L190 1168" fill="#FFF8EE"/>
+      <path d="M966 820v44M114 820v44"/>
 
-      <!-- LEFT: skills, mostly empty -->
-      <path d="M200 720H560M200 900H560"/>
-      <!-- empty slots -->
-      <g stroke-width="4" stroke-dasharray="10 12">
-        <rect x="318" y="590" width="58" height="126" rx="8"/>
-        <rect x="392" y="590" width="58" height="126" rx="8"/>
-        <rect x="466" y="590" width="58" height="126" rx="8"/>
-        <rect x="240" y="768" width="280" height="128" rx="12"/>
+      <!-- CLOTHES HALF: packed rail -->
+      <path d="M574 598H878"/>
+      <g fill="#FFF8EE">
+        <g transform="translate(596 598) rotate(-5)"><path d="M0 0v-8"/><path d="M0 5L-22 20H22z"/><path d="M-20 20H20L30 38 20 42V176H-20V42L-30 38Z"/></g>
+        <g transform="translate(628 598) rotate(4)"><path d="M0 0v-8"/><path d="M0 5L-22 20H22z"/><path d="M-14 20H14L12 48 40 196H-40L-12 48Z" fill="#F3E7EF"/></g>
+        <g transform="translate(662 598) rotate(-3)"><path d="M0 0v-8"/><path d="M0 5L-22 20H22z"/><path d="M-20 20H20L30 38 20 42V186H-20V42L-30 38Z"/></g>
+        <g transform="translate(696 598) rotate(5)"><path d="M0 0v-8"/><path d="M0 5L-22 20H22z"/><path d="M-22 20H22L32 40 22 44V170H-22V44L-32 40Z" fill="#F3E7EF"/><path d="M-12 70h24M-12 96h24"/></g>
+        <g transform="translate(730 598) rotate(-4)"><path d="M0 0v-8"/><path d="M0 5L-22 20H22z"/><path d="M-14 20H14L12 48 38 206H-38L-12 48Z"/></g>
+        <g transform="translate(764 598) rotate(3)"><path d="M0 0v-8"/><path d="M0 5L-22 20H22z"/><path d="M-20 20H20L30 38 20 42V180H-20V42L-30 38Z" fill="#F3E7EF"/></g>
+        <g transform="translate(798 598) rotate(-5)"><path d="M0 0v-8"/><path d="M0 5L-22 20H22z"/><path d="M-20 20H20L30 38 20 42V192H-20V42L-30 38Z"/></g>
+        <g transform="translate(832 598) rotate(4)"><path d="M0 0v-8"/><path d="M0 5L-22 20H22z"/><path d="M-14 20H14L12 48 36 186H-36L-12 48Z" fill="#F3E7EF"/></g>
+        <g transform="translate(862 598) rotate(-2)"><path d="M0 0v-8"/><path d="M0 5L-22 20H22z"/><path d="M-20 20H20L30 38 20 42V172H-20V42L-30 38Z"/></g>
+      </g>
+      <!-- a sleeve squeezed out of the right door -->
+      <path d="M888 700q40 10 52 52l-18 8q-12-28-34-34z" fill="#FFF8EE"/>
+      <path d="M560 860H890"/>
+      <!-- folded stack + bags -->
+      <g fill="#FFF8EE">
+        <rect x="582" y="1100" width="118" height="26" rx="8"/><rect x="588" y="1074" width="108" height="26" rx="8" fill="#F3E7EF"/>
+        <rect x="580" y="1048" width="120" height="26" rx="8"/><rect x="590" y="1022" width="104" height="26" rx="8" fill="#F3E7EF"/>
+        <rect x="584" y="996" width="114" height="26" rx="8"/><rect x="592" y="970" width="100" height="26" rx="8" fill="#F3E7EF"/>
+        <rect x="586" y="1126" width="116" height="40" rx="8"/>
+        <g transform="translate(800 1070) rotate(-5)"><path d="M-36-34c0-50 72-50 72 0"/><path d="M-66-34H66q8 0 8 8v76q0 10-10 10H-64q-10 0-10-10v-76q0-8 8-8z"/><rect x="-12" y="-10" width="24" height="18" rx="4"/></g>
+        <g transform="translate(760 940) rotate(7)"><path d="M-20-40v-10c0-22 40-22 40 0v10"/><path d="M-46-40h92l-5 80q-1 8-9 8h-64q-8 0-9-8z" fill="#F3E7EF"/></g>
+        <g transform="translate(846 930) rotate(-9)"><path d="M-14-30v-8c0-16 28-16 28 0v8"/><path d="M-30-30h60l-4 60q-1 6-7 6h-38q-6 0-7-6z"/></g>
+      </g>
+      <!-- shoe falling out -->
+      <g transform="translate(985 1218) rotate(-16) scale(.74)"><path d="M-95 40V5c0-17 13-25 29-25h36l20 24c20 18 46 24 76 27l26 5c12 2 16 14 12 24H-95z" fill="#FFF8EE"/><path d="M-95 48h199"/></g>
+      <path d="M930 1150q14-18 6-40" stroke-dasharray="1 15"/>
+
+      <!-- SKILLS HALF: shelves + dashed slots for what's missing -->
+      <path d="M190 720H560M190 920H560"/>
+      <g stroke-width="4" stroke-dasharray="9 11">
+        <rect x="300" y="602" width="54" height="116" rx="7"/>
+        <rect x="366" y="602" width="54" height="116" rx="7"/>
+        <rect x="432" y="602" width="54" height="116" rx="7"/>
+        <!-- laptop silhouette -->
+        <rect x="268" y="764" width="214" height="128" rx="12"/>
+        <path d="M250 900h250"/>
+        <!-- bulb silhouette -->
+        <path d="M412 962a40 40 0 0 0-24 72c4 4 6 9 6 15h36c0-6 2-11 6-15a40 40 0 0 0-24-72z"/>
+        <rect x="396" y="1056" width="32" height="18" rx="5"/>
       </g>
     </g>
-    <!-- one real book on the top shelf (solid = investment) -->
-    <g transform="translate(270 652) scale(.5)">
+    <!-- the one real thing on the skills side: a book -->
+    <g transform="translate(250 660) scale(.47)">
       <rect x="-66" y="-126" width="132" height="236" rx="10" fill="#30263A"/>
       <rect x="-66" y="-126" width="24" height="236" rx="6" fill="#463A52"/>
       <rect x="-26" y="-94" width="72" height="14" rx="7" fill="#F5C04A"/>
       <rect x="-26" y="-70" width="52" height="9" rx="4.5" fill="#FFF8EE" opacity=".75"/>
     </g>
-    <!-- string for the tag -->
-    <path d="M380 900V996" stroke="#30263A" stroke-width="3" opacity=".55"/>
+    <path d="M300 920V1086" stroke="#30263A" stroke-width="3" opacity=".5"/>
   </svg>
 
-  <div class="tag" style="top:984px;left:224px;width:316px;height:76px;white-space:nowrap;font-size:34px;transform:rotate(-5deg);transform-origin:158px 0">لسه فيه مكان</div>
+  <!-- plaques naming the halves -->
+  <div class="plaque" style="top:516px;left:610px;width:230px;background:var(--cr);color:var(--vi);box-shadow:inset 0 0 0 4px var(--vi)">اللبس</div>
+  <div class="plaque" style="top:516px;left:255px;width:240px;background:var(--pu);color:var(--cr)">المهارات</div>
 
-  <img class="logo" src="../../01-BRAND-ASSETS/salina-logo-transparent.png" alt="Salina" style="left:445px;bottom:28px;width:190px">
+  <div class="tag" style="top:1080px;left:208px;width:300px;height:72px;transform:rotate(-5deg);transform-origin:150px 0">لسه فيه مكان</div>
+
+  <img class="logo" src="../../01-BRAND-ASSETS/salina-logo-transparent.png" alt="Salina" style="left:450px;bottom:26px;width:180px">
 </div>
 </body></html>

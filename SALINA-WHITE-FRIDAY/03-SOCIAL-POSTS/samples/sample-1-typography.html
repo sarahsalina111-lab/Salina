@@ -2,33 +2,39 @@
 <html lang="ar"><head><meta charset="utf-8"><title>Sample 1 — الخصم بيخلص</title>
 <link rel="stylesheet" href="base.css">
 <style>
+  /* Typographic poster: a centred stack framed by rules (lettering-poster structure),
+     where the rules are two meters — the offer runs out, what you learn stays full. */
   .stage{background:var(--pu)}
-  /* two statements, two "meters": the offer runs out, the learning stays full */
-  .track{height:30px;border-radius:15px;box-shadow:inset 0 0 0 4px rgba(233,220,240,.45)}
-  .fill{position:absolute;right:0;top:0;bottom:0;border-radius:15px;background:var(--gd)}
+  .c{left:0;right:0;text-align:center}
+  .meter{left:150px;right:150px;height:14px;border-radius:7px;background:rgba(255,248,238,.22)}
+  .meter i{position:absolute;right:0;top:0;bottom:0;border-radius:7px;background:var(--gd)}
+  .cap{font:600 30px/1 "Cairo",sans-serif;color:var(--soft);white-space:nowrap}
+  .rule{left:150px;right:150px;height:4px;border-radius:2px;background:var(--cr);opacity:.85}
+  .halftone{left:40px;top:300px;width:1000px;height:1000px;border-radius:50%;
+    background-image:radial-gradient(circle,#6A4483 3.2px,transparent 3.6px);background-size:22px 22px;
+    -webkit-mask:radial-gradient(circle,#000 0,#000 38%,transparent 70%);mask:radial-gradient(circle,#000 0,#000 38%,transparent 70%)}
 </style></head>
 <body>
 <div class="stage" id="stage">
-  <!-- header: campaign name right, logo chip left -->
+  <div class="halftone"></div>
+
   <div class="eb" style="top:72px;right:84px;color:var(--cr)"><i></i>SALINA WHITE FRIDAY</div>
   <div class="chip" style="top:48px;left:60px;width:230px"><img src="../../01-BRAND-ASSETS/salina-logo-transparent.png" alt="Salina"></div>
 
-  <!-- statement 1: muted, small, its meter almost empty -->
-  <div class="d" style="top:232px;right:84px;font-size:118px;color:var(--vi)">الخصم بيخلص.</div>
-  <div class="track" style="top:392px;right:84px;width:912px">
-    <div class="fill" style="width:12%"></div>
-  </div>
-  <div class="b" style="top:440px;right:84px;font-size:32px;color:var(--soft)">عروض الوايت فرايداي</div>
+  <!-- line 1: the offer — smaller, softer, its meter almost empty -->
+  <div class="rule" style="top:262px"></div>
+  <div class="d c" style="top:300px;font-size:116px;color:var(--soft);font-weight:800">الخصم بيخلص.</div>
+  <div class="meter" style="top:468px"><i style="width:10%"></i></div>
+  <div class="cap" style="top:504px;right:150px">عروض الوايت فرايداي</div>
+  <div class="cap" style="top:504px;left:150px;color:var(--gd)">قرّبت تخلص</div>
 
-  <!-- statement 2: bright, large, meter full -->
-  <div class="d" style="top:610px;right:84px;font-size:146px;color:var(--cr)">اللي اتعلمتيه</div>
-  <div class="d" style="top:790px;right:84px;font-size:250px;color:var(--cr)">بيفضل.</div>
-  <div class="track" style="top:1080px;right:84px;width:912px;box-shadow:none">
-    <div class="fill" style="width:100%"></div>
-  </div>
-  <div class="b" style="top:1128px;right:84px;font-size:32px;color:var(--soft)">معاكي على طول</div>
+  <!-- line 2: what you learn — big, bright, its meter full -->
+  <div class="d c" style="top:610px;font-size:150px;color:var(--cr)">اللي اتعلمتيه</div>
+  <div class="d c" style="top:790px;font-size:250px;color:var(--cr);text-shadow:10px 10px 0 var(--gd)">بيفضل.</div>
+  <div class="meter" style="top:1100px;height:22px;border-radius:11px"><i style="width:100%;border-radius:11px"></i></div>
+  <div class="cap" style="top:1144px;right:150px">مهارتك</div>
+  <div class="cap" style="top:1144px;left:150px;color:var(--gd)">معاكي على طول</div>
 
-  <!-- footer -->
-  <div class="b" style="bottom:66px;left:84px;font-size:38px;color:var(--cr);font-weight:700">استثمري في نفسك</div>
+  <div class="d c" style="bottom:56px;font-size:44px;color:var(--cr);font-weight:800">استثمري في نفسك</div>
 </div>
 </body></html>
