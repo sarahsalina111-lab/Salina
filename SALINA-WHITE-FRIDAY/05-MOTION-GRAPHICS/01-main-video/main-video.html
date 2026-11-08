@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ar"><head><meta charset="utf-8"><title>SALINA WHITE FRIDAY — Main Campaign Video</title>
+<link rel="stylesheet" href="../../01-BRAND-ASSETS/fonts/fonts.css">
+<style>
+  /* Source of the main campaign video (1080x1920, 30fps, 18.5s).
+     Every frame is a pure function of time: renderAt(t). Open with #play to preview live in a browser. */
+  :root{--pu:#58346F;--pu-dk:#46295A;--pu-in:#3E2350;--vi:#A979C0;--gd:#F5C04A;--cr:#FFF8EE;--ch:#30263A;--tint:#F3E7EF;--soft:#E9DCF0}
+  html,body{margin:0;background:#222}
+  #stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--cr);font-family:"Tajawal","Cairo",sans-serif}
+  #stage > *{position:absolute}
+  svg{overflow:visible}
+  .line{left:0;right:0;display:flex;justify-content:center;gap:.26em;direction:rtl;white-space:nowrap;font-weight:900;line-height:1.25}
+  .m{display:inline-block;overflow:hidden;padding:.12em .04em .2em;margin:-.12em -.04em -.2em}
+  .m > span{display:inline-block;will-change:transform}
+  .ltr{direction:ltr}
+  #wipe{left:0;top:0;width:1px;height:1px;border-radius:50%;background:var(--pu)}
+  .chip{background:var(--cr);border-radius:34px;padding:22px 30px;box-sizing:border-box}
+  .chip img{display:block;width:100%}
+</style></head>
+<body>
+<div id="stage">
+  <svg id="art" width="1080" height="1920" viewBox="0 0 1080 1920" style="left:0;top:0">
+    <defs>
+      <!-- outline shopping bag, origin = mouth centre -->
+      <g id="obag" fill="var(--cr)" stroke="var(--vi)" stroke-width="8" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M-58 0v-38c0-78 116-78 116 0v38" fill="none"/>
+        <path d="M-150 0H150L136 300Q135 320 115 320H-115Q-135 320-136 300Z"/>
+      </g>
+      <g id="i-shoe" fill="var(--cr)" stroke="var(--vi)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" transform="translate(-5 -14)">
+        <path d="M-95 40V5c0-17 13-25 29-25h36l20 24c20 18 46 24 76 27l26 5c12 2 16 14 12 24H-95z"/><path d="M-95 48h199M-22 10l12-10M-6 18l12-10" fill="none"/>
+      </g>
+      <g id="i-dress" fill="var(--cr)" stroke="var(--vi)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M0-102c0-16 15-20 19-9" fill="none"/><path d="M0-100L-72-62H72z" fill="none"/><path d="M-30-62H30l-4 42 54 140H-80l54-140z"/><path d="M-27-20h54" fill="none"/>
+      </g>
+      <g id="i-hbag" fill="var(--cr)" stroke="var(--vi)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" transform="translate(0 -6)">
+        <path d="M-45-30c0-64 90-64 90 0" fill="none"/><path d="M-80-30H80q8 0 8 8v82q0 12-12 12H-76q-12 0-12-12v-82q0-8 8-8z"/><rect x="-14" y="-6" width="28" height="20" rx="4"/>
+      </g>
+      <g id="i-shirt" fill="var(--cr)" stroke="var(--vi)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" transform="translate(0 -40)">
+        <path d="M-30 0L-12-8H12L30 0 52 30 34 42 26 34V100H-26V34L-34 42-52 30Z"/><path d="M-12-8q12 14 24 0" fill="none"/>
+      </g>
+      <clipPath id="wipeClip" clipPathUnits="userSpaceOnUse"><rect id="wipeRect" x="-320" y="400" width="640" height="900"/></clipPath>
+    </defs>
+
+    <circle id="ground" cx="540" cy="1330" r="450" fill="var(--tint)"/>
+
+    <g id="B1"><use href="#obag"/></g>
+    <g id="B3"><use href="#obag"/></g>
+    <g id="B2"><use href="#obag"/></g>
+
+    <!-- Salina bag: back | learning items | front (back+front revealed by a bottom-up wipe) -->
+    <g id="sbag">
+      <g clip-path="url(#wipeClip)">
+        <path d="M-120-8C-120-190 120-190 120-8" fill="none" stroke="var(--pu-in)" stroke-width="22" stroke-linecap="round"/>
+        <polygon points="-214,-22 214,-22 202,6 -202,6" fill="var(--pu-in)"/>
+      </g>
+      <g id="it-laptop">
+        <g transform="translate(0 -40)">
+          <rect x="-118" y="-128" width="236" height="230" rx="16" fill="var(--vi)"/>
+          <rect x="-102" y="-112" width="204" height="128" rx="8" fill="var(--cr)"/>
+          <rect x="-84" y="-94" width="96" height="14" rx="7" fill="var(--pu)"/>
+          <rect x="-84" y="-70" width="70" height="9" rx="4.5" fill="var(--vi)"/>
+          <rect x="-84" y="-54" width="56" height="9" rx="4.5" fill="var(--vi)"/>
+          <circle cx="54" cy="-58" r="28" fill="var(--gd)"/><path d="M46-72v28l22-14z" fill="var(--cr)"/>
+          <rect x="-84" y="-14" width="168" height="10" rx="5" fill="var(--tint)"/>
+          <rect id="lap-progress" x="-84" y="-14" width="30" height="10" rx="5" fill="var(--gd)"/>
+        </g>
+      </g>
+      <g id="it-book">
+        <g transform="translate(0 -20)">
+          <rect x="-66" y="-126" width="132" height="280" rx="10" fill="var(--ch)"/>
+          <rect x="-66" y="-126" width="24" height="280" rx="6" fill="#463A52"/>
+          <rect x="-26" y="-94" width="72" height="14" rx="7" fill="var(--gd)"/>
+          <rect x="-26" y="-70" width="52" height="9" rx="4.5" fill="var(--cr)" opacity=".75"/>
+          <circle cx="10" cy="-12" r="22" fill="none" stroke="var(--cr)" stroke-width="6" opacity=".75"/>
+          <rect x="62" y="-118" width="10" height="264" rx="3" fill="var(--cr)"/>
+        </g>
+      </g>
+      <g id="it-bulb">
+        <g id="rays" stroke="var(--gd)" stroke-width="11" stroke-linecap="round">
+          <path id="r0" d="M0-112v-26"/><path id="r1" d="M-80-80l-18-18"/><path id="r2" d="M80-80l18-18"/><path id="r3" d="M-112-12h-26"/><path id="r4" d="M112-12h26"/>
+        </g>
+        <path id="glass" d="M-74-12a74 74 0 1 1 148 0c0 34-30 50-34 86h-80c-4-36-34-52-34-86z" fill="var(--cr)" stroke="var(--vi)" stroke-width="6"/>
+        <path id="shine" d="M-42-36a46 46 0 0 1 30-32" fill="none" stroke="var(--cr)" stroke-width="11" stroke-linecap="round"/>
+        <rect x="-40" y="80" width="80" height="22" rx="8" fill="var(--pu)"/>
+        <rect x="-32" y="106" width="64" height="20" rx="8" fill="var(--pu-dk)"/>
+      </g>
+      <g clip-path="url(#wipeClip)">
+        <path d="M-222 0H222L196 340Q194 368 166 368H-166Q-194 368-196 340Z" fill="var(--pu)"/>
+        <path d="M148 38H219L196 340Q194 368 166 368H142Z" fill="var(--pu-dk)" opacity=".55"/>
+        <polygon points="-222,0 222,0 219,38 -219,38" fill="var(--pu-dk)"/>
+      </g>
+    </g>
+
+    <g id="I1"><use href="#i-hbag"/></g>
+    <g id="I2"><use href="#i-dress"/></g>
+    <g id="I3"><use href="#i-shoe"/></g>
+    <g id="I4"><use href="#i-shirt"/></g>
+    <g id="I5"><use href="#i-shoe"/></g>
+  </svg>
+
+  <!-- scene 1 copy -->
+  <div class="line" id="s1a" style="top:250px;font-size:112px;color:var(--ch);font-weight:800"><span class="m"><span>كل</span></span><span class="m"><span>سنة</span></span><span class="m"><span>في</span></span></div>
+  <div class="line" id="s1b" style="top:395px;font-size:150px;color:var(--pu)"><span class="m ltr"><span>White Friday</span></span></div>
+  <div class="line" id="s1c" style="top:310px;font-size:96px;color:var(--pu)"><span class="m"><span>بنشتري</span></span><span class="m"><span>حاجات</span></span><span class="m"><span>كتير...</span></span></div>
+
+  <!-- scene 3 copy -->
+  <div class="line" id="s3a" style="top:250px;font-size:120px;color:var(--ch);font-weight:800;align-items:center"><span class="m"><span>المرة</span></span><span class="m"><span>دي</span></span>
+    <span id="dots" style="display:inline-flex;gap:16px;align-self:flex-end;margin-bottom:46px"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></div>
+  <div id="hl" style="background:var(--gd);height:74px;border-radius:12px;transform-origin:100% 50%"></div>
+  <div class="line" id="s3b" style="top:430px;font-size:228px;color:var(--pu)"><span id="invest" style="display:inline-block">استثمري</span></div>
+  <div class="line" id="s3c" style="top:780px;font-size:170px;color:var(--pu)"><span class="m"><span>في</span></span><span class="m"><span>نفسك</span></span><span id="bang" style="display:inline-block;color:var(--gd)">!</span></div>
+
+  <!-- scene 4: identity -->
+  <div id="wipe"></div>
+  <div class="line ltr" id="s4a" style="top:380px;font-size:230px;color:var(--cr);gap:0;direction:ltr"></div>
+  <div class="line ltr" id="s4b" style="top:680px;font-size:86px;color:var(--soft);font-weight:800;direction:ltr">WHITE FRIDAY</div>
+  <div id="rule" style="left:390px;top:840px;width:300px;height:10px;border-radius:5px;background:var(--gd);transform-origin:50% 50%"></div>
+  <div class="line" id="s4c" style="top:920px;font-size:112px;color:var(--cr);font-weight:800"><span class="m"><span>مهارة</span></span><span class="m"><span>جديدة...</span></span></div>
+  <div class="line" id="s4d" style="top:1075px;font-size:124px;color:var(--gd)"><span class="m"><span>قيمة</span></span><span class="m"><span>تفضل</span></span><span class="m"><span>معاكي</span></span></div>
+  <div class="chip" id="logo" style="left:280px;top:1330px;width:520px"><img src="../../01-BRAND-ASSETS/salina-logo-transparent.png" alt="Salina"></div>
+</div>
+<style>.dot{display:block;width:26px;height:26px;border-radius:50%;background:var(--gd)}</style>
+
+<script>
+const DURATION = 18.5, FPS = 30;
+const $ = id => document.getElementById(id);
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const P = (t, t0, t1) => clamp((t - t0) / (t1 - t0));
+const lerp = (a, b, p) => a + (b - a) * p;
+const E = {
+  outCubic: p => 1 - (1 - p) ** 3, inCubic: p => p ** 3, inQuad: p => p * p,
+  inOutCubic: p => p < .5 ? 4 * p ** 3 : 1 - (-2 * p + 2) ** 3 / 2,
+  outBack: (p, s = 1.7) => 1 + (s + 1) * (p - 1) ** 3 + s * (p - 1) ** 2,
+  outQuint: p => 1 - (1 - p) ** 5,
+};
+const spring = (dt, amp, f = 18, k = 9) => dt < 0 ? 0 : amp * Math.exp(-k * dt) * Math.cos(f * dt);
+const mix = (c1, c2, p) => { const h = c => [1, 3, 5].map(i => parseInt(c.slice(i, i + 2), 16)); const a = h(c1), b = h(c2);
+  return '#' + a.map((v, i) => Math.round(lerp(v, b[i], p)).toString(16).padStart(2, '0')).join(''); };
+const tf = (el, x, y, r = 0, sx = 1, sy = sx) => el.setAttribute('transform', `translate(${x} ${y}) rotate(${r}) scale(${sx} ${sy})`);
+const css = (el, o) => Object.assign(el.style, o);
+
+/* word-mask reveal: words slide up into place (in) and up out of view (out) */
+function words(lineId, tIn, step, tOut, t) {
+  const spans = [...$(lineId).querySelectorAll('.m > span')];
+  spans.forEach((s, i) => {
+    const pin = E.outCubic(P(t, tIn + i * step, tIn + i * step + .45));
+    const pout = tOut ? E.inCubic(P(t, tOut + i * .04, tOut + i * .04 + .35)) : 0;
+    s.style.transform = `translateY(${(1 - pin) * 115 - pout * 115}%)`;
+  });
+  $(lineId).style.visibility = (t >= tIn - .01 && (!tOut || t < tOut + .6)) ? 'visible' : 'hidden';
+}
+
+/* ---------- layout constants ---------- */
+const BAGS = [ // outline shopping bags: x, mouth y, land time
+  { id: 'B1', x: 285, y: 1300, tl: .55 }, { id: 'B2', x: 540, y: 1345, tl: 1.0 }, { id: 'B3', x: 795, y: 1300, tl: 1.45 } ];
+const ITEMS = [ // item, from bag, pop time, rest x,y,rot, scale
+  { id: 'I1', b: 0, tp: 1.9, x: 205, y: 960, r: -12, s: 1.6 },
+  { id: 'I2', b: 1, tp: 2.15, x: 545, y: 880, r: 6, s: 1.55 },
+  { id: 'I3', b: 2, tp: 2.4, x: 880, y: 975, r: 16, s: 1.55 },
+  { id: 'I4', b: 0, tp: 2.65, x: 330, y: 750, r: 10, s: 1.45 },
+  { id: 'I5', b: 2, tp: 2.9, x: 770, y: 745, r: -20, s: 1.3 } ];
+const SB = { x: 540, y: 1180, s: .92 };                 // Salina bag (mouth centre) in scene 2
+const LEARN = [ // learning items inside Salina bag, local coords
+  { id: 'it-laptop', tp: 7.0, x: -150, y: -70, r: -18, s: 1 },
+  { id: 'it-book', tp: 7.3, x: 38, y: -105, r: 5, s: 1 },
+  { id: 'it-bulb', tp: 7.6, x: 222, y: -200, r: 16, s: 1 } ];
+
+function renderAt(t) {
+  /* ground */
+  const g = E.outBack(P(t, .05, .7), 1.2) * (1 - E.inCubic(P(t, 13.6, 14.1)));
+  $('ground').setAttribute('r', 450 * g);
+  const groundShift = E.inOutCubic(P(t, 9.0, 9.8));
+  $('ground').setAttribute('cy', lerp(1330, 1560, groundShift));
+
+  /* ----- scene 1: bags drop, items pop out ----- */
+  BAGS.forEach((b, i) => {
+    const el = $(b.id);
+    const fall = E.inQuad(P(t, b.tl - .38, b.tl));
+    let y = lerp(-500, b.y, fall), sx = 1, sy = 1, s = .86, x = b.x;
+    if (t >= b.tl) { const sq = spring(t - b.tl, .2); sy = 1 - sq; sx = 1 + sq * .7; }
+    // a little hop each time an item leaves this bag
+    ITEMS.filter(it => BAGS[it.b] === b).forEach(it => { const d = spring(t - it.tp, .12, 22, 11); sy -= d; sx += d * .6; });
+    // scene 2: side bags slide into the middle one and vanish; the middle one grows
+    if (i !== 1) { const m = E.inCubic(P(t, 5.15 + i * .05, 5.65 + i * .05)); x = lerp(x, 540, m); y = lerp(y, 1345, m); s *= 1 - m * .9; }
+    else { const m = E.inOutCubic(P(t, 5.45, 6.0)); s = lerp(.86, SB.s * 444 / 300, m); y = lerp(y, SB.y, m); }
+    // squash about the bag's bottom edge
+    el.setAttribute('transform', `translate(${x} ${y + 320 * s}) scale(${s * sx} ${s * sy}) translate(0 -320)`);
+    const hidden = t < b.tl - .4 || (i !== 1 && t > 5.75) || (i === 1 && t > 6.9);
+    el.style.display = hidden ? 'none' : '';
+    if (i === 1) el.style.opacity = 1 - P(t, 6.3, 6.85);
+  });
+
+  ITEMS.forEach((it, k) => {
+    const el = $(it.id), b = BAGS[it.b];
+    const p = P(t, it.tp, it.tp + .62), e = E.outCubic(p);
+    let x = lerp(b.x, it.x, e), y = lerp(b.y + 20, it.y, e) - 300 * 4 * p * (1 - p) * .55;
+    let r = lerp(-140, it.r, E.outBack(p, 1.3)), s = lerp(.25, it.s, E.outBack(p, 1.6));
+    // idle float
+    const fl = P(t, it.tp + .6, it.tp + 1.0);
+    y += fl * 10 * Math.sin((t * 2 * Math.PI) / 1.7 + k); r += fl * 3 * Math.sin((t * 2 * Math.PI) / 2.1 + k);
+    // scene 2: crowd in a little (4.2-4.7), then get pulled into the middle bag one by one
+    const crowd = E.inOutCubic(P(t, 4.1, 4.6));
+    x = lerp(x, lerp(x, 540, .25), crowd); y = lerp(y, y + 40, crowd);
+    const tg = 4.7 + k * .12, gp = E.inCubic(P(t, tg, tg + .45));
+    x = lerp(x, 540, gp); y = lerp(y, 1345, gp); s *= 1 - gp * .85; r += gp * 200;
+    tf(el, x, y, r, s);
+    el.style.display = (t < it.tp || t > tg + .45) ? 'none' : '';
+  });
+
+  /* ----- scene 2: the middle bag becomes the Salina bag ----- */
+  const sb = $('sbag');
+  const wipe = E.inOutCubic(P(t, 6.05, 6.85));
+  $('wipeRect').setAttribute('y', lerp(400, -260, wipe));
+  let sx = SB.x, sy = SB.y, ss = SB.s, sqx = 1, sqy = 1;
+  const pulse = spring(t - 6.85, .14, 20, 9); sqy -= pulse; sqx += pulse * .7;
+  LEARN.forEach(l => { const d = spring(t - l.tp, .07, 22, 12); sqy -= d; sqx += d * .5; });
+  // scene 3: bag settles lower and smaller so the words can take the top
+  const down = E.inOutCubic(P(t, 9.0, 9.8));
+  sy = lerp(sy, 1500, down); ss = lerp(ss, .8, down);
+  sb.setAttribute('transform', `translate(${sx} ${sy + 368 * ss}) scale(${ss * sqx} ${ss * sqy}) translate(0 -368)`);
+  sb.style.display = (t < 6.0 || t > 14.2) ? 'none' : '';
+
+  LEARN.forEach((l, i) => {
+    const p = P(t, l.tp, l.tp + .55);
+    const x = lerp(l.x * .4, l.x, E.outCubic(p)), y = lerp(220, l.y, E.outBack(p, 1.5));
+    const fl = P(t, l.tp + .55, l.tp + 1);
+    tf($(l.id), x, y + fl * 8 * Math.sin(t * 3.4 + i * 1.7), l.r + fl * 2.5 * Math.sin(t * 2.6 + i), lerp(.6, l.s, E.outCubic(p)));
+    $(l.id).style.display = t < l.tp ? 'none' : '';
+  });
+  // laptop progress bar fills while it is on screen
+  $('lap-progress').setAttribute('width', lerp(30, 168, E.inOutCubic(P(t, 7.4, 12.5))));
+  // bulb switches on
+  const on = P(t, 8.0, 8.25);
+  $('glass').setAttribute('fill', mix('#FFF8EE', '#F5C04A', on));
+  $('glass').setAttribute('stroke', mix('#A979C0', '#F5C04A', on));
+  ['r0', 'r1', 'r2', 'r3', 'r4'].forEach((r, i) => { const q = E.outBack(P(t, 8.05 + i * .04, 8.35 + i * .04), 2);
+    const glow = 1 + .12 * Math.sin(t * 6 + i) * P(t, 8.4, 8.8);
+    $(r).setAttribute('transform', `translate(0 -12) scale(${Math.max(q * glow, 0.0001)}) translate(0 12)`); $(r).style.opacity = q > 0 ? 1 : 0; });
+
+  /* ----- copy, scene 1 ----- */
+  words('s1a', .35, .14, 2.95, t);
+  words('s1b', .85, 0, 3.0, t);
+  words('s1c', 3.25, .16, 5.7, t);
+
+  /* ----- copy, scene 3 ----- */
+  words('s3a', 9.1, .22, 13.4, t);
+  [...document.querySelectorAll('.dot')].forEach((d, i) => { const q = E.outBack(P(t, 9.55 + i * .15, 9.8 + i * .15), 3);
+    d.style.transform = `scale(${q * (1 - E.inCubic(P(t, 13.4, 13.6)))})`; });
+  const inv = $('invest'), ip = P(t, 10.3, 10.75);
+  const ins = lerp(1.9, 1, E.outBack(ip, 2.2)) + spring(t - 12.4, .05, 16, 6);
+  inv.style.transform = `scale(${ins}) rotate(${lerp(-7, 0, E.outBack(ip, 1.8))}deg)`;
+  inv.style.opacity = P(t, 10.3, 10.42) * (1 - P(t, 13.45, 13.7));
+  $('s3b').style.visibility = t >= 10.3 ? 'visible' : 'hidden';
+  // highlighter swipe under «استثمري» (sized from the word itself)
+  const r = inv.getBoundingClientRect(), st = $('stage').getBoundingClientRect();
+  const hp = E.outQuint(P(t, 10.55, 10.95)) * (1 - E.inCubic(P(t, 13.4, 13.65)));
+  if (ip >= 1) { const w = r.width + 40; css($('hl'), { left: (r.left - st.left - 20) + 'px', top: (r.bottom - st.top - r.height * .42) + 'px', width: w + 'px' }); }
+  $('hl').style.transform = `scaleX(${hp}) rotate(-2deg)`; $('hl').style.visibility = hp > 0 ? 'visible' : 'hidden';
+  words('s3c', 11.05, .2, 13.4, t);
+  const bp = P(t, 11.5, 11.85);
+  $('bang').style.transform = `translateY(${lerp(-80, 0, E.outBack(bp, 2.5))}px) rotate(${lerp(-30, 8, E.outBack(bp, 2))}deg) scale(${1 + spring(t - 12.4, .15, 18, 8)})`;
+  $('bang').style.opacity = P(t, 11.5, 11.55) * (1 - P(t, 13.4, 13.6));
+
+  /* ----- scene 4: purple circle opens from the bag, identity builds ----- */
+  const wp = E.inOutCubic(P(t, 13.45, 14.15)), R = 2300 * wp;
+  css($('wipe'), { width: 2 * R + 'px', height: 2 * R + 'px', left: (540 - R) + 'px', top: (1560 - R) + 'px', visibility: wp > 0 ? 'visible' : 'hidden' });
+  [...$('s4a').children].forEach((c, i) => { const q = P(t, 14.2 + i * .07, 14.65 + i * .07);
+    c.style.transform = `translateY(${lerp(140, 0, E.outBack(q, 1.6))}px)`; c.style.opacity = clamp(q * 3); });
+  const wf = E.outCubic(P(t, 14.75, 15.35));
+  css($('s4b'), { letterSpacing: lerp(70, 14, wf) + 'px', opacity: wf });
+  $('rule').style.transform = `scaleX(${E.outQuint(P(t, 15.1, 15.5))})`;
+  words('s4c', 15.45, .18, 0, t);
+  words('s4d', 16.0, .16, 0, t);
+  const lp = P(t, 16.55, 17.0);
+  $('logo').style.transform = `translateY(${spring(t - 17.0, 0) + 6 * Math.sin(t * 2.4) * P(t, 17, 17.5)}px) scale(${lerp(.5, 1, E.outBack(lp, 2))})`;
+  $('logo').style.opacity = clamp(lp * 3);
+}
+
+/* build SALINA letters once */
+'SALINA'.split('').forEach(ch => { const s = document.createElement('span'); s.textContent = ch; s.style.display = 'inline-block'; $('s4a').appendChild(s); });
+
+window.renderAt = renderAt; window.DURATION = DURATION; window.FPS = FPS;
+renderAt(0);
+if (location.hash === '#play') { const t0 = performance.now(); (function loop() { renderAt(((performance.now() - t0) / 1000) % DURATION); requestAnimationFrame(loop); })(); }
+</script>
+</body></html>
