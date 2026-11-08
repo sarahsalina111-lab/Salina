@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ar"><head><meta charset="utf-8"><title>SALINA WHITE FRIDAY — عرض ورشة تصميم الفيديوهات بالذكاء الاصطناعي</title>
+<link rel="stylesheet" href="../../01-BRAND-ASSETS/fonts/fonts.css">
+<style>
+  /* Offer video (1080x1920, 30fps, 18.6s) — reusable template: every word comes from OFFER below.
+     1 hook («طق طق» on a door that opens onto a video screen) · 2 the workshop tag + facts + who it's for ·
+     3 what you learn, day by day · 4 the discount · 5 CTA (booking version). Frames = renderAt(t); #play to preview. */
+  :root{--pu:#58346F;--pu-dk:#46295A;--pu-in:#3E2350;--vi:#A979C0;--gd:#F5C04A;--cr:#FFF8EE;--ch:#30263A;--tint:#F3E7EF;--soft:#E9DCF0;--lv:#D9C3E6;--lg:#FBE9B7}
+  html,body{margin:0;background:#222}
+  #stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--cr);font-family:"Tajawal","Cairo",sans-serif}
+  #stage > *{position:absolute}
+  svg{overflow:visible}
+  .line{left:0;right:0;display:flex;justify-content:center;gap:.26em;direction:rtl;white-space:nowrap;font-weight:900;line-height:1.25}
+  .m{display:inline-block;overflow:hidden;padding:.12em .04em .2em;margin:-.12em -.04em -.2em}
+  .m > span{display:inline-block}
+  #bg2{left:0;top:0;width:1080px;height:1920px;background:var(--tint)}
+  #tag{left:70px;top:300px;width:520px;height:960px;background:var(--gd);clip-path:polygon(50% 0,100% 11%,100% 100%,0 100%,0 11%);transform-origin:50% 0;
+       display:flex;flex-direction:column;align-items:center;gap:18px;padding-top:150px;box-sizing:border-box;text-align:center}
+  #tag::before{content:"";position:absolute;left:50%;top:50px;width:36px;height:36px;margin-left:-18px;border-radius:50%;background:var(--tint)}
+  #facts{left:0;right:0;top:0;bottom:0}
+  .fact{position:absolute;right:70px;width:390px;display:flex;align-items:center;gap:20px;direction:rtl}
+  .fact .ic{width:76px;height:76px;border-radius:50%;background:var(--pu);flex:none;display:flex;align-items:center;justify-content:center}
+  .fact span{font:700 40px/1.3 "Cairo",sans-serif;color:var(--ch)}
+  #who{left:60px;right:60px;top:1420px;display:flex;flex-wrap:wrap;justify-content:center;gap:16px;direction:rtl}
+  #who b{background:var(--cr);color:var(--pu);border-radius:999px;padding:12px 26px;font:800 36px/1.2 "Tajawal",sans-serif;box-shadow:inset 0 0 0 4px var(--lv);white-space:nowrap}
+  .day{left:70px;right:70px;height:520px;border-radius:48px;background:var(--tint);padding:40px 48px;box-sizing:border-box;direction:rtl;display:flex;flex-direction:column;gap:22px}
+  .day .hd{align-self:flex-start;background:var(--gd);color:var(--pu);border-radius:999px;padding:10px 30px;font:900 40px/1.2 "Tajawal",sans-serif}
+  .day .tt{font:900 64px/1.2 "Tajawal",sans-serif;color:var(--pu)}
+  .day .bl{display:flex;flex-wrap:wrap;gap:14px}
+  .day .bl b{display:flex;align-items:center;gap:12px;background:var(--cr);border-radius:999px;padding:10px 24px 10px 18px;font:700 36px/1.25 "Cairo",sans-serif;color:var(--ch);white-space:nowrap}
+  .day .bl b i{width:34px;height:34px;border-radius:50%;background:var(--pu);display:flex;align-items:center;justify-content:center;flex:none}
+  #steps{left:0;right:0;top:0;bottom:0}
+  .step{position:absolute;right:110px;display:flex;align-items:center;gap:30px;direction:rtl}
+  .step .si{width:120px;height:120px;border-radius:50%;background:var(--pu);display:flex;align-items:center;justify-content:center;flex:none;position:relative}
+  .step .si em{position:absolute;top:-6px;right:-6px;width:44px;height:44px;border-radius:50%;background:var(--gd);color:var(--pu);font:900 28px/44px "Tajawal",sans-serif;text-align:center;font-style:normal}
+  .step span{font:900 58px/1.2 "Tajawal",sans-serif;color:var(--pu);white-space:nowrap}
+  #wipe{left:0;top:0;width:1px;height:1px;border-radius:50%;background:var(--pu)}
+  .logo{background:var(--cr);border-radius:30px;padding:18px 26px;box-sizing:border-box}
+  .logo img{display:block;width:100%}
+</style></head>
+<body>
+<div id="stage">
+  <div id="bg2"></div>
+  <div class="line" id="eb" style="top:46px;font-size:32px;color:var(--pu);font-weight:800;letter-spacing:5px;direction:ltr;align-items:center;gap:14px"><i style="display:block;width:12px;height:12px;border-radius:50%;background:var(--gd)"></i>SALINA WHITE FRIDAY</div>
+
+  <!-- 1 hook -->
+  <div class="line" id="k1" style="top:170px;font-size:48px;color:var(--ch);font-weight:800"></div>
+  <div class="line" id="k2" style="top:258px;font-size:88px;color:var(--pu)"><span id="k2w" style="display:inline-block"></span></div>
+  <svg id="door" width="1080" height="1920" viewBox="0 0 1080 1920" style="left:0;top:0">
+    <rect x="290" y="480" width="500" height="920" rx="24" fill="var(--pu-in)"/>
+    <rect x="320" y="510" width="440" height="870" rx="10" fill="var(--cr)"/>
+    <g id="scr"><circle cx="540" cy="900" r="96" fill="var(--gd)"/><path d="M514 856v88l78-44z" fill="var(--pu)"/>
+      <rect x="370" y="1200" width="340" height="16" rx="8" fill="var(--lv)"/><rect id="scrbar" x="370" y="1200" width="60" height="16" rx="8" fill="var(--gd)"/>
+      <rect x="370" y="1240" width="110" height="34" rx="8" fill="var(--vi)"/><rect x="490" y="1240" width="150" height="34" rx="8" fill="var(--lv)"/><rect x="650" y="1240" width="60" height="34" rx="8" fill="var(--vi)"/>
+      <g transform="translate(680 600)"><rect x="-56" y="-34" width="112" height="68" rx="20" fill="var(--pu)"/><text x="0" y="4" text-anchor="middle" dominant-baseline="middle" font-family="Tajawal" font-weight="900" font-size="44" fill="var(--gd)">AI</text></g></g>
+    <g id="dpanel"><rect x="320" y="510" width="440" height="870" rx="10" fill="var(--pu)"/>
+      <rect x="370" y="570" width="340" height="330" rx="16" fill="var(--pu-dk)"/><rect x="370" y="960" width="340" height="360" rx="16" fill="var(--pu-dk)"/>
+      <circle cx="710" cy="940" r="20" fill="var(--gd)"/></g>
+    <text id="kn0" x="0" y="0" text-anchor="middle" font-family="Tajawal" font-weight="900" font-size="110" fill="var(--pu)">طق</text>
+    <text id="kn1" x="0" y="0" text-anchor="middle" font-family="Tajawal" font-weight="900" font-size="110" fill="var(--pu)">طق</text>
+  </svg>
+  <div class="line" id="k3" style="top:1520px;font-size:56px;color:var(--ch);font-weight:800"></div>
+  <div class="line" id="k4" style="top:1610px;font-size:84px;color:var(--pu)"></div>
+
+  <!-- 2 the workshop -->
+  <div id="nail" style="left:316px;top:200px;width:26px;height:26px;border-radius:50%;background:var(--pu)"></div>
+  <div id="string" style="left:327px;top:220px;width:4px;height:84px;background:var(--ch);opacity:.55"></div>
+  <div id="tag">
+    <span id="tKind" style="background:var(--pu);color:var(--cr);border-radius:999px;padding:10px 32px;font:800 38px/1.2 'Tajawal',sans-serif"></span>
+    <span id="tName" style="font:900 86px/1.05 'Tajawal',sans-serif;color:var(--pu);direction:ltr"></span>
+    <span style="width:300px;border-top:5px dashed var(--pu);opacity:.4"></span>
+    <span id="tSub" style="font:800 42px/1.35 'Tajawal',sans-serif;color:var(--ch);padding:0 30px"></span>
+  </div>
+  <div id="facts"></div>
+  <div class="line" id="whoT" style="top:1340px;font-size:48px;color:var(--pu)"></div>
+  <div id="who"></div>
+
+  <!-- 3 what you learn -->
+  <div class="line" id="lT" style="top:150px;font-size:76px;color:var(--ch);font-weight:800"></div>
+  <div id="steps"></div>
+  <div class="line" id="lB" style="top:1430px;font-size:50px;color:var(--pu)"></div>
+
+  <!-- 4 the discount -->
+  <div id="wipe"></div>
+  <div class="line" id="x1" style="top:300px;font-size:64px;color:var(--soft);font-weight:800"></div>
+  <svg id="burst" width="1080" height="1920" viewBox="0 0 1080 1920" style="left:0;top:0">
+    <g id="bst"><polygon id="bpoly" fill="var(--gd)"/><circle r="250" fill="none" stroke="var(--cr)" stroke-width="6" stroke-dasharray="10 12"/>
+      <text id="bTop" x="0" y="-120" text-anchor="middle" font-family="Tajawal" font-weight="900" font-size="92" fill="var(--pu)"></text>
+      <text id="bBig" x="0" y="80" text-anchor="middle" font-family="Tajawal" font-weight="900" font-size="250" fill="var(--pu)"></text></g>
+  </svg>
+  <div class="line" id="x2" style="top:1290px;font-size:66px;color:var(--cr);font-weight:800"></div>
+  <div class="line" id="x3" style="top:1400px;font-size:58px;color:var(--gd)"></div>
+  <div class="logo" id="logo" style="left:400px;top:1600px;width:280px"><img src="../../01-BRAND-ASSETS/salina-logo-transparent.png" alt="Salina"></div>
+</div>
+
+<script src="../lib/cta.js"></script>
+<script>
+/* ======================= OFFER DATA — edit this block for another course ======================= */
+const OFFER = {
+  hook: { a: 'نفسك تعملي فيديوهات بالذكاء الاصطناعي؟', b: 'اتعلمي صناعة الفيديوهات',
+          c: 'من طق طق...', d: 'للسلام عليكم!' },
+  kind: 'ورشة', name: 'تصميم<br>الفيديوهات', sub: 'بالذكاء الاصطناعي',
+  facts: [ ['rec', '٣ جلسات لايف'], ['online', 'عملي + نظري'], ['cal', 'من الفكرة<br>للمونتاج'] ],
+  whoTitle: '', who: [],
+  learnTitle: 'خط الإنتاج كله...',
+  steps: [ ['idea', 'الفكرة'], ['script', 'كتابة السكريبت'], ['image', 'توليد الصور الثابتة'], ['play', 'تحريك الصور'], ['wave', 'تركيب الصوت'], ['cut', 'المونتاج'] ],
+  learnBottom: 'خطوة بخطوة، عملي ونظري',
+  offerTitle: 'عرض الوايت فرايداي', discTop: 'خصم', discBig: '٥٠٪',
+  offerOn: 'على ورشة تصميم الفيديوهات', offerJoke: 'اتعلميها بنص التمن!',
+  cta: { b: 'احجزي مكانك الأول', bSize: 100, tag: 'احجزي بخصم ٥٠٪' }
+};
+/* =============================================================================================== */
+
+const DURATION = 17.5, FPS = 30;
+const T = { CARD: 3.3, LEARN: 7.2, DISC: 11.4, CTA: 14.8 };
+const $ = id => document.getElementById(id);
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const P = (t, t0, t1) => clamp((t - t0) / (t1 - t0));
+const lerp = (a, b, p) => a + (b - a) * p;
+const E = { outCubic: p => 1 - (1 - p) ** 3, inCubic: p => p ** 3,
+  inOutCubic: p => p < .5 ? 4 * p ** 3 : 1 - (-2 * p + 2) ** 3 / 2,
+  outBack: (p, s = 1.7) => 1 + (s + 1) * (p - 1) ** 3 + s * (p - 1) ** 2 };
+const spring = (dt, amp, f = 18, k = 9) => dt < 0 ? 0 : amp * Math.exp(-k * dt) * Math.cos(f * dt);
+const NS = 'http://www.w3.org/2000/svg';
+const masked = s => { const out = []; s.split(' ').forEach(w => { const lat = /^[A-Za-z]/.test(w), prev = out[out.length - 1];
+    if (lat && prev && prev.lat) prev.w += ' ' + w; else out.push({ w, lat }); });   // keep Latin phrases together so bidi stays right
+  return out.map(o => `<span class="m"${o.lat ? ' dir="ltr"' : ''}><span>${o.w}</span></span>`).join(''); };
+function words(id, tIn, step, tOut, t) {
+  [...$(id).querySelectorAll('.m > span')].forEach((s, i) => { const a = E.outCubic(P(t, tIn + i * step, tIn + i * step + .42)), b = tOut ? E.inCubic(P(t, tOut + i * .04, tOut + i * .04 + .3)) : 0;
+    s.style.transform = `translateY(${(1 - a) * 115 - b * 115}%)`; });
+  $(id).style.visibility = (t >= tIn - .01 && (!tOut || t < tOut + .5)) ? 'visible' : 'hidden';
+}
+const ICON = { // small cream glyphs for the fact list
+  online: '<svg width="40" height="40" viewBox="-20 -20 40 40"><rect x="-16" y="-12" width="32" height="20" rx="3" fill="#FFF8EE"/><path d="M-19 12h38" stroke="#FFF8EE" stroke-width="5" stroke-linecap="round"/></svg>',
+  cal: '<svg width="40" height="40" viewBox="-20 -20 40 40"><rect x="-16" y="-14" width="32" height="30" rx="4" fill="#FFF8EE"/><path d="M-16-5h32" stroke="#58346F" stroke-width="4"/><circle cx="-6" cy="5" r="3" fill="#58346F"/><circle cx="6" cy="5" r="3" fill="#58346F"/></svg>',
+  clock: '<svg width="40" height="40" viewBox="-20 -20 40 40"><circle r="16" fill="#FFF8EE"/><path d="M0-9v9l7 5" stroke="#58346F" stroke-width="4" fill="none" stroke-linecap="round"/></svg>',
+  rec: '<svg width="40" height="40" viewBox="-20 -20 40 40"><rect x="-17" y="-12" width="34" height="24" rx="6" fill="#FFF8EE"/><path d="M-4-6v12l10-6z" fill="#58346F"/></svg>',
+  cert: '<svg width="40" height="40" viewBox="-20 -20 40 40"><rect x="-16" y="-14" width="32" height="22" rx="3" fill="#FFF8EE"/><circle cx="8" cy="8" r="7" fill="#F5C04A"/><path d="M4 14l-2 8 6-3 6 3-2-8" fill="#F5C04A"/></svg>' };
+const STEP_ICON = {
+  idea: '<svg width="60" height="60" viewBox="-30 -30 60 60"><path d="M-14 4a17 17 0 1 1 28 0c-3 4-5 7-5 11h-18c0-4-2-7-5-11z" fill="#F5C04A"/><rect x="-8" y="18" width="16" height="7" rx="3" fill="#FFF8EE"/></svg>',
+  script: '<svg width="60" height="60" viewBox="-30 -30 60 60"><rect x="-18" y="-24" width="36" height="48" rx="5" fill="#FFF8EE"/><path d="M-10-12h20M-10-3h20M-10 6h12" stroke="#58346F" stroke-width="4" stroke-linecap="round"/></svg>',
+  image: '<svg width="60" height="60" viewBox="-30 -30 60 60"><rect x="-24" y="-18" width="48" height="36" rx="5" fill="#FFF8EE"/><path d="M-20 14l12-14 9 9 7-6 12 11z" fill="#A979C0"/><circle cx="10" cy="-7" r="5" fill="#F5C04A"/></svg>',
+  play: '<svg width="60" height="60" viewBox="-30 -30 60 60"><circle r="22" fill="#FFF8EE"/><path d="M-7-11v22l18-11z" fill="#58346F"/></svg>',
+  wave: '<svg width="60" height="60" viewBox="-30 -30 60 60"><path d="M-20 0v0M-12-10v20M-4-18v36M4-8v16M12-14v28M20-4v8" stroke="#FFF8EE" stroke-width="5" stroke-linecap="round"/></svg>',
+  cut: '<svg width="60" height="60" viewBox="-30 -30 60 60"><rect x="-24" y="-12" width="20" height="24" rx="4" fill="#FFF8EE"/><rect x="-1" y="-12" width="12" height="24" rx="4" fill="#F5C04A"/><rect x="14" y="-12" width="10" height="24" rx="4" fill="#FFF8EE"/><path d="M-2-22v44" stroke="#F5C04A" stroke-width="3"/></svg>' };
+const AR_N = '٠١٢٣٤٥٦٧٨٩';
+const CHECK = '<svg width="20" height="20" viewBox="-10 -10 20 20"><path d="M-5 0l3 4 7-8" fill="none" stroke="#FFF8EE" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+/* ---- build from OFFER ---- */
+$('k1').innerHTML = masked(OFFER.hook.a); $('k2w').innerHTML = OFFER.hook.b; $('k3').innerHTML = masked(OFFER.hook.c); $('k4').innerHTML = masked(OFFER.hook.d);
+$('tKind').textContent = OFFER.kind; $('tName').innerHTML = OFFER.name; $('tSub').innerHTML = OFFER.sub;
+if (!/^[A-Za-z]/.test(OFFER.name)) { $('tName').style.direction = 'rtl'; $('tName').style.fontSize = '78px'; $('tName').style.lineHeight = '1.15'; }
+OFFER.facts.forEach(([ic, tx], i) => { const d = document.createElement('div'); d.className = 'fact'; d.id = 'f' + i; d.style.top = (360 + i * 240) + 'px';
+  d.innerHTML = `<div class="ic">${ICON[ic]}</div><span>${tx}</span>`; $('facts').appendChild(d); });
+$('whoT').innerHTML = masked(OFFER.whoTitle + ':');
+OFFER.who.forEach(w => { const b = document.createElement('b'); b.textContent = w; $('who').appendChild(b); });
+$('lT').innerHTML = masked(OFFER.learnTitle);
+OFFER.steps.forEach(([ic, tx], i) => { const d = document.createElement('div'); d.className = 'step'; d.id = 'st' + i; d.style.top = (290 + i * 180) + 'px';
+  d.innerHTML = `<div class="si">${STEP_ICON[ic]}<em>${AR_N[i + 1]}</em></div><span>${tx}</span>`; $('steps').appendChild(d); });
+const conn = document.createElement('div'); conn.id = 'conn'; conn.style.cssText = 'position:absolute;right:166px;top:350px;width:8px;height:0;border-radius:4px;background:repeating-linear-gradient(#A979C0 0 18px,transparent 18px 32px)'; $('steps').prepend(conn);
+$('lB').innerHTML = masked(OFFER.learnBottom);
+$('x1').innerHTML = masked(OFFER.offerTitle); $('bTop').textContent = OFFER.discTop; $('bBig').textContent = OFFER.discBig;
+$('x2').innerHTML = masked(OFFER.offerOn); $('x3').innerHTML = masked(OFFER.offerJoke);
+
+// discount burst
+(() => { const pts = []; for (let i = 0; i < 32; i++) { const a = i / 32 * Math.PI * 2, r = i % 2 ? 300 : 340; pts.push(`${Math.cos(a) * r},${Math.sin(a) * r}`); } $('bpoly').setAttribute('points', pts.join(' ')); })();
+
+function renderAt(t) {
+  $('eb').style.opacity = P(t, .1, .4) * (1 - P(t, T.CTA - .1, T.CTA + .2));
+  $('bg2').style.opacity = E.inOutCubic(P(t, T.CARD - .2, T.CARD + .3)) * (1 - E.inOutCubic(P(t, T.LEARN - .2, T.LEARN + .2)));
+
+  /* 1 hook */
+  words('k1', .2, .1, T.CARD - .3, t);
+  const kp = P(t, 1.35, 1.7); $('k2w').style.transform = `scale(${lerp(1.7, 1, E.outBack(kp, 2.2))})`;
+  $('k2').style.opacity = clamp(kp * 4) * (1 - P(t, T.CARD - .3, T.CARD)); $('k2').style.visibility = t < T.CARD + .1 ? 'visible' : 'hidden';
+  // knock knock: the door jolts, then swings open onto a video screen
+  const doorIn = E.outCubic(P(t, 0, .3)), doorOut = E.inCubic(P(t, T.CARD - .35, T.CARD));
+  const jolt = spring(t - .35, 10, 40, 14) + spring(t - .7, 10, 40, 14);
+  const op = E.inOutCubic(P(t, 1.15, 1.65));
+  $('dpanel').setAttribute('transform', `translate(${320 + jolt} 0) scale(${Math.max(1 - .9 * op, .02)} 1) skewY(${-8 * op}) translate(-320 0)`);
+  $('door').style.transform = `translateY(${(1 - doorIn) * 900 + doorOut * 1300}px)`;
+  [['kn0', .35, 300, 760, -14], ['kn1', .7, 790, 880, 12]].forEach(([id, t0, x, y, r]) => { const q = P(t, t0, t0 + .25);
+    $(id).setAttribute('transform', `translate(${x} ${y}) rotate(${r}) scale(${Math.max(E.outBack(q, 3) * (1 - P(t, 1.2, 1.45)), 1e-4)})`); });
+  $('scrbar').setAttribute('width', 60 + 280 * E.inOutCubic(P(t, 1.6, 3.0)));
+  $('door').style.display = t < T.CARD + .05 ? '' : 'none';
+  words('k3', 2.0, .1, T.CARD - .3, t); words('k4', 2.35, .12, T.CARD - .3, t);
+
+  /* 2 the workshop */
+  const tg = P(t, T.CARD, T.CARD + .6), cardOut = E.inCubic(P(t, T.LEARN - .4, T.LEARN));
+  $('tag').style.transform = `translateY(${(1 - E.outBack(tg, 1.3)) * -1100 - cardOut * 1400}px) rotate(${-4 + 6 * Math.sin((t - T.CARD) * 3.2) * Math.exp(-(t - T.CARD) * 1.4) * (tg > 0 ? 1 : 0)}deg)`;
+  ['nail', 'string'].forEach(id => $(id).style.opacity = P(t, T.CARD, T.CARD + .2) * (1 - cardOut));
+  $('tag').style.visibility = t > T.CARD - .05 && t < T.LEARN + .05 ? 'visible' : 'hidden';
+  OFFER.facts.forEach((_, i) => { const p = P(t, T.CARD + .6 + i * .32, T.CARD + .95 + i * .32), o = E.inCubic(P(t, T.LEARN - .4 + i * .03, T.LEARN - .1 + i * .03));
+    $('f' + i).style.transform = `translateX(${(1 - E.outBack(p, 1.6)) * 500 + o * 700}px)`; $('f' + i).style.opacity = clamp(p * 3) * (1 - o); });
+  if (OFFER.who.length) words('whoT', T.CARD + 2.3, .1, T.LEARN - .4, t); else $('whoT').style.visibility = 'hidden';
+  [...$('who').children].forEach((b, i) => { const p = E.outBack(P(t, T.CARD + 2.6 + i * .16, T.CARD + 2.95 + i * .16), 2.2), o = cardOut;
+    b.style.transform = `scale(${p * (1 - o)})`; b.style.display = 'inline-block'; });
+
+  /* 3 what you learn */
+  words('lT', T.LEARN + .1, .12, T.DISC - .2, t);
+  const sOut = E.inCubic(P(t, T.DISC - .35, T.DISC));
+  OFFER.steps.forEach((_, i) => { const d = $('st' + i), p = P(t, T.LEARN + .3 + i * .38, T.LEARN + .65 + i * .38);
+    d.style.transform = `translateX(${(1 - E.outBack(p, 1.5)) * -700}px)`; d.style.opacity = clamp(p * 3) * (1 - sOut);
+    d.querySelector('.si').style.transform = `scale(${1 + spring(t - (T.LEARN + .6 + i * .38), .15, 20, 9)})`; });
+  $('conn').style.height = (900 * E.inOutCubic(P(t, T.LEARN + .4, T.LEARN + .4 + .38 * 5))) + 'px'; $('conn').style.opacity = 1 - sOut;
+  $('steps').style.visibility = t > T.LEARN && t < T.DISC + .05 ? 'visible' : 'hidden';
+  words('lB', T.LEARN + 2.75, .1, T.DISC - .2, t);
+
+  /* 4 the discount */
+  const wp = E.inOutCubic(P(t, T.DISC - .2, T.DISC + .4)), R = 2300 * wp;
+  Object.assign($('wipe').style, { width: 2 * R + 'px', height: 2 * R + 'px', left: (540 - R) + 'px', top: (900 - R) + 'px', visibility: wp > 0 ? 'visible' : 'hidden' });
+  const dOut = E.inCubic(P(t, T.CTA - .1, T.CTA + .25));
+  words('x1', T.DISC + .45, .12, T.CTA - .1, t);
+  const bp = P(t, T.DISC + .75, T.DISC + 1.15);
+  $('bst').setAttribute('transform', `translate(540 ${880 - dOut * 200}) rotate(${lerp(-40, 0, E.outBack(bp, 1.6)) + (t - T.DISC) * 6}) scale(${Math.max(lerp(2.2, 1, E.outBack(bp, 2.4)) * (bp > 0 ? 1 : 0) * (1 + spring(t - (T.DISC + 2.3), .05, 16, 6)) * (1 - dOut), 1e-4)})`);
+  $('bBig').setAttribute('transform', `rotate(${-(t - T.DISC) * 6})`); $('bTop').setAttribute('transform', `rotate(${-(t - T.DISC) * 6})`);
+  $('burst').style.display = bp > 0 && dOut < 1 ? '' : 'none';
+  words('x2', T.DISC + 1.45, .1, T.CTA - .1, t); words('x3', T.DISC + 1.95, .12, T.CTA - .1, t);
+  const lp = E.outBack(P(t, T.DISC + 2.3, T.DISC + 2.6), 2); $('logo').style.transform = `scale(${lp * (1 - dOut)})`;
+
+  /* 5 CTA */
+  CTA.render(t, T.CTA);
+}
+CTA.init($('stage'), OFFER.cta);
+window.renderAt = renderAt; window.DURATION = DURATION; window.FPS = FPS;
+renderAt(0);
+if (location.hash === '#play') { const t0 = performance.now(); (function loop() { renderAt(((performance.now() - t0) / 1000) % DURATION); requestAnimationFrame(loop); })(); }
+</script>
+</body></html>
