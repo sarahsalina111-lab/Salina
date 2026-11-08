@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ar"><head><meta charset="utf-8"><title>Sample 1 — الخصم بيخلص</title>
+<link rel="stylesheet" href="base.css">
+<style>
+  .stage{background:var(--pu)}
+  /* two statements, two "meters": the offer runs out, the learning stays full */
+  .track{height:30px;border-radius:15px;box-shadow:inset 0 0 0 4px rgba(233,220,240,.45)}
+  .fill{position:absolute;right:0;top:0;bottom:0;border-radius:15px;background:var(--gd)}
+</style></head>
+<body>
+<div class="stage" id="stage">
+  <!-- header: campaign name right, logo chip left -->
+  <div class="eb" style="top:72px;right:84px;color:var(--cr)"><i></i>SALINA WHITE FRIDAY</div>
+  <div class="chip" style="top:48px;left:60px;width:230px"><img src="../../01-BRAND-ASSETS/salina-logo-transparent.png" alt="Salina"></div>
+
+  <!-- statement 1: muted, small, its meter almost empty -->
+  <div class="d" style="top:232px;right:84px;font-size:118px;color:var(--vi)">الخصم بيخلص.</div>
+  <div class="track" style="top:392px;right:84px;width:912px">
+    <div class="fill" style="width:12%"></div>
+  </div>
+  <div class="b" style="top:440px;right:84px;font-size:32px;color:var(--soft)">عروض الوايت فرايداي</div>
+
+  <!-- statement 2: bright, large, meter full -->
+  <div class="d" style="top:610px;right:84px;font-size:146px;color:var(--cr)">اللي اتعلمتيه</div>
+  <div class="d" style="top:790px;right:84px;font-size:250px;color:var(--cr)">بيفضل.</div>
+  <div class="track" style="top:1080px;right:84px;width:912px;box-shadow:none">
+    <div class="fill" style="width:100%"></div>
+  </div>
+  <div class="b" style="top:1128px;right:84px;font-size:32px;color:var(--soft)">معاكي على طول</div>
+
+  <!-- footer -->
+  <div class="b" style="bottom:66px;left:84px;font-size:38px;color:var(--cr);font-weight:700">استثمري في نفسك</div>
+</div>
+</body></html>
